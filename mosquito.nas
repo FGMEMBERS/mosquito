@@ -7,7 +7,7 @@ init = func {
 
 main_loop = func {
   cview = getprop("/sim/current-view/view-number");
-    if (cview == 6) {
+    if (cview == 7) {
       aphmode = getprop ("/autopilot/locks/heading");
       apvmode = getprop ("/autopilot/locks/altitude");
       if (aphmode == "none" ) {

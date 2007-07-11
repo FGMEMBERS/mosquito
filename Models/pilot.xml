@@ -10,7 +10,7 @@
   <object-name>arm1.R</object-name>
   <object-name>arm2.R</object-name>
   <object-name>hand.R</object-name>
-  <property>/sim/model/crew/pilot/visible</property>
+  <property>sim/model/crew/pilot/visible</property>
   <factor>90</factor>
   <center>
    <x-m>-0.015</x-m>
@@ -65,7 +65,7 @@
   <type>rotate</type>
   <object-name>arm2.R</object-name>
   <object-name>hand.R</object-name>
-  <property>/sim/model/crew/pilot/visible</property>
+  <property>sim/model/crew/pilot/visible</property>
   <factor>75</factor>
   <center>
    <x-m>0.007</x-m>
@@ -120,7 +120,7 @@
   <object-name>arm1.L</object-name>
   <object-name>arm2.L</object-name>
   <object-name>hand.L</object-name>
-  <property>/sim/model/crew/pilot/visible</property>
+  <property>sim/model/crew/pilot/visible</property>
   <factor>90</factor>
   <center>
    <x-m>-0.015</x-m>
@@ -137,7 +137,7 @@
   <type>rotate</type>
   <object-name>arm2.L</object-name>
   <object-name>hand.L</object-name>
-  <property>/sim/model/crew/pilot/visible</property>
+  <property>sim/model/crew/pilot/visible</property>
   <factor>85</factor>
   <center>
    <x-m>0.007</x-m>
@@ -156,7 +156,7 @@
   <object-name>leg1.R</object-name>
   <object-name>leg2.R</object-name>
   <object-name>foot.R</object-name>
-  <property>/sim/model/crew/pilot/visible</property>
+  <property>sim/model/crew/pilot/visible</property>
   <factor>80</factor>
   <center>
    <x-m>0.012</x-m>
@@ -174,7 +174,7 @@
   <type>rotate</type>
   <object-name>leg2.R</object-name>
   <object-name>foot.R</object-name>
-  <property>/sim/model/crew/pilot/visible</property>
+  <property>sim/model/crew/pilot/visible</property>
   <factor>40</factor>
   <center>
    <x-m>-0.064</x-m>
@@ -193,7 +193,7 @@
   <object-name>leg1.L</object-name>
   <object-name>leg2.L</object-name>
   <object-name>foot.L</object-name>
-  <property>/sim/model/crew/pilot/visible</property>
+  <property>sim/model/crew/pilot/visible</property>
   <factor>80</factor>
   <center>
    <x-m>0.012</x-m>
@@ -211,7 +211,7 @@
   <type>rotate</type>
   <object-name>leg2.L</object-name>
   <object-name>foot.L</object-name>
-  <property>/sim/model/crew/pilot/visible</property>
+  <property>sim/model/crew/pilot/visible</property>
   <factor>40</factor>
   <center>
    <x-m>-0.064</x-m>
@@ -229,7 +229,7 @@
  <animation>
   <type>rotate</type>
   <object-name>head</object-name>
-  <property>/sim/model/crew/pilot/visible</property>
+  <property>sim/model/crew/pilot/visible</property>
   <factor>10</factor>
   <center>
    <x-m>0.055</x-m>

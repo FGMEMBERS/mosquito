@@ -1,0 +1,145 @@
+<PropertyList>
+    <model> 
+      <path>Aircraft/mosquito/Models/Instruments/asi.xml</path>
+      <offsets> 
+        <x-m>1.569</x-m>
+        <y-m>-0.23</y-m>
+        <z-m>0.52</z-m>
+      </offsets>
+    </model>
+    <model> 
+      <path>Aircraft/mosquito/Models/Instruments/attitude.xml</path>
+	  <name>Attitude</name>
+      <offsets> 
+        <x-m>1.575</x-m>
+        <y-m>-0.12</y-m>
+        <z-m>0.52</z-m>
+      </offsets>
+    </model>
+    <model> 
+      <path>Aircraft/mosquito/Models/Instruments/vsi.xml</path>
+      <offsets> 
+        <x-m>1.569</x-m>
+        <y-m>.0.01</y-m>
+        <z-m>0.52</z-m>
+      </offsets>
+    </model>
+    <model> 
+      <path>Aircraft/mosquito/Models/Instruments/altimeter.xml</path>
+	  <name>Altimeter</name>
+      <offsets> 
+        <x-m>1.569</x-m>
+        <y-m>-0.23</y-m>
+        <z-m>0.415</z-m>
+      </offsets>
+    </model>
+    <model> 
+      <path>Aircraft/mosquito/Models/Instruments/compass.xml</path>
+      <offsets> 
+        <x-m>1.575</x-m>
+        <y-m>-0.12</y-m>
+        <z-m>0.42</z-m>
+      </offsets>
+    </model>
+    <model> 
+      <path>Aircraft/mosquito/Models/Instruments/turn.xml</path>
+	  <name>Turn</name>
+      <offsets> 
+        <x-m>1.569</x-m>
+        <y-m>-0.01</y-m>
+        <z-m>0.415</z-m>
+      </offsets>
+    </model>
+    <model>
+      <path>Aircraft/mosquito/Models/Instruments/beam_approach.xml</path>
+      <offsets> 
+        <x-m>1.569</x-m>
+        <y-m>0.13</y-m>
+        <z-m>0.53</z-m>
+      </offsets>
+    </model>
+
+
+
+
+    <model>
+      <path>Aircraft/mosquito/Models/Instruments/rpm-p.xml</path>
+      <offsets> 
+        <x-m>1.569</x-m>
+        <y-m>-0.47</y-m>
+        <z-m>0.37</z-m>
+      </offsets>
+    </model>
+
+    <model>
+      <path>Aircraft/mosquito/Models/Instruments/rpm-s.xml</path>
+      <offsets>
+        <x-m>1.569</x-m>
+        <y-m>-0.39</y-m>
+        <z-m>0.37</z-m>
+      </offsets>
+    </model>
+    <model> 
+      <path>Aircraft/mosquito/Models/Instruments/boost-p.xml</path>
+      <offsets> 
+        <x-m>1.569</x-m>
+        <y-m>-0.49</y-m>
+        <z-m>0.285</z-m>
+
+      </offsets>
+    </model>
+
+    <model> 
+      <path>Aircraft/mosquito/Models/Instruments/boost-s.xml</path>
+      <offsets> 
+        <x-m>1.569</x-m>
+        <y-m>-0.41</y-m>
+        <z-m>0.285</z-m>
+
+      </offsets>
+    </model>
+    <model> 
+      <path>Aircraft/mosquito/Models/Instruments/oil-temp-p.xml</path>
+      <name>Oil Temp Port</name>
+      <offsets>
+        <x-m>1.569</x-m>
+        <y-m>-0.48</y-m>
+        <z-m>0.21</z-m>
+      </offsets>
+    </model>
+    <model>
+      <path>Aircraft/mosquito/Models/Instruments/oil-temp-s.xml</path>
+      <name>Oil Temp Stbd</name>
+      <offsets>
+        <x-m>1.569</x-m>
+        <y-m>-0.42</y-m>
+        <z-m>0.21</z-m>
+      </offsets>
+    </model>
+    <model>
+      <path>Aircraft/mosquito/Models/Instruments/oil-pressure-p.xml</path>
+      <offsets> 
+        <x-m>1.569</x-m>
+        <y-m>-0.53</y-m>
+        <z-m>0.21</z-m>
+      </offsets>
+    </model>
+
+    <model>
+      <path>Aircraft/mosquito/Models/Instruments/oil-pressure-s.xml</path>
+      <offsets>
+        <x-m>1.569</x-m>
+        <y-m>-0.37</y-m>
+        <z-m>0.21</z-m>
+      </offsets>
+    </model>
+    <model>
+      <path>Aircraft/mosquito/Models/Instruments/triple.xml</path>
+      <offsets> 
+        <x-m>1.569</x-m>
+        <y-m>-0.18</y-m>
+        <z-m>0.30</z-m>
+      </offsets>
+    </model>
+
+</PropertyList>

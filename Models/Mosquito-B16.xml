@@ -25,60 +25,18 @@
 		<object-name>topdoorglass</object-name>
 		<object-name>noseglass</object-name>
 	</animation>
+	<model>
+		<name>cockpit</name>
+		<path>Aircraft/mosquito/Models/cockpit.xml</path>
+	</model>
+	<animation>
+  <object-name>cockpit</object-name>
+		<type>range</type>
+		<min-m>0</min-m>
+		<max-m>10</max-m>
+	</animation>
 
-    <model> 
-      <path>Aircraft/mosquito/Models/asi.xml</path>
-      <offsets> 
-        <x-m>1.569</x-m>
-        <y-m>-0.23</y-m>
-        <z-m>0.52</z-m>
-      </offsets>
-    </model>
-    <model> 
-      <path>Aircraft/mosquito/Models/attitude.xml</path>
-	  <name>Attitude</name>
-      <offsets> 
-        <x-m>1.575</x-m>
-        <y-m>-0.12</y-m>
-        <z-m>0.52</z-m>
-      </offsets>
-    </model>
-    <model> 
-      <path>Aircraft/mosquito/Models/vsi.xml</path>
-      <offsets> 
-        <x-m>1.569</x-m>
-        <y-m>.0.01</y-m>
-        <z-m>0.52</z-m>
-      </offsets>
-    </model>
-    <model> 
-      <path>Aircraft/mosquito/Models/altimeter.xml</path>
-	  <name>Altimeter</name>
-      <offsets> 
-        <x-m>1.569</x-m>
-        <y-m>-0.23</y-m>
-        <z-m>0.415</z-m>
-      </offsets>
-    </model>
-    <model> 
-      <path>Aircraft/mosquito/Models/compass.xml</path>
-      <offsets> 
-        <x-m>1.575</x-m>
-        <y-m>-0.12</y-m>
-        <z-m>0.42</z-m>
-      </offsets>
-    </model>
-    <model> 
-      <path>Aircraft/mosquito/Models/turn.xml</path>
-	  <name>Turn</name>
-      <offsets> 
-        <x-m>1.569</x-m>
-        <y-m>-0.01</y-m>
-        <z-m>0.415</z-m>
-      </offsets>
-    </model>
-
- <animation>
+<animation>
   <type>rotate</type>
   <object-name>yoke</object-name>
   <object-name>yokewheel</object-name>
@@ -112,7 +70,6 @@
    <z>0.0</z>
   </axis>
  </animation>
-
 
 <!--leftgear -->
  <animation>

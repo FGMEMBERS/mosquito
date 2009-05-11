@@ -103,6 +103,10 @@ don@sol2500.net
 		  <shininess>2</shininess>
 		 </prophub_color>
 		</livery>
+		<logo>
+			<name>FlightGear</name>
+			<texture>../../Generic/Logos/FlightGear.png</texture>
+		</logo>
   </model>
   <view n="0">
    <internal archive="y">true</internal>

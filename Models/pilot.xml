@@ -10,8 +10,7 @@
   <object-name>arm1.R</object-name>
   <object-name>arm2.R</object-name>
   <object-name>hand.R</object-name>
-  <property>sim/model/crew/pilot/visible</property>
-  <factor>90</factor>
+  <offset>90</offset>
   <center>
    <x-m>-0.015</x-m>
    <y-m>0.23</y-m>
@@ -65,8 +64,7 @@
   <type>rotate</type>
   <object-name>arm2.R</object-name>
   <object-name>hand.R</object-name>
-  <property>sim/model/crew/pilot/visible</property>
-  <factor>75</factor>
+  <offset>75</offset>
   <center>
    <x-m>0.007</x-m>
    <y-m>0.533</y-m>
@@ -120,8 +118,7 @@
   <object-name>arm1.L</object-name>
   <object-name>arm2.L</object-name>
   <object-name>hand.L</object-name>
-  <property>sim/model/crew/pilot/visible</property>
-  <factor>90</factor>
+  <offset>90</offset>
   <center>
    <x-m>-0.015</x-m>
    <y-m>-0.23</y-m>
@@ -137,8 +134,7 @@
   <type>rotate</type>
   <object-name>arm2.L</object-name>
   <object-name>hand.L</object-name>
-  <property>sim/model/crew/pilot/visible</property>
-  <factor>85</factor>
+  <offset>85</offset>
   <center>
    <x-m>0.007</x-m>
    <y-m>-0.533</y-m>
@@ -156,8 +152,7 @@
   <object-name>leg1.R</object-name>
   <object-name>leg2.R</object-name>
   <object-name>foot.R</object-name>
-  <property>sim/model/crew/pilot/visible</property>
-  <factor>80</factor>
+  <offset>80</offset>
   <center>
    <x-m>0.012</x-m>
    <y-m>0.199</y-m>
@@ -174,8 +169,7 @@
   <type>rotate</type>
   <object-name>leg2.R</object-name>
   <object-name>foot.R</object-name>
-  <property>sim/model/crew/pilot/visible</property>
-  <factor>40</factor>
+  <offset>40</offset>
   <center>
    <x-m>-0.064</x-m>
    <y-m>0.109</y-m>
@@ -193,8 +187,7 @@
   <object-name>leg1.L</object-name>
   <object-name>leg2.L</object-name>
   <object-name>foot.L</object-name>
-  <property>sim/model/crew/pilot/visible</property>
-  <factor>80</factor>
+  <offset>80</offset>
   <center>
    <x-m>0.012</x-m>
    <y-m>-0.199</y-m>
@@ -211,8 +204,7 @@
   <type>rotate</type>
   <object-name>leg2.L</object-name>
   <object-name>foot.L</object-name>
-  <property>sim/model/crew/pilot/visible</property>
-  <factor>40</factor>
+  <offset>40</offset>
   <center>
    <x-m>-0.064</x-m>
    <y-m>-0.109</y-m>
@@ -229,8 +221,7 @@
  <animation>
   <type>rotate</type>
   <object-name>head</object-name>
-  <property>sim/model/crew/pilot/visible</property>
-  <factor>10</factor>
+  <offset>10</offset>
   <center>
    <x-m>0.055</x-m>
    <y-m>0.0</y-m>

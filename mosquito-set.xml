@@ -284,6 +284,11 @@ Approach at 145 knots with Flaps down. Treshold speed is about 110 knots. </text
 			</menu>
 		</default>
 	</menubar>
+	<multiplay>
+		<generic>
+			<string/>
+		</generic>
+	</multiplay>
  </sim>
 
  <!-- set prop for the manual "bookmark" arrow on the remote compas -->

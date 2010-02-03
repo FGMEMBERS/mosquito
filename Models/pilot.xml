@@ -10,7 +10,7 @@
   <object-name>arm1.R</object-name>
   <object-name>arm2.R</object-name>
   <object-name>hand.R</object-name>
-  <offset>90</offset>
+  <offset-deg>90</offset-deg>
   <center>
    <x-m>-0.015</x-m>
    <y-m>0.23</y-m>
@@ -64,7 +64,7 @@
   <type>rotate</type>
   <object-name>arm2.R</object-name>
   <object-name>hand.R</object-name>
-  <offset>75</offset>
+  <offset-deg>75</offset-deg>
   <center>
    <x-m>0.007</x-m>
    <y-m>0.533</y-m>
@@ -118,7 +118,7 @@
   <object-name>arm1.L</object-name>
   <object-name>arm2.L</object-name>
   <object-name>hand.L</object-name>
-  <offset>90</offset>
+  <offset-deg>90</offset-deg>
   <center>
    <x-m>-0.015</x-m>
    <y-m>-0.23</y-m>
@@ -134,7 +134,7 @@
   <type>rotate</type>
   <object-name>arm2.L</object-name>
   <object-name>hand.L</object-name>
-  <offset>85</offset>
+  <offset-deg>85</offset-deg>
   <center>
    <x-m>0.007</x-m>
    <y-m>-0.533</y-m>
@@ -152,7 +152,7 @@
   <object-name>leg1.R</object-name>
   <object-name>leg2.R</object-name>
   <object-name>foot.R</object-name>
-  <offset>80</offset>
+  <offset-deg>80</offset-deg>
   <center>
    <x-m>0.012</x-m>
    <y-m>0.199</y-m>
@@ -169,7 +169,7 @@
   <type>rotate</type>
   <object-name>leg2.R</object-name>
   <object-name>foot.R</object-name>
-  <offset>40</offset>
+  <offset-deg>40</offset-deg>
   <center>
    <x-m>-0.064</x-m>
    <y-m>0.109</y-m>
@@ -187,7 +187,7 @@
   <object-name>leg1.L</object-name>
   <object-name>leg2.L</object-name>
   <object-name>foot.L</object-name>
-  <offset>80</offset>
+  <offset-deg>80</offset-deg>
   <center>
    <x-m>0.012</x-m>
    <y-m>-0.199</y-m>
@@ -204,7 +204,7 @@
   <type>rotate</type>
   <object-name>leg2.L</object-name>
   <object-name>foot.L</object-name>
-  <offset>40</offset>
+  <offset-deg>40</offset-deg>
   <center>
    <x-m>-0.064</x-m>
    <y-m>-0.109</y-m>
@@ -221,7 +221,7 @@
  <animation>
   <type>rotate</type>
   <object-name>head</object-name>
-  <offset>10</offset>
+  <offset-deg>10</offset-deg>
   <center>
    <x-m>0.055</x-m>
    <y-m>0.0</y-m>

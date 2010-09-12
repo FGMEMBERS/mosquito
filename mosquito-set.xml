@@ -105,6 +105,7 @@ don@sol2500.net
 		 </prophub_color>
 		</livery>
 		<logo>
+			<display type="int">2</display>
 			<name>FlightGear</name>
 			<texture>../../Generic/Logos/FlightGear.png</texture>
 		</logo>
@@ -273,6 +274,17 @@ Approach at 145 knots with Flaps down. Treshold speed is about 110 knots. </text
                 <command>nasal</command>
                 <script>mosquito.logo_dialog.toggle()</script>
               </binding>
+					</item>
+					<item>
+						<label>Toggle Logo display</label>
+        <binding> 
+          <command>property-adjust</command>
+          <property>sim/model/logo/display</property>
+          <step type="int">1</step>
+          <min type="int">0</min>
+          <max type="int">3</max>
+					<wrap>1</wrap>
+        </binding>
 					</item>
       <item>
         <label>Registration</label>

@@ -35,3 +35,9 @@ aircraft.steering.init();
 var logo_dialog = gui.OverlaySelector.new("Select Logo", "Aircraft/Generic/Logos", "sim/model/logo/name", nil, "sim/multiplay/generic/string");
 
 aircraft.livery.init("Aircraft/mosquito/Models/Liveries", "sim/model/livery/name");
+
+var config = gui.Dialog.new("/sim/gui/dialogs/appearance/dialog", "Aircraft/mosquito/Dialogs/config.xml");
+
+var flash_trigger = props.globals.getNode("sim/armament/gun[0]/fire", 0);
+aircraft.light.new("sim/model/mosquito/lighting/flash-l", [0.03, 0.02], flash_trigger);
+aircraft.light.new("sim/model/mosquito/lighting/flash-r", [0.024, 0.03], flash_trigger);

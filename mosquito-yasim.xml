@@ -131,7 +131,7 @@ YASim aerodynamic model for a de Havilland Mosquito
            cruise-alt="3000" cruise-power="1385"
            cruise-speed="305" cruise-rpm="1056"
            gear-ratio="0.42"
-           min-rpm="766" max-rpm="1437" >
+           min-rpm="766" max-rpm="1276" >
   <actionpt x="-0.239" y="2.51" z="-0.02"/>
   <control-input axis="/controls/engines/engine[0]/propeller-pitch" control="ADVANCE" />
   <piston-engine

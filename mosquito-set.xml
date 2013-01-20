@@ -40,7 +40,8 @@ don@sol2500.net
   <path>Aircraft/Generic/Panels/generic-vfr-panel.xml</path>
   <visibility>false</visibility>
   </panel>
-
+   <armament include="Dialogs/armament.xml">
+   </armament>
   <model>
    <path>Aircraft/mosquito/Models/Mosquito-B16.xml</path>
    <crew>

@@ -1,0 +1,399 @@
+<?xml version="1.0"?>
+<!--
+************************************************************************
+Mosquito simulation config. This files ties together all the components
+used by FGFS to represent the Beaufighter. Components include the flight data 
+model, instrument panel, and external 3D model.
+
+March 2007 Detlef Faber 
+
+http://www.sol2500.net/flightgear
+
+don@sol2500.net
+************************************************************************
+-->
+
+<PropertyList>
+
+ <sim>
+
+  <description>de Havilland Mosquito B Mk 16</description>
+  <author>Detlef Faber</author>
+  <status>beta</status>
+  <flight-model>yasim</flight-model>
+  <aero>mosquito-yasim</aero>
+  <fuel-fraction>0.50</fuel-fraction>
+
+  <virtual-cockpit archive="y">true</virtual-cockpit>
+  <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
+
+  <sound>
+   <path>Aircraft/mosquito/mosquito-sound.xml</path>
+  </sound>
+<!--
+  <submodels> 
+    <serviceable type="bool">true</serviceable>
+    <path>Aircraft/beaufighter/Models/submodels.xml</path>
+  </submodels>
+-->
+  <panel>
+  <path>Aircraft/Generic/Panels/generic-vfr-panel.xml</path>
+  <visibility>false</visibility>
+  </panel>
+   <armament include="Dialogs/armament.xml">
+   </armament>
+  <model>
+   <path>Aircraft/mosquito/Models/Mosquito-B16.xml</path>
+   <crew>
+     <pilot>
+       <visible type="double">1</visible>
+     </pilot>
+   </crew>
+		<livery>
+   	 <file/>
+		 <letter_color>
+		  <diffuse>
+		   <red>1.0</red>
+		   <green>1.0</green>
+		   <blue>1.0</blue>
+		  </diffuse>
+		  <ambient>
+		   <red>1.0</red>
+		   <green>1.0</green>
+		   <blue>1.0</blue>
+		  </ambient>
+		  <specular>
+		   <red>1.0</red>
+		   <green>1.0</green>
+		   <blue>1.0</blue>
+		  </specular>
+	  <emission>
+		   <red>0.0</red>
+		   <green>0.0</green>
+		   <blue>0.0</blue>
+		  </emission>
+		  <transparency>
+		   <alpha>1.0</alpha>
+		  </transparency>
+		  <shininess>1</shininess>
+		 </letter_color>
+	
+		 <prophub_color>
+		  <diffuse>
+		   <red>0.4</red>
+		   <green>0.0</green>
+		   <blue>0.0</blue>
+		  </diffuse>
+		  <ambient>
+		   <red>0.4</red>
+		   <green>0.0</green>
+		   <blue>0.0</blue>
+		  </ambient>
+		  <specular>
+		   <red>0.4</red>
+		   <green>0.0</green>
+		   <blue>0.0</blue>
+		  </specular>
+		  <emission>
+		   <red>0.0</red>
+		   <green>0.0</green>
+		   <blue>0.0</blue>
+		  </emission>
+		  <transparency>
+	   <alpha>1.0</alpha>
+		  </transparency>	
+		  <shininess>2</shininess>
+		 </prophub_color>
+		</livery>
+		<logo>
+			<display type="int">2</display>
+			<name>FlightGear</name>
+			<texture>../../Generic/Logos/FlightGear.png</texture>
+		</logo>
+  </model>
+  <view n="0">
+   <internal archive="y">true</internal>
+   <config>
+    <x-offset-m archive="y" type="double">-0.2</x-offset-m>
+    <y-offset-m archive="y" type="double">0.9</y-offset-m>
+    <z-offset-m archive="y" type="double">2.55</z-offset-m>
+    <pitch-offset-deg>-17.5</pitch-offset-deg>
+   </config>
+  </view>
+
+  <view n="1">
+   <config>
+    <target-z-offset-m archive="y" type="double">3.949</target-z-offset-m>
+   </config>
+  </view>
+
+  <view n="2">
+   <config>
+    <target-z-offset-m archive="y" type="double">3.949</target-z-offset-m>
+   </config>
+  </view>
+
+  <view n="3">
+   <config>
+    <target-z-offset-m archive="y" type="double">3.949</target-z-offset-m>
+   </config>
+  </view>
+
+  <view n="4">
+   <config>
+    <target-z-offset-m archive="y" type="double">3.949</target-z-offset-m>
+   </config>
+  </view>
+
+  <view n="5">
+   <config>
+    <target-z-offset-m archive="y" type="double">3.949</target-z-offset-m>
+   </config>
+  </view>
+
+  <view n="6">
+   <config>
+    <target-z-offset-m archive="y" type="double">3.949</target-z-offset-m>
+   </config>
+  </view>
+  <view n="7">
+   <config>
+    <target-z-offset-m archive="y" type="double">3.949</target-z-offset-m>
+   </config>
+  </view>
+
+  <view n="100">
+   <name>interior view</name>
+   <type>lookfrom</type>
+   <internal archive="y">true</internal>
+    <config>
+        <from-model type="bool">true</from-model>
+        <from-model-idx type="int">0</from-model-idx>
+        <ground-level-nearplane-m type="double">0.05f</ground-level-nearplane-m>
+        <default-field-of-view-deg type="double">55.0</default-field-of-view-deg>
+        <default-pitch-deg type="double">0</default-pitch-deg>
+        <default-heading-deg type="double">0</default-heading-deg>
+        <front-direction-deg type="double">0</front-direction-deg>
+     <x-offset-m archive="y" type="double">0.2</x-offset-m>
+     <y-offset-m archive="y" type="double">1.0</y-offset-m>
+     <z-offset-m archive="y" type="double">2.7</z-offset-m>
+     <pitch-offset-deg>3</pitch-offset-deg>
+    </config>
+  </view>
+
+
+ <autopilot>
+   <config>
+     <min-climb-speed-kt type="float">70.0</min-climb-speed-kt>
+     <best-climb-speed-kt type="float">75.0</best-climb-speed-kt>
+     <target-climb-rate-fpm type="float">500.0</target-climb-rate-fpm>
+     <target-descent-rate-fpm type="float">1000.0</target-descent-rate-fpm>
+     <elevator-adj-factor type="float">4000.0</elevator-adj-factor>
+     <integral-contribution type="float">0.01</integral-contribution>
+     <zero-pitch-throttle type="float">0.45</zero-pitch-throttle>
+     <zero-pitch-trim-full-throttle type="float">0.14</zero-pitch-trim-full-throttle>
+   </config>
+ </autopilot>
+
+  <hud>
+   <enable3d>false</enable3d>
+  </hud>
+
+  <help>
+    <key>
+      <name>D</name>
+      <desc>toggle Radiator Shutter</desc>
+    </key>
+    <key>
+      <name>F</name>
+      <desc>toggle cockpit door</desc>
+    </key>
+    <key>
+      <name>Ctrl-L</name>
+      <desc>toggle Tailwheel lock</desc>
+    </key>
+    <text>Mosquito B Mk 16
+---Take off---
+Open Radiator shutters and use Flaps 1 step down on short fields. Lift Tailwheel early and take off at 120 knots. 
+Close Radiator shutters in level flight.
+
+---Landing---
+Approach at 145 knots with Flaps down. Treshold speed is about 110 knots. </text>
+  </help>
+
+<!--
+  <weight n="0">
+      <name>Center</name>
+      <weight-lb>0</weight-lb>
+      <selected>none</selected>
+      <opt><name>none</name><lbs>0</lbs></opt>
+      <opt><name>Torpedo</name><lbs>1700.0</lbs></opt>
+  </weight>
+
+  <weight n="1">
+      <name>Left Wing</name>
+      <weight-lb type="double">0.0</weight-lb>
+      <selected>none</selected>
+      <opt><name>none</name><lbs>0.0</lbs></opt>
+      <opt><name>Rockets</name><lbs>260.0</lbs></opt>
+  </weight>
+
+  <weight n="2">
+      <name>Right Wing</name>
+      <weight-lb type="double">0</weight-lb>
+      <selected>none</selected>
+      <opt><name>none</name><lbs>0.0</lbs></opt>
+      <opt><name>Rockets</name><lbs>260.0</lbs></opt>
+  </weight>
+-->
+
+	<menubar>
+		<default>
+			<menu n="10">
+				<label>Mosquito</label>
+					<enabled type="bool">true</enabled>
+<!--
+					<item>
+						<label>Magically start engine</label>
+						<binding>
+							<command>nasal</command>
+							<script>f4u.magicstart();</script>
+						</binding>
+					</item>
+-->
+					<item>
+						<label>Select Livery</label>
+              <binding>
+                <command>nasal</command>
+                <script>aircraft.livery.dialog.toggle()</script>
+              </binding>
+					</item>
+
+					<item>
+						<label>Select Logo</label>
+              <binding>
+                <command>nasal</command>
+                <script>mosquito.logo_dialog.toggle()</script>
+              </binding>
+					</item>
+					<item>
+						<label>Toggle Logo display</label>
+        <binding> 
+          <command>property-adjust</command>
+          <property>sim/model/logo/display</property>
+          <step type="int">1</step>
+          <min type="int">0</min>
+          <max type="int">3</max>
+					<wrap>1</wrap>
+        </binding>
+					</item>
+      <item>
+        <label>Registration</label>
+        <binding>
+          <command>nasal</command>
+          <script>immat.immat_dialog.toggle()</script>
+        </binding>
+      </item>
+			</menu>
+		</default>
+	</menubar>
+	<multiplay>
+		<generic>
+			<string/>
+		</generic>
+	</multiplay>
+ </sim>
+
+ <!-- set prop for the manual "bookmark" arrow on the remote compas -->
+ <instrumentation>
+    <magnetic-compass>
+       <bookmark-heading-deg type="double">43.0</bookmark-heading-deg>
+    </magnetic-compass>
+ </instrumentation>
+
+ <!-- set up control properties for YASim -->
+ <controls>
+   <armament>
+     <station>
+       <loaded type="bool">true</loaded>
+     </station>
+   </armament>
+   <engines>
+      <engine n="0">
+        <magnetos>3</magnetos>
+        <boost type="double">0.45</boost>
+				<blower type="int">0</blower>
+      </engine>
+      <engine n="1">
+        <magnetos>3</magnetos>
+        <boost type="double">0.45</boost>
+				<blower type="int">0</blower>
+      </engine>
+   </engines>
+   <gear>
+     <tailwheel-lock>true</tailwheel-lock>
+     <rdoor-pos-norm type="float">0.0</rdoor-pos-norm>
+     <cdoor-pos-norm type="float">0.0</cdoor-pos-norm>
+     <fdoor-pos-norm type="float">0.0</fdoor-pos-norm>
+  </gear>
+
+
+ </controls>
+ <engines>
+  <engine>
+   <rpm type="double">700</rpm>
+  </engine>
+  <engine>
+   <rpm type="double">700</rpm>
+  </engine>
+ </engines>  
+ <input>
+   <keyboard>
+      <key n="12"> 
+          <name>Ctrl-L</name>
+          <desc>Toggle Tailwheel Lock.</desc>
+          <binding> 
+            <command>property-toggle</command>
+            <property>controls/gear/tailwheel-lock</property>
+          </binding>
+      </key>
+      <key n="70">
+        <name>F</name>
+        <desc>Toggle Front-Door</desc>
+        <binding n="0">
+          <command>nasal</command>
+          <script>mosquito.toggle_door()</script>
+        </binding>
+      </key>
+      <key n="68">
+        <name>D</name>
+        <desc>Toggle Radiator Shutters</desc>
+        <binding>
+          <command>nasal</command>
+          <script>mosquito.toggle_cowlflaps()</script>
+        </binding>
+      </key>
+     </keyboard>
+  </input>
+<!--
+ <yasim>
+   <weights>
+     <torpedo-lbs>1700.0</torpedo-lbs>
+   </weights>
+ </yasim>
+-->
+
+  <nasal>
+   <mosquito>
+     <file>Aircraft/mosquito/Nasal/mosquito.nas</file>
+   </mosquito>
+   <immat>
+     <file>Aircraft/mosquito/Nasal/immat.nas</file>
+   </immat>
+  </nasal>
+
+</PropertyList>
+
+
+
+

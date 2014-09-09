@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+	<gun n="0">
+		<serviceable type="bool">true</serviceable>
+		<fire type="bool">false</fire>
+	</gun>
+	<gun n="1">
+		<serviceable type="bool">true</serviceable>
+		<fire type="bool">false</fire>
+	</gun>
+	<gun n="2">
+		<serviceable type="bool">true</serviceable>
+		<fire type="bool">false</fire>
+	</gun>
+	<gun n="3">
+		<serviceable type="bool">true</serviceable>
+		<fire type="bool">false</fire>
+	</gun>
+	
+	<cannon n="0">
+		<serviceable type="bool">true</serviceable>
+		<fire type="bool">false</fire>
+	</cannon>
+	<cannon n="1">
+		<serviceable type="bool">true</serviceable>
+		<fire type="bool">false</fire>
+	</cannon>
+	<cannon n="2">
+		<serviceable type="bool">true</serviceable>
+		<fire type="bool">false</fire>
+	</cannon>
+	<cannon n="3">
+		<serviceable type="bool">true</serviceable>
+		<fire type="bool">false</fire>
+	</cannon>
+	
+  <tankL>
+    <type type="int">0</type>
+  </tankL>
+    <tankR>
+    <type type="int">0</type>
+  </tankR>
+	<bombL>
+    <type type="int">0</type>
+	</bombL>
+	<bombR>
+    <type type="int">0</type>
+	</bombR>
+	<bombB1>
+    <type type="int">0</type>
+	</bombB1>
+	<force>
+		<force-lb type="float">1000</force-lb>
+		<force-azimuth-deg type="float">0</force-azimuth-deg>
+		<force-elevation-deg type="float">0</force-elevation-deg>
+	</force>
+	<rpmode type= "int">0</rpmode>
+	<rocket n="0">
+		<serviceable type="bool">true</serviceable>
+		<fire type="bool">false</fire>
+		<drop type="bool">false</drop>
+	</rocket>
+	
+</PropertyList>

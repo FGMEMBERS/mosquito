@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<!-- undercarriage indicator -->
+<PropertyList>
+  <path>gear.ac</path>
+
+
+  <!-- Port locked down -->
+  <animation>
+    <type>select</type>
+    <object-name>LGup</object-name>
+    <condition>
+      <equals>
+        <property>gear/gear[1]/position-norm</property>
+        <value>0</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <!-- Stbd locked down -->
+  <animation>
+    <type>select</type>
+    <object-name>RGup</object-name>
+    <condition>
+      <equals>
+        <property>gear/gear[1]/position-norm</property>
+        <value>0</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <!-- Port locked up -->
+  <animation>
+    <type>select</type>
+    <object-name>LGdown</object-name>
+    <condition>
+      <equals>
+        <property>gear/gear[1]/position-norm</property>
+        <value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <!-- Stbd locked up -->
+  <animation>
+    <type>select</type>
+    <object-name>RGdown</object-name>
+    <condition>
+      <equals>
+        <property>gear/gear[1]/position-norm</property>
+        <value>1</value>
+      </equals>
+    </condition>
+  </animation>
+
+  <!-- lighting -->
+  <animation>
+    <type>material</type>
+    <condition>
+      <greater-than>
+        <property>/controls/lighting/panel-norm</property>
+        <value>0</value>
+      </greater-than>
+      <not>
+        <property>/sim/rendering/rembrandt/enabled</property>
+      </not>
+    </condition>
+    <emission>
+      <factor-prop>/controls/lighting/panel-norm</factor-prop>
+      <red>0.75</red>
+      <green>0.25</green>
+      <blue>0.25</blue>
+    </emission>
+  </animation>
+
+</PropertyList>

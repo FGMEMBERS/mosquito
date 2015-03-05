@@ -734,34 +734,6 @@
     </offsets>
   </model>	
 
-  <animation>
-    <type>select</type>
-    <object-name>prop.L</object-name>
-    <condition>
-      <less-than>
-        <property>engines/engine[0]/rpm</property>
-        <value>1000</value>
-      </less-than>
-    </condition>
-  </animation>
-
-  <animation>
-    <type>spin</type>
-    <object-name>prop.L</object-name>
-    <property>engines/engine[0]/rpm</property>
-    <factor>0.479</factor>
-    <center>
-      <x-m>-0.218</x-m>
-      <y-m>-2.525</y-m>
-      <z-m>0.030</z-m>
-    </center>
-    <axis>
-      <x>1.0</x>
-      <y>0.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
-
   <model>
     <name>pdiskL</name>
     <nopreview/>
@@ -772,33 +744,6 @@
       <z-m>0.030</z-m>
     </offsets>
   </model>	
-  <animation>
-    <type>select</type>
-    <object-name>prop.R</object-name>
-    <condition>
-      <less-than>
-        <property>engines/engine[1]/rpm</property>
-        <value>1000</value>
-      </less-than>
-    </condition>
-  </animation>
-
-  <animation>
-    <type>spin</type>
-    <object-name>prop.R</object-name>
-    <property>engines/engine[1]/rpm</property>
-    <factor>0.479</factor>
-    <center>
-      <x-m>-0.218</x-m>
-      <y-m>2.525</y-m>
-      <z-m>0.030</z-m>
-    </center>
-    <axis>
-      <x>1.0</x>
-      <y>0.0</y>
-      <z>0.0</z>
-    </axis>
-  </animation>
 
   <animation>
     <type>material</type>

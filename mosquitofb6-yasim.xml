@@ -131,7 +131,6 @@ YASim aerodynamic model for a de Havilland Mosquito
                     min="1" max="-1"/>
   </vstab>
 
-
   <propeller   x="-1.414" y="2.51" z="-0.02"
                radius="1.9" 
                mass="1640" moment="94.0"
@@ -152,8 +151,6 @@ YASim aerodynamic model for a de Havilland Mosquito
       <control-input axis="/controls/engines/engine[0]/boost" control="BOOST"/>
       <control-input axis="/controls/engines/engine[0]/propeller-feather" control="PROPFEATHER"/>
     </piston-engine>
-
-
   </propeller>
 
   <propeller   x="-1.414" y="-2.51" z="-0.02"
@@ -176,10 +173,7 @@ YASim aerodynamic model for a de Havilland Mosquito
       <control-input axis="/controls/engines/engine[1]/boost" control="BOOST"/>
       <control-input axis="/controls/engines/engine[1]/propeller-feather" control="PROPFEATHER"/>
     </piston-engine>
-
-
   </propeller>
-
 
 
   <!-- left main -->
@@ -222,8 +216,8 @@ YASim aerodynamic model for a de Havilland Mosquito
 
   <ballast x="-1.5" y="0" z="0.9" mass="5000"/>
   <!--
-      <weight x="2.499" y="0" z="-1.084" mass-prop="sim/weight[0]/weight-lb" size="0.46" />
-      <weight x="2.6" y="-5.8" z="-0.21" mass-prop="sim/weight[1]/weight-lb" size="0.25" />
-      <weight x="2.6" y="5.8" z="-0.21" mass-prop="sim/weight[2]/weight-lb" size="0.25" />
-      -->
-    </airplane>
+  <weight x="2.499" y="0" z="-1.084" mass-prop="sim/weight[0]/weight-lb" size="0.46" />
+  <weight x="2.6" y="-5.8" z="-0.21" mass-prop="sim/weight[1]/weight-lb" size="0.25" />
+  <weight x="2.6" y="5.8" z="-0.21" mass-prop="sim/weight[2]/weight-lb" size="0.25" />
+  -->
+</airplane>

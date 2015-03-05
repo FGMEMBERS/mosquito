@@ -5,7 +5,7 @@
   <animation> 
     <type>rotate</type>
     <object-name>boost-Needle1</object-name>
-    <property>engines/engine[0]/boost-gauge-inhg</property>
+    <property alias="../../boost-gauge-inhg"/>
     <!--    <factor>0.4911</factor>
          <offset>-29.92</offset> -->
     <interpolation> 

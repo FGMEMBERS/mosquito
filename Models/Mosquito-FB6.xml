@@ -39,6 +39,14 @@
     <min-m>0</min-m>
     <max-m>10</max-m>
   </animation>
+  <model>
+    <path>Models/Instruments/gunsight-mk2/gunsight-mk2.xml</path>
+    <offsets> 
+      <x-m>1.6</x-m>
+      <y-m>-0.18</y-m>
+      <z-m>0.77</z-m>
+    </offsets>
+  </model>
   <!--
       <animation>
       <type>rotate</type>

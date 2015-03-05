@@ -22,18 +22,18 @@
     <weight>0.1069</weight>
     <cd>0.193</cd>
     <eda>0.00136354</eda> 
-		<collision>true</collision>
-		<collision-reports>ai/models/model-collision</collision-reports>
-		<impact>true</impact>
-		<impact-reports>ai/models/model-impact</impact-reports>
-		<submodel-path>Aircraft/spitfireIX/Models/subsubmodels.xml</submodel-path>
+    <collision>true</collision>
+    <collision-reports>ai/models/model-collision</collision-reports>
+    <impact>true</impact>
+    <impact-reports>ai/models/model-impact</impact-reports>
+    <submodel-path>Aircraft/spitfireIX/Models/subsubmodels.xml</submodel-path>
   </submodel>
 
 
-<!--right up-->
+  <!--right up-->
   <submodel>
     <name>tracer</name>
-    <model>Aircraft/mosquito/Models/Effects/tracer.xml</model>
+    <model>Models/Effects/tracer.xml</model>
     <trigger>sim/armament/gun[0]/fire</trigger>
     <speed>2840.0</speed>
     <repeat>true</repeat>
@@ -55,7 +55,7 @@
 
   <submodel>
     <name>rp_l1</name>
-    <model>Aircraft/mosquito/Models/rprocket.xml</model>
+    <model>Models/rprocket.xml</model>
     <trigger>sim/armament/rocket[0]/fire</trigger>
     <speed>0</speed>
     <repeat>false</repeat>
@@ -75,6 +75,6 @@
     <force-path>sim/armament/force</force-path>
   </submodel>
 
- 
+  
 
 </PropertyList>

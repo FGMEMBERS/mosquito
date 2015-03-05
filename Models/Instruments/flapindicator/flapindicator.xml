@@ -1,39 +1,39 @@
 <?xml version="1.0"?>
-  <PropertyList> 
-    <path>mosqflap.ac</path>
-    
+<PropertyList> 
+  <path>mosqflap.ac</path>
 
-    
-    <animation> 
-      <type>material</type>
-      <emission> 
-        <factor-prop>controls/lighting/panel-norm</factor-prop>
-        <red>0.75</red>
-        <green>0.25</green>
-        <blue>0.25</blue>
-      </emission>
-    </animation>
 
- <animation>
-  <type>rotate</type>
-  <object-name>needle</object-name>
-  <object-name>needle3</object-name>
-  <property>surface-positions/flap-pos-norm</property>
-  <interpolation>
-   <entry><ind>0</ind><dep>-12.5</dep></entry>
-   <entry><ind>1</ind><dep>192</dep></entry>
 
-  </interpolation>
-  <center>
-   <x-m>0</x-m>
-   <y-m>0</y-m>
-   <z-m>0</z-m>
-  </center>
-  <axis>
-   <x>1</x>
-   <y>0</y>
-   <z>0</z>
-  </axis>
- </animation>
+  <animation> 
+    <type>material</type>
+    <emission> 
+      <factor-prop>controls/lighting/panel-norm</factor-prop>
+      <red>0.75</red>
+      <green>0.25</green>
+      <blue>0.25</blue>
+    </emission>
+  </animation>
 
-  </PropertyList>
+  <animation>
+    <type>rotate</type>
+    <object-name>needle</object-name>
+    <object-name>needle3</object-name>
+    <property>surface-positions/flap-pos-norm</property>
+    <interpolation>
+      <entry><ind>0</ind><dep>-12.5</dep></entry>
+      <entry><ind>1</ind><dep>192</dep></entry>
+
+    </interpolation>
+    <center>
+      <x-m>0</x-m>
+      <y-m>0</y-m>
+      <z-m>0</z-m>
+    </center>
+    <axis>
+      <x>1</x>
+      <y>0</y>
+      <z>0</z>
+    </axis>
+  </animation>
+
+</PropertyList>

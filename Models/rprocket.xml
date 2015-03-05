@@ -1,19 +1,19 @@
 <?xml version="1.0"?>
 
 <PropertyList>
-    <path>rprocket.ac</path>
-    <offsets>
+  <path>rprocket.ac</path>
+  <offsets>
+    <z-m>0</z-m>
+    <pitch-deg>0</pitch-deg>
+  </offsets>
+  
+  <model>
+    <path>Models/Effects/rpengine.xml</path>
+    <offsets> 
+      <x-m>5.0</x-m>
+      <y-m>0</y-m>
       <z-m>0</z-m>
-	<pitch-deg>0</pitch-deg>
-      </offsets>
-      
-    <model>
-      <path>Aircraft/mosquito/Models/Effects/rpengine.xml</path>
-      <offsets> 
-        <x-m>5.0</x-m>
-        <y-m>0</y-m>
-        <z-m>0</z-m>
-      </offsets>
-    </model>
+    </offsets>
+  </model>
 
 </PropertyList>

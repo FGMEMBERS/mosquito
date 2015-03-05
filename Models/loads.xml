@@ -1,27 +1,22 @@
 <?xml version="1.0"?>
 
 <PropertyList>
-	
- 
+  <model> 
+    <path>Models/loads.xml</path>
+    <name>external loads</name>
+  </model>
 
+  <!--
       <model> 
-      <path>Aircraft/mosquito/Models/loads.xml</path>
-	  <name>external loads</name>
-    </model>
-  
-
-<!--
-    <model> 
-      <path>Aircraft/mosquito/Models/yoke.ac</path>
-	  <name>yoke</name>
+      <path>Models/yoke.ac</path>
+      <name>yoke</name>
       <offsets> 
-        <x-m>1.935</x-m>
-        <y-m>-0.23</y-m>
-        <z-m>-0.146</z-m>
-        <pitch-deg>14</pitch-deg>
+      <x-m>1.935</x-m>
+      <y-m>-0.23</y-m>
+      <z-m>-0.146</z-m>
+      <pitch-deg>14</pitch-deg>
       </offsets>
-    </model>
--->
+      </model>
+  -->
 
-  
 </PropertyList>

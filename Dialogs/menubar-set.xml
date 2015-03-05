@@ -2,60 +2,60 @@
 
 <PropertyList>
 
-		<default>
-			<menu n="10">
-				<label>F4U-1</label>
-					<enabled type="bool">true</enabled>
-					<item>
-						<label>Magically start engine</label>
-						<binding>
-							<command>nasal</command>
-							<script>R2800.magicstart();</script>
-						</binding>
-					</item>
-					<item>
-						<label>Select Livery</label>
-              <binding>
-                <command>nasal</command>
-                <script>aircraft.livery.dialog.toggle()</script>
-              </binding>
-					</item>
-					<item>
-						<label>Select Logo</label>
-              <binding>
-                <command>nasal</command>
-                <script>f4u.logo_dialog.toggle()</script>
-              </binding>
-					</item>
-					<item>
-						<label>Toggle Logo display</label>
+  <default>
+    <menu n="10">
+      <label>F4U-1</label>
+      <enabled type="bool">true</enabled>
+      <item>
+	<label>Magically start engine</label>
+	<binding>
+	  <command>nasal</command>
+	  <script>R2800.magicstart();</script>
+	</binding>
+      </item>
+      <item>
+	<label>Select Livery</label>
+        <binding>
+          <command>nasal</command>
+          <script>aircraft.livery.dialog.toggle()</script>
+        </binding>
+      </item>
+      <item>
+	<label>Select Logo</label>
+        <binding>
+          <command>nasal</command>
+          <script>f4u.logo_dialog.toggle()</script>
+        </binding>
+      </item>
+      <item>
+	<label>Toggle Logo display</label>
         <binding> 
           <command>property-adjust</command>
           <property>sim/model/logo/display</property>
           <step type="int">1</step>
           <min type="int">0</min>
           <max type="int">3</max>
-					<wrap>1</wrap>
+	  <wrap>1</wrap>
         </binding>
-					</item>
+      </item>
 
-			</menu>
-		</default>  <weight n="2">
-      <name>right Wing</name>
-      <tank>5</tank>
-      <weight-lb>0</weight-lb>
-      <selected>none</selected>
-      <opt><name>none</name><lbs>0</lbs></opt>
-      <opt><name>Droptank</name>
-      <lbs>50.0</lbs>
-	<gals>86</gals>
-      </opt>
-      <opt><name>500 lbs Bomb</name>
-      <lbs>510.0</lbs>
-      </opt>
-      <opt><name>1000 lbs Bomb</name>
-      <lbs>1020.0</lbs>
-      </opt>
+    </menu>
+    </default>  <weight n="2">
+    <name>right Wing</name>
+    <tank>5</tank>
+    <weight-lb>0</weight-lb>
+    <selected>none</selected>
+    <opt><name>none</name><lbs>0</lbs></opt>
+    <opt><name>Droptank</name>
+    <lbs>50.0</lbs>
+    <gals>86</gals>
+    </opt>
+    <opt><name>500 lbs Bomb</name>
+    <lbs>510.0</lbs>
+    </opt>
+    <opt><name>1000 lbs Bomb</name>
+    <lbs>1020.0</lbs>
+    </opt>
   </weight>
 
 </PropertyList>

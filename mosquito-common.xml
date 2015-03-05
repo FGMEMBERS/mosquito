@@ -1,0 +1,263 @@
+<?xml version="1.0"?>
+
+<!-- Mosquito B mk VXI and Mosquito FB mk VI common parts
+
+Copyright (c) 2015 Ludovic Brenta
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 2 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+-->
+
+<PropertyList>
+  <!-- set prop for the manual "bookmark" arrow on the remote compas -->
+  <instrumentation>
+    <magnetic-compass>
+      <bookmark-heading-deg type="double">43.0</bookmark-heading-deg>
+    </magnetic-compass>
+  </instrumentation>
+
+  <controls>
+    <armament>
+      <station>
+        <loaded type="bool">true</loaded>
+      </station>
+    </armament>
+    <engines>
+      <engine n="0">
+        <magnetos>3</magnetos>
+        <boost type="double">0.45</boost> <!--high: 0.6 -->
+	<blower type="int">0</blower>
+      </engine>
+      <engine n="1">
+        <magnetos>3</magnetos>
+        <boost type="double">0.45</boost>
+	<blower type="int">0</blower>
+      </engine>
+    </engines>
+    <gear>
+      <tailwheel-lock>true</tailwheel-lock>
+      <rdoor-pos-norm type="float">0.0</rdoor-pos-norm>
+      <cdoor-pos-norm type="float">0.0</cdoor-pos-norm>
+      <fdoor-pos-norm type="float">0.0</fdoor-pos-norm>
+    </gear>
+  </controls>
+
+  <input>
+    <keyboard>
+      <key n="12"> 
+        <name>Ctrl+L</name>
+        <desc>Toggle Tailwheel Lock.</desc>
+        <binding> 
+          <command>property-toggle</command>
+          <property>controls/gear/tailwheel-lock</property>
+        </binding>
+      </key>
+      <key n="68"> 
+        <name>D</name>
+        <desc>Toggle Radiator Shutter</desc>
+        <binding>
+          <command>nasal</command>
+          <script>mosquito.toggle_cowlflaps()</script>
+        </binding>
+      </key>
+      <key n="70">
+        <name>F</name>
+        <desc>Toggle Front-Door</desc>
+        <binding n="0">
+          <command>nasal</command>
+          <script>mosquito.toggle_door()</script>
+        </binding>
+      </key>
+      <key n="100"> 
+        <name>d</name>
+        <desc>Toggle Master Arm</desc>
+        <binding> 
+          <command>property-toggle</command>
+          <property>/controls/armament/master-arm</property>
+        </binding>
+      </key>
+      <key n="101">
+        <name>e</name>
+        <desc>Fire machine guns</desc>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/armament/trigger</property>
+        </binding>
+        <mod-up>
+          <binding>
+            <command>property-toggle</command>
+            <property>controls/armament/trigger</property>
+          </binding>
+        </mod-up>
+      </key>
+    </keyboard>
+  </input>
+
+  <nasal>
+    <weapons>
+      <file>Nasal/weapons.nas</file>
+    </weapons>
+    <mosquito>
+      <file>Nasal/mosquito.nas</file>
+    </mosquito>
+    <immat>
+      <file>Nasal/immat.nas</file>
+    </immat>
+    <hitcheck>
+      <file>Nasal/hitcheck.nas</file>
+    </hitcheck>
+  </nasal>
+
+  <sim>
+    <aircraft-version>0.2</aircraft-version>
+    <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
+    <armament include="Dialogs/armament.xml"/>
+    <author>Detlef Faber, Ludovic Brenta</author>
+
+    <autopilot>
+      <config>
+        <min-climb-speed-kt type="float">70.0</min-climb-speed-kt>
+        <best-climb-speed-kt type="float">75.0</best-climb-speed-kt>
+        <target-climb-rate-fpm type="float">500.0</target-climb-rate-fpm>
+        <target-descent-rate-fpm type="float">1000.0</target-descent-rate-fpm>
+        <elevator-adj-factor type="float">4000.0</elevator-adj-factor>
+        <integral-contribution type="float">0.01</integral-contribution>
+        <zero-pitch-throttle type="float">0.45</zero-pitch-throttle>
+        <zero-pitch-trim-full-throttle type="float">0.14</zero-pitch-trim-full-throttle>
+      </config>
+    </autopilot>
+
+    <flight-model>yasim</flight-model>
+
+    <help>
+      <key>
+        <name>D</name>
+        <desc>toggle Radiator Shutter</desc>
+      </key>
+      <key>
+        <name>Shift+D</name>
+        <desc>Toggle Master Arm</desc>
+      </key>
+      <key>
+        <name>E</name>
+        <desc>Fire machine guns</desc>
+      </key>
+      <key>
+        <name>F</name>
+        <desc>toggle cockpit door</desc>
+      </key>
+      <key>
+        <name>Ctrl+L</name>
+        <desc>toggle Tailwheel lock</desc>
+      </key>
+      <text>
+      ---Take off---
+      Open Radiator shutters and use Flaps 1 step down on short fields. Lift Tailwheel early and take off at 120 knots. 
+      Close Radiator shutters in level flight.
+
+      ---Landing---
+      Approach at 145 knots with Flaps down. Treshold speed is about 110 knots. </text>
+    </help>
+
+    <hud>
+      <enable3d>false</enable3d>
+    </hud>
+
+    <menubar>
+      <default>
+	<menu n="10">
+	  <label>Mosquito</label>
+	  <enabled type="bool">true</enabled>
+	  <item>
+	    <label>Select Livery</label>
+            <binding>
+              <command>nasal</command>
+              <script>aircraft.livery.dialog.toggle()</script>
+            </binding>
+	  </item>
+	  <item>
+	    <label>Select Logo</label>
+            <binding>
+              <command>nasal</command>
+              <script>mosquito.logo_dialog.toggle()</script>
+            </binding>
+	  </item>
+	  <item>
+	    <label>Toggle Logo display</label>
+            <binding> 
+              <command>property-adjust</command>
+              <property>sim/model/logo/display</property>
+              <step type="int">1</step>
+              <min type="int">0</min>
+              <max type="int">3</max>
+	      <wrap>1</wrap>
+            </binding>
+	  </item>
+	  <item>
+	    <label>Configuration</label>
+	    <binding>
+	      <command>nasal</command>
+	      <script>mosquito.config.open()</script>
+	    </binding>
+	  </item>
+          <item>
+            <label>Registration</label>
+            <binding>
+              <command>nasal</command>
+              <script>immat.immat_dialog.toggle()</script>
+            </binding>
+          </item>
+	</menu>
+      </default>
+    </menubar>
+
+    <rating>
+      <FDM type="int">1</FDM>
+      <systems type="int">1</systems>
+      <cockpit type="int">2</cockpit>
+      <model type="int">2</model>
+    </rating>
+
+    <sound>
+      <path>mosquito-sound.xml</path>
+    </sound>
+
+    <submodels> 
+      <serviceable type="bool">true</serviceable>
+      <path>Models/submodels.xml</path>
+    </submodels>
+
+    <view n="100">
+      <name>interior view</name>
+      <type>lookfrom</type>
+      <internal archive="y">true</internal>
+      <config>
+        <from-model type="bool">true</from-model>
+        <from-model-idx type="int">0</from-model-idx>
+        <ground-level-nearplane-m type="double">0.05f</ground-level-nearplane-m>
+        <default-field-of-view-deg type="double">55.0</default-field-of-view-deg>
+        <default-pitch-deg type="double">0</default-pitch-deg>
+        <default-heading-deg type="double">0</default-heading-deg>
+        <front-direction-deg type="double">0</front-direction-deg>
+        <x-offset-m archive="y" type="double">0.2</x-offset-m>
+        <y-offset-m archive="y" type="double">1.0</y-offset-m>
+        <z-offset-m archive="y" type="double">2.7</z-offset-m>
+        <pitch-offset-deg>3</pitch-offset-deg>
+      </config>
+    </view>
+
+    <virtual-cockpit archive="y">true</virtual-cockpit>
+  </sim>
+
+</PropertyList>

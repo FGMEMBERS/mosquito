@@ -28,6 +28,9 @@
   <model>
     <name>cockpit</name>
     <path>Models/cockpit.xml</path>
+    <offsets>
+      <x-m>0.083</x-m>
+    </offsets>
   </model>
   <animation>
     <object-name>cockpit</object-name>

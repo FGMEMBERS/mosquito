@@ -76,20 +76,26 @@
   </model>
 
   <model> 
-    <path>Models/Instruments/boost20/boost20-0.xml</path>
+    <path>Models/Instruments/boost20/boost20.xml</path>
     <offsets> 
       <x-m>1.485</x-m>
       <y-m>-0.49</y-m>
       <z-m>0.285</z-m>
     </offsets>
+    <overlay>
+      <boost-gauge-inhg>engines/engine[0]/boost-gauge-inhg</boost-gauge-inhg>
+    </overlay>
   </model>
   <model> 
-    <path>Models/Instruments/boost20/boost20-1.xml</path>
+    <path>Models/Instruments/boost20/boost20.xml</path>
     <offsets> 
       <x-m>1.485</x-m>
       <y-m>-0.41</y-m>
       <z-m>0.285</z-m>
     </offsets>
+    <overlay>
+      <boost-gauge-inhg>engines/engine[1]/boost-gauge-inhg</boost-gauge-inhg>
+    </overlay>
   </model>
   <model> 
     <path>Models/Instruments/oil-temp-gb/oil-temp-0.xml</path>
@@ -187,7 +193,14 @@
       <z-m>0.09</z-m>
     </offsets>
   </model>
-  
+  <model>
+    <path>Models/Instruments/pitch.xml</path>
+    <offsets>
+      <x-m>1.62</x-m>
+      <y-m>-0.50</y-m>
+      <z-m>0.16</z-m>
+    </offsets>
+  </model>
   <model>
     <path>Models/Instruments/ignition-gb/ignition.xml</path>
     <offsets> 

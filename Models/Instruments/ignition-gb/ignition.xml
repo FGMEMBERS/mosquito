@@ -5,7 +5,7 @@
     <type>rotate</type>
     <object-name>left</object-name>
     <object-name>left_on</object-name>
-    <property>controls/engines/engine[0]/magnetos</property>
+    <property alias="../../magnetos"/>
     <factor>180</factor>
     <center>
       <x-m>0.000697</x-m>
@@ -24,7 +24,7 @@
     <object-name>right_on</object-name>
     <condition>
       <greater-than>
-        <property>controls/engines/engine[0]/magnetos</property>
+        <property alias="../../../../magnetos"/>
         <value>1</value>
       </greater-than>
     </condition>
@@ -34,10 +34,9 @@
     <object-name>right</object-name>
     <condition>
       <less-than>
-        <property>controls/engines/engine[0]/magnetos</property>
+        <property alias="../../../../magnetos"/>
         <value>2</value>
       </less-than>
-
     </condition>
   </animation>
 
@@ -50,7 +49,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine/magnetos</property>
+        <property alias="../../../../magnetos"/>
         <step>1.0</step>
         <min>0</min>
         <max>3</max>
@@ -67,7 +66,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine/magnetos</property>
+        <property alias="../../../../magnetos"/>
         <step>-1.0</step>
         <min>0</min>
         <max>3</max>
@@ -83,7 +82,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine/magnetos</property>
+        <property alias="../../../../magnetos"/>
         <step>2.0</step>
         <min>0</min>
         <max>3</max>
@@ -100,7 +99,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine/magnetos</property>
+        <property alias="../../../../magnetos"/>
         <step>-2.0</step>
         <min>0</min>
         <max>3</max>

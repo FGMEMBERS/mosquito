@@ -7,7 +7,7 @@
   <animation>
     <type>rotate</type>
     <object-name>rpm-Needle1</object-name>
-    <property>engines/engine[1]/rpm</property>
+    <property alias="../../rpm"/>
     <interpolation>
       <entry>
         <ind>0</ind>
@@ -32,7 +32,7 @@
   <animation> 
     <type>rotate</type>
     <object-name>rpm-Needle2</object-name>
-    <property>engines/engine[1]/rpm</property>
+    <property alias="../../rpm"/>
     <interpolation>
       <entry>
         <ind>0</ind>

@@ -51,27 +51,30 @@
     </offsets>
   </model>
 
-
-
-
-
   <model>
-    <path>Models/Instruments/rpm5k-gb/rpm5k-gb-0.xml</path>
+    <path>Models/Instruments/rpm.xml</path>
     <offsets> 
       <x-m>1.485</x-m>
       <y-m>-0.47</y-m>
       <z-m>0.37</z-m>
     </offsets>
+    <overlay>
+      <rpm>engines/engine[0]/rpm</rpm>
+    </overlay>
   </model>
 
   <model>
-    <path>Models/Instruments/rpm5k-gb/rpm5k-gb-1.xml</path>
+    <path>Models/Instruments/rpm.xml</path>
     <offsets>
       <x-m>1.485</x-m>
       <y-m>-0.38</y-m>
       <z-m>0.37</z-m>
     </offsets>
+    <overlay>
+      <rpm>engines/engine[1]/rpm</rpm>
+    </overlay>
   </model>
+
   <model> 
     <path>Models/Instruments/boost20/boost20-0.xml</path>
     <offsets> 
@@ -200,20 +203,26 @@
   </model>
   
   <model>
-    <path>Models/Instruments/ignition-gb/ignition1.xml</path>
+    <path>Models/Instruments/ignition-gb/ignition.xml</path>
     <offsets> 
       <x-m>1.46</x-m>
-      <y-m>0.12</y-m>
-      <z-m>0.42</z-m>
+      <y-m>0.10</y-m>
+      <z-m>0.483</z-m>
     </offsets>
+    <overlay>
+      <magnetos>/controls/engines/engine[0]/magnetos</magnetos>
+    </overlay>
   </model>
   <model>
-    <path>Models/Instruments/ignition-gb/ignition2.xml</path>
+    <path>Models/Instruments/ignition-gb/ignition.xml</path>
     <offsets> 
       <x-m>1.46</x-m>
-      <y-m>0.16</y-m>
-      <z-m>0.42</z-m>
+      <y-m>0.14</y-m>
+      <z-m>0.483</z-m>
     </offsets>
+    <overlay>
+      <magnetos>/controls/engines/engine[1]/magnetos</magnetos>
+    </overlay>
   </model>
   <model>
     <path>Models/Instruments/featherbutton/featherbutton1-gb.xml</path>
@@ -235,9 +244,9 @@
   <model>
     <path>Models/Instruments/beamapp/beam_approach.xml</path>
     <offsets> 
-      <x-m>1.46</x-m>
-      <y-m>0.13</y-m>
-      <z-m>0.23</z-m>
+      <x-m>1.50</x-m>
+      <y-m>0.11</y-m>
+      <z-m>0.42</z-m>
     </offsets>
   </model>
 

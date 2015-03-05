@@ -81,17 +81,14 @@
       <x-m>1.485</x-m>
       <y-m>-0.49</y-m>
       <z-m>0.285</z-m>
-
     </offsets>
   </model>
-
   <model> 
     <path>Models/Instruments/boost20/boost20-1.xml</path>
     <offsets> 
       <x-m>1.485</x-m>
       <y-m>-0.41</y-m>
       <z-m>0.285</z-m>
-
     </offsets>
   </model>
   <model> 
@@ -129,7 +126,6 @@
       <z-m>0.21</z-m>
     </offsets>
   </model>
-
 
   <model>
     <path>Models/Instruments/flapindicator/flapindicator.xml</path>
@@ -175,15 +171,6 @@
 
     </offsets>
   </model>
-
-  <model>
-    <path>Models/Instruments/gunsight-mk2/gunsight-mk2.xml</path>
-    <offsets> 
-      <x-m>1.6</x-m>
-      <y-m>-0.18</y-m>
-      <z-m>0.77</z-m>
-    </offsets>
-  </model>
   <model>
     <path>Models/Instruments/ruddertrim/ruddertrim.xml</path>
     <offsets> 
@@ -192,7 +179,6 @@
       <z-m>0.65</z-m>
     </offsets>
   </model>
-  
   <model>
     <path>Models/Instruments/compass-p11/compass-p11.xml</path>
     <offsets> 

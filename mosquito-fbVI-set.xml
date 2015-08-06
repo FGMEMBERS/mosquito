@@ -2,10 +2,10 @@
 <!--
 ************************************************************************
 Mosquito simulation config. This files ties together all the components
-used by FGFS to represent the Beaufighter. Components include the flight data 
+used by FGFS to represent the Beaufighter. Components include the flight data
 model, instrument panel, and external 3D model.
 
-March 2007 Detlef Faber 
+March 2007 Detlef Faber
 
 http://www.sol2500.net/flightgear
 
@@ -18,7 +18,7 @@ don@sol2500.net
     <description>de Havilland Mosquito FB Mk VI</description>
     <flight-model>yasim</flight-model>
     <aero>mosquitofb6-yasim</aero>
-
+    <variant-of>mosquito</variant-of>
     <model>
       <path>Models/Mosquito-FB6.xml</path>
       <crew>
@@ -54,7 +54,7 @@ don@sol2500.net
 	  </transparency>
 	  <shininess>1</shininess>
 	</letter_color>
-	
+
 	<prophub_color>
 	  <diffuse>
 	    <red>0.4</red>
@@ -78,7 +78,7 @@ don@sol2500.net
 	  </emission>
 	  <transparency>
 	    <alpha>1.0</alpha>
-	  </transparency>	
+	  </transparency>
 	  <shininess>2</shininess>
 	</prophub_color>
       </livery>
@@ -101,7 +101,3 @@ don@sol2500.net
 
   </sim>
 </PropertyList>
-
-
-
-

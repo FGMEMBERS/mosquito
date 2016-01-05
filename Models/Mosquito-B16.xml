@@ -658,7 +658,6 @@
   <model> 
     <path>Models/pilot.xml</path>
     <name>pilot</name>
-    <nopreview/>
     <offsets> 
       <x-m>2.36</x-m>
       <y-m>-0.23</y-m>
@@ -680,7 +679,6 @@
   <model> 
     <path>Models/crew.xml</path>
     <name>crew</name>
-    <nopreview/>
     <offsets> 
       <x-m>2.64</x-m>
       <y-m>0.2</y-m>
@@ -725,7 +723,6 @@
 
   <model>
     <name>pdiskL</name>
-    <nopreview/>
     <path>Models/pdiskL.xml</path>
     <offsets>
       <x-m>0.218</x-m>
@@ -736,7 +733,6 @@
 
   <model>
     <name>pdiskL</name>
-    <nopreview/>
     <path>Models/pdiskR.xml</path>
     <offsets>
       <x-m>0.218</x-m>

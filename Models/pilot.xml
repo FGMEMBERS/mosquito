@@ -2,6 +2,50 @@
 <PropertyList> 
   <path>pilot-b.ac</path>
 
+  <animation>
+    <object-name>Armature</object-name>
+    <object-name>leg1.R</object-name>
+    <object-name>leg2.L</object-name>
+    <object-name>leg2.L_0</object-name>
+    <object-name>leg2.L_1</object-name>
+    <object-name>hip</object-name>
+    <object-name>hip_0</object-name>
+    <object-name>hip_1</object-name>
+    <object-name>hand.L</object-name>
+    <object-name>hand.L_0</object-name>
+    <object-name>hand.L_1</object-name>
+    <object-name>arm2.R</object-name>
+    <object-name>arm2.R_0</object-name>
+    <object-name>arm2.R_1</object-name>
+    <object-name>arm1.R</object-name>
+    <object-name>arm1.R_0</object-name>
+    <object-name>arm1.R_1</object-name>
+    <object-name>foot.R</object-name>
+    <object-name>foot.R_0</object-name>
+    <object-name>foot.R_1</object-name>
+    <object-name>foot.L</object-name>
+    <object-name>foot.L_0</object-name>
+    <object-name>foot.L_1</object-name>
+    <object-name>arm1.L</object-name>
+    <object-name>arm1.L_0</object-name>
+    <object-name>arm1.L_1</object-name>
+    <object-name>torso</object-name>
+    <object-name>torso_0</object-name>
+    <object-name>torso_1</object-name>
+    <object-name>head</object-name>
+    <object-name>hand.R</object-name>
+    <object-name>hand.R_0</object-name>
+    <object-name>hand.R_1</object-name>
+    <object-name>arm2.L</object-name>
+    <object-name>arm2.L_0</object-name>
+    <object-name>arm2.L_1</object-name>
+    <object-name>leg1.L</object-name>
+    <object-name>leg2.R</object-name>
+    <object-name>leg2.R_0</object-name>
+    <object-name>leg2.R_1</object-name>
+    <nopreview/>
+  </animation>
+
   <!-- arms -->
   <animation>
     <type>rotate</type>

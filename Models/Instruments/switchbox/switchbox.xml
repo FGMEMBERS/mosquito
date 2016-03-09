@@ -1,0 +1,238 @@
+<?xml version="1.0"?>
+  <PropertyList> 
+    <path>switchbox.ac</path>
+
+  <model>
+    <path>Models/Instruments/fuelgauge/fuelgauge320.xml</path>
+    <offsets> 
+      <x-m>0.086</x-m>
+      <y-m>-0.0</y-m>
+      <z-m>0.0</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Models/Instruments/fuelgauge/fuelgauge59.xml</path>
+    <offsets> 
+      <x-m>0.086</x-m>
+      <y-m>0.10</y-m>
+      <z-m>0.0</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Models/Instruments/fuelgauge/fuelgauge120.xml</path>
+    <offsets> 
+      <x-m>0.086</x-m>
+      <y-m>0.21</y-m>
+      <z-m>0.0</z-m>
+    </offsets>
+  </model>
+    
+
+  <model>
+    <path>Models/Instruments/fire-ext-gb/fire-ext1-gb.xml</path>
+    <offsets> 
+      <x-m>0.042</x-m>
+      <y-m>0.082</y-m>
+      <z-m>0.0847</z-m>
+      <pitch-deg>-90</pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Models/Instruments/fire-ext-gb/fire-ext1-gb.xml</path>
+    <offsets> 
+      <x-m>0.042</x-m>
+      <y-m>0.132</y-m>
+      <z-m>0.0847</z-m>
+      <pitch-deg>-90</pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Models/Instruments/fire-ext-gb/fire-ext1-gb.xml</path>
+    <offsets> 
+      <x-m>0.042</x-m>
+      <y-m>0.182</y-m>
+      <z-m>0.0847</z-m>
+      <pitch-deg>-90</pitch-deg>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Models/Instruments/fire-ext-gb/fire-ext1-gb.xml</path>
+    <offsets> 
+      <x-m>0.042</x-m>
+      <y-m>0.232</y-m>
+      <z-m>0.0847</z-m>
+      <pitch-deg>-90</pitch-deg>
+    </offsets>
+  </model>
+
+ <animation>
+  <type>pick</type>
+  <object-name>coolflapL</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>controls/engines/engine/cowl-flaps-norm</property>
+    <step>1.0</step>
+    <min>0</min>
+    <max>2</max>
+    <wrap>1</wrap>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>coolflapL</object-name>
+  <property>controls/engines/engine/cowl-flaps-norm</property>
+   <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>80</dep>
+      </entry>
+      
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>
+  <center>
+   <x-m>0.03868</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.08404</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>-1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>  
+
+ <animation>
+  <type>pick</type>
+  <object-name>coolflapR</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>controls/engines/engine[1]/cowl-flaps-norm</property>
+    <step>1.0</step>
+    <min>0</min>
+    <max>2</max>
+    <wrap>1</wrap>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>coolflapR</object-name>
+  <property>controls/engines/engine[1]/cowl-flaps-norm</property>
+   <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>80</dep>
+      </entry>
+      
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>
+  <center>
+   <x-m>0.03868</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.08404</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>-1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>  
+
+ <animation>
+  <type>pick</type>
+  <object-name>navlight</object-name>
+  <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+      <command>property-adjust</command>
+      <property>controls/lighting/navlights</property>
+    <step>1.0</step>
+    <min>0</min>
+    <max>2</max>
+    <wrap>1</wrap>
+    </binding>
+  </action>
+</animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>navlight</object-name>
+  <property>controls/lighting/navlights</property>
+   <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>80</dep>
+      </entry>
+      
+      <entry>
+        <ind>1.0</ind>
+        <dep>0.0</dep>
+      </entry>
+    </interpolation>
+  <center>
+   <x-m>0.03868</x-m>
+   <y-m>0.0</y-m>
+   <z-m>0.08404</z-m>
+  </center>
+  <axis>
+   <x>0.0</x>
+   <y>-1.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>  
+    <!--
+ <animation>
+  <type>translate</type>
+  <object-name>button</object-name>
+  <property>/controls/engine/engine[0]/booster</property>
+  <interpolation>
+    <entry>
+      <ind>0.0</ind>
+      <dep>0</dep>
+    </entry>
+    <entry>
+      <ind>1.00</ind>
+      <dep>0.02</dep>
+    </entry>
+  </interpolation>
+  <axis>
+    <x>-1.0</x>
+    <y>0.0</y>
+    <z>-0.0</z>
+  </axis>
+ </animation>
+-->
+    
+    <animation> 
+      <type>material</type>
+      <emission> 
+        <factor-prop>/controls/lighting/panel-norm</factor-prop>
+        <red>0.75</red>
+        <green>0.25</green>
+        <blue>0.25</blue>
+      </emission>
+    </animation>
+
+
+  </PropertyList>

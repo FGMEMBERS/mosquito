@@ -27,12 +27,47 @@ var main_loop = func {
   settimer(main_loop, 0.2)
 }
 
-setlistener("/sim/signals/fdm-initialized",main_loop);
+var switch_fuelS = func {
+  cockR = getprop ("controls/fuel/stbdcock");
+  setprop ("consumables/fuel/tank[1]/selected", 0);
+  setprop ("consumables/fuel/tank[3]/selected", 0);
+  setprop ("consumables/fuel/tank[5]/selected", 0);
 
+  # inner tanks
+  if ( cockR == 1 ) {
+    setprop ("consumables/fuel/tank[1]/selected", 1);
+    setprop ("consumables/fuel/tank[3]/selected", 1);
+  }
+  # outer tanks
+  if ( cockR == 2 ) {
+    setprop ("consumables/fuel/tank[5]/selected", 1);
+  }
+}
+
+var switch_fuelP = func {
+  cockL = getprop ("controls/fuel/prtcock");
+  setprop ("consumables/fuel/tank[0]/selected", 0);
+  setprop ("consumables/fuel/tank[2]/selected", 0);
+  setprop ("consumables/fuel/tank[4]/selected", 0);
+
+  # inner tanks
+  if ( cockL == 1 ) {
+    setprop ("consumables/fuel/tank[0]/selected", 1);
+    setprop ("consumables/fuel/tank[2]/selected", 1);
+  }
+  # outer tanks
+  if ( cockL == 2 ) {
+    setprop ("consumables/fuel/tank[4]/selected", 1);
+  }
+}
+
+setlistener("/sim/signals/fdm-initialized",main_loop);
 
 aircraft.steering.init();
 
-var logo_dialog = gui.OverlaySelector.new("Select Logo", "Aircraft/Generic/Logos", "sim/model/logo/name", nil, "sim/multiplay/generic/string");
+var door = aircraft.door.new ("/controls/doors/door/",2.5);
+
+var bombbaydoor = aircraft.door.new ("/controls/armament/bombbaydoor/",3.5);
 
 aircraft.livery.init("Aircraft/mosquito/Models/Liveries", "sim/model/livery/name");
 

@@ -13,7 +13,7 @@ OBJECT poly
 name "disk"
 data 8
 Mesh.002
-texture "ASI.png"
+texture "smiths_climb.png"
 texrep 1 1
 crease 45.000000
 numvert 12

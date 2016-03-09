@@ -509,19 +509,18 @@
     </axis>
   </animation>
 
-<animation>
+  <animation>
     <type>pick</type>
     <object-name>doorhandle</object-name>
     <visible>true</visible>
     <action>
       <button>0</button>
       <repeatable>false</repeatable>
-
       <binding>
         <command>nasal</command>
-      <script>mosquito.door.toggle();  </script>                                                                                                                                                            
+        <script>mosquito.door.toggle();</script>
       </binding>
     </action>
- </animation>   
+  </animation>   
 
 </PropertyList>

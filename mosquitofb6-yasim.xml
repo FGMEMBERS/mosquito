@@ -154,7 +154,7 @@ YASim aerodynamic model for a de Havilland Mosquito
   </propeller>
 
   <propeller   x="-1.414" y="-2.51" z="-0.02"
-               radius="1.75" 
+               radius="1.9" 
                mass="1640" moment="94.0"
                cruise-alt="6000" cruise-power="1085"
                cruise-speed="235" cruise-rpm="1050"

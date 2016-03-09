@@ -166,7 +166,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <desc>Toggle Front-Door</desc>
         <binding n="0">
           <command>nasal</command>
-          <script>mosquito.toggle_door()</script>
+          <script>mosquito.door.toggle();</script>
         </binding>
       </key>
       <key n="113"> 
@@ -282,19 +282,19 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
     <help>
       <key>
-        <name>D</name>
+        <name>Shift+D</name>
         <desc>toggle Radiator Shutter</desc>
       </key>
       <key>
-        <name>Shift+D</name>
-        <desc>Toggle Master Arm</desc>
+        <name>q/Q</name>
+        <desc>Master Arm on/off</desc>
       </key>
       <key>
         <name>E</name>
         <desc>Fire machine guns</desc>
       </key>
       <key>
-        <name>F</name>
+        <name>Shift+F</name>
         <desc>toggle cockpit door</desc>
       </key>
       <key>

@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+
+<!-- vertical speed indicator -->
+
+<PropertyList>
+
+ <path>fuelgauge59.ac</path>
+
+<animation>
+  <type>rotate</type>
+  <object-name>needle1</object-name>
+  <property>consumables/fuel/tank[0]/level-gal_imp</property>
+  <interpolation>
+   <entry>
+     <ind>0</ind>
+     <dep>-160</dep>
+   </entry>
+   <entry>
+     <ind>59.0</ind>
+     <dep>160</dep>
+   </entry>
+ 
+  </interpolation>
+  <center>
+   <x-m>0</x-m>
+   <y-m>-0.0169</y-m>
+   <z-m>-0.0018</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>needle2</object-name>
+  <property>consumables/fuel/tank[1]/level-gal_imp</property>
+  <interpolation>
+   <entry>
+     <ind>0</ind>
+     <dep>-160</dep>
+   </entry>
+   <entry>
+     <ind>59.0</ind>
+     <dep>160</dep>
+   </entry>
+ 
+  </interpolation>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0.0174</y-m>
+   <z-m>-0.0018</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+ <animation>
+  <type>noshadow</type>
+ </animation>
+ 
+ <!-- *** LoD *** -->
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>5</max-m>
+ </animation>
+
+</PropertyList>

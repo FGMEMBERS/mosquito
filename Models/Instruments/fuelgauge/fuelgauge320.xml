@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+
+<!-- vertical speed indicator -->
+
+<PropertyList>
+
+ <path>fuelgauge320.ac</path>
+
+<animation>
+  <type>rotate</type>
+  <object-name>needle1</object-name>
+  <property>consumables/fuel/tank[2]/level-gal_imp</property>
+  <interpolation>
+   <entry>
+     <ind>0</ind>
+     <dep>-160</dep>
+   </entry>
+   <entry>
+     <ind>320.0</ind>
+     <dep>160</dep>
+   </entry>
+ 
+  </interpolation>
+  <center>
+   <x-m>0</x-m>
+   <y-m>-0.0169</y-m>
+   <z-m>-0.0018</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>needle2</object-name>
+  <property>consumables/fuel/tank[3]/level-gal_imp</property>
+  <interpolation>
+   <entry>
+     <ind>0</ind>
+     <dep>-160</dep>
+   </entry>
+   <entry>
+     <ind>320.0</ind>
+     <dep>160</dep>
+   </entry>
+ 
+  </interpolation>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0.0174</y-m>
+   <z-m>-0.0018</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+ <animation> 
+  <type>material</type>
+  <emission> 
+   <factor-prop>controls/lighting/panel-norm</factor-prop>
+   <red>0.75</red>
+   <green>0.25</green>
+   <blue>0.25</blue>
+  </emission>
+ </animation>
+
+ <animation>
+  <type>noshadow</type>
+ </animation>
+ 
+ <!-- *** LoD *** -->
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>5</max-m>
+ </animation>
+
+</PropertyList>

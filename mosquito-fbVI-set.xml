@@ -2,10 +2,10 @@
 <!--
 ************************************************************************
 Mosquito simulation config. This files ties together all the components
-used by FGFS to represent the Beaufighter. Components include the flight data
+used by FGFS to represent the Beaufighter. Components include the flight data 
 model, instrument panel, and external 3D model.
 
-March 2007 Detlef Faber
+March 2007 Detlef Faber 
 
 http://www.sol2500.net/flightgear
 
@@ -18,7 +18,7 @@ don@sol2500.net
     <description>de Havilland Mosquito FB Mk VI</description>
     <flight-model>yasim</flight-model>
     <aero>mosquitofb6-yasim</aero>
-    <variant-of>mosquito</variant-of>
+
     <model>
       <path>Models/Mosquito-FB6.xml</path>
       <crew>
@@ -28,59 +28,8 @@ don@sol2500.net
       </crew>
       <livery>
    	<file/>
-	<letter_color>
-	  <diffuse>
-	    <red>1.0</red>
-	    <green>1.0</green>
-	    <blue>1.0</blue>
-	  </diffuse>
-	  <ambient>
-	    <red>1.0</red>
-	    <green>1.0</green>
-	    <blue>1.0</blue>
-	  </ambient>
-	  <specular>
-	    <red>1.0</red>
-	    <green>1.0</green>
-	    <blue>1.0</blue>
-	  </specular>
-	  <emission>
-	    <red>0.0</red>
-	    <green>0.0</green>
-	    <blue>0.0</blue>
-	  </emission>
-	  <transparency>
-	    <alpha>1.0</alpha>
-	  </transparency>
-	  <shininess>1</shininess>
-	</letter_color>
-
-	<prophub_color>
-	  <diffuse>
-	    <red>0.4</red>
-	    <green>0.0</green>
-	    <blue>0.0</blue>
-	  </diffuse>
-	  <ambient>
-	    <red>0.4</red>
-	    <green>0.0</green>
-	    <blue>0.0</blue>
-	  </ambient>
-	  <specular>
-	    <red>0.4</red>
-	    <green>0.0</green>
-	    <blue>0.0</blue>
-	  </specular>
-	  <emission>
-	    <red>0.0</red>
-	    <green>0.0</green>
-	    <blue>0.0</blue>
-	  </emission>
-	  <transparency>
-	    <alpha>1.0</alpha>
-	  </transparency>
-	  <shininess>2</shininess>
-	</prophub_color>
+        <amb_correction type="string">0.2</amb_correction>
+        <refl_correction type="string">-0.8</refl_correction>
       </livery>
       <logo>
 	<display type="int">2</display>
@@ -93,11 +42,15 @@ don@sol2500.net
       <internal archive="y">true</internal>
       <config>
         <x-offset-m archive="y" type="double">-0.18</x-offset-m>
-        <y-offset-m archive="y" type="double">0.83</y-offset-m>
-        <z-offset-m archive="y" type="double">2.2</z-offset-m>
+        <y-offset-m archive="y" type="double">0.93</y-offset-m>
+        <z-offset-m archive="y" type="double">2.35</z-offset-m>
         <pitch-offset-deg>-17.5</pitch-offset-deg>
       </config>
     </view>
 
   </sim>
 </PropertyList>
+
+
+
+

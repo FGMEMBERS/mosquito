@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+  <sim>
+    <model>
+      <livery>
+        <name type="string">RAF Coastal Command</name>
+
+        <texture>Liveries/mosquito-2.png</texture>
+        <amb_correction type="string">0.1</amb_correction>
+        <refl_correction type="string">-0.7</refl_correction>
+      </livery>
+    </model>
+  </sim>
+</PropertyList>

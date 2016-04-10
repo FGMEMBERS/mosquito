@@ -102,6 +102,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <gear-down type="bool">false</gear-down>
       </gear>
     </gear>
+    <startup>
+      <config type="bool" userarchive="y">0</config>
+      <idling type="bool" userarchive="y">1</idling>
+    </startup>
   </controls>
 
  <engines>
@@ -209,6 +213,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   </input>
 
   <nasal>
+    <startup>
+      <file>Nasal/startup.nas</file>
+    </startup>
     <weapons>
       <file>Nasal/weapons.nas</file>
     </weapons>
@@ -290,7 +297,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <desc>Master Arm on/off</desc>
       </key>
       <key>
-        <name>E</name>
+        <name>e</name>
         <desc>Fire machine guns</desc>
       </key>
       <key>

@@ -214,7 +214,8 @@ var cool_down = func {
 
 
 var magicstart = func {
-    setprop("/consumables/fuel/tank[0]/selected",1);
+    setprop("/consumables/fuel/tank[1]/selected",1);
+    setprop("/consumables/fuel/tank[3]/selected",1);
     setprop("/controls/engines/engine["~ en ~"]/magnetos",3);
     setprop("/controls/engines/engine["~ en ~"]/coolflap-auto",1);
     setprop("/controls/engines/engine["~ en ~"]/radlever",1);

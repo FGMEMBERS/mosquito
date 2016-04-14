@@ -102,6 +102,42 @@
       </binding>
     </checkbox>
 
+        <text>
+            <row>2</row>
+            <col>0</col>
+            <label>Start Idling</label>
+        </text>
+
+        <checkbox>
+	    <name>idling</name>
+            <halign>left</halign>
+            <row>2</row>
+            <col>1</col>	
+            <property>/controls/startup/idling</property>
+	    <binding>
+		<command>dialog-apply</command>
+		<object-name>idling</object-name>
+	    </binding>
+        </checkbox>
+
+        <text>
+            <row>3</row>
+            <col>0</col>
+            <label>Configure Startup</label>
+        </text>
+
+        <checkbox>
+	    <name>confstart</name>
+            <halign>left</halign>
+            <row>3</row>
+            <col>1</col>	
+            <property>/controls/startup/config</property>
+	    <binding>
+		<command>dialog-apply</command>
+		<object-name>confstart</object-name>
+	    </binding>
+        </checkbox>
+
   </group>
   <hrule/>
   <group>

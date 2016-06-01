@@ -167,7 +167,7 @@ var check_engine = func {
   failure.kill_engine();
 	}
 	if ( gload.getValue() < -0.3 ) {
-  	print ("cutout!");
+  	print ("Engine cutout!");
   	if (mixture0.getValue() == 0 ){
     	mixture0.setValue( mixture.getValue() );
     	mixture.setValue(0);
@@ -230,12 +230,12 @@ var magicstart = func {
 
 var open_cowlflaps = func {
 	if (cowlflap.getValue() < 1.0){
-  interpolate("controls/engines/engine["~ en ~"]/cowl-flaps-norm",cowlflap.getValue() + 0.1,1);
+  setprop("controls/engines/engine["~ en ~"]/cowl-flaps-norm",1 );
 	}
 }
 var close_cowlflaps = func {
 	if (cowlflap.getValue() > 0.0){
-  interpolate("controls/engines/engine["~ en ~"]/cowl-flaps-norm",cowlflap.getValue() -0.1,1);
+  setprop("controls/engines/engine["~ en ~"]/cowl-flaps-norm",0 );
 	}
 }
 

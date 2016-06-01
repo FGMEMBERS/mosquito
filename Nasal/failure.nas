@@ -46,43 +46,49 @@ var check_airframe = func {
 	var ow = gw - emptyw;
 
 # check flap deployment and failure due to overspeed
-	if ( flappos.getValue() > 0 ) {
-
-				if (as > flapoverspeed) {
-						print ("flaps overspeed!");
-						var load = as - flapoverspeed;
-						print (load*flappos.getValue());
-						if (load * flappos.getValue() > 20 ) {
-								if (flappos.getValue() >= 0.5 ) {
-										flappos.setValue(0);
-										flappos.setAttribute("writable",0);
-										setprop ("/sim/failure-manager/flaps", "1");
-								}
-						flappos.setValue(0);
-						}
-				}
-		}
+  if ( flappos.getValue() > 0 ) {
+    if (as > flapoverspeed) {
+      print ("flaps overspeed! as=", as, " flapoverspeed=", flapoverspeed);
+      var load = as - flapoverspeed;
+   #   print (load*flappos.getValue());
+      if (load * flappos.getValue() > 20 ) {
+        if (flappos.getValue() >= 0.5 ) {
+          flappos.setValue(0);
+          flappos.setAttribute("writable",0);
+          setprop ("/sim/failure-manager/flaps", "1");
+          print ("Flaps failed");
+        }
+	flappos.setValue(0);
+      }
+    }
+  }
 
 # check for excessive g-load or overspeed
-		#print(gl, breakload - 0.0004 * ow );
-	if (gl > (breakload - 0.0003 * ow) or (as > breakspeed)) {
-		print ("break");
-		if (slip < 0) {
-			setprop ("sim/failure-manager/left-wing-torn", "1");
-			fail_r.setValue(1);
-		} else {
-			setprop ("sim/failure-manager/right-wing-torn", "1");
-			fail_r.setValue(-1);
-		}
-	}
-	if (gl > (bendload - 0.0004 * ow)) {
-		print ("bend");
-		if (slip < 0) {
-			gear0.setAttribute("writable",0);
-		} else {
-			gear1.setAttribute("writable",0);
-		}
-	}		
+  # print(gl, breakload - 0.0004 * ow );
+  if (gl > (breakload - 0.0003 * ow)) {
+    print ("gl=", gl, " > (breakload - 0.0003 * ow)=", breakload - 0.0003 * ow);
+  }
+  if (as > breakspeed) {
+    print ("as=", as, " > breakspeed=", breakspeed);
+  }
+  if (gl > (breakload - 0.0003 * ow) or (as > breakspeed)) {
+    print ("break");
+    if (slip < 0) {
+      setprop ("sim/failure-manager/left-wing-torn", "1");
+      fail_r.setValue(1);
+    } else {
+      setprop ("sim/failure-manager/right-wing-torn", "1");
+      fail_r.setValue(-1);
+    }
+  }
+  if (gl > (bendload - 0.0004 * ow)) {
+    print ("bend");
+    if (slip < 0) {
+      gear0.setAttribute("writable",0);
+    } else {
+      gear1.setAttribute("writable",0);
+    }
+  }		
 }
 
 

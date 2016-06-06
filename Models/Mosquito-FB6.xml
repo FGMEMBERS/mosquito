@@ -9,6 +9,14 @@
       var update = aircraft.overlay_update.new();
       update.add("Models/AI-Liveries", "sim/model/livery/file");
 
+  var self = cmdarg();
+  var refl_c = self.getNode("sim/model/livery/refl_correction");
+  refl_c.setValue(-0.8);
+  var amb_c = self.getNode("sim/model/livery/amb_correction");
+  amb_c.setValue(0.2);
+  var MPmodel = self.getNode("sim/model/MPmodel",1);
+
+
     </load>
     <unload>
       update.stop();
@@ -88,7 +96,7 @@
 
   <model>
     <name>cockpit</name>
-    <path>Models/FBcockpit.xml</path>
+    <path>Aircraft/mosquito/Models/FBcockpit.xml</path>
   </model>
   <animation>
     <object-name>cockpit</object-name>

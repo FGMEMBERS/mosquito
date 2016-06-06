@@ -20,7 +20,7 @@ don@sol2500.net
     <aero>mosquitofb6-yasim</aero>
 
     <model>
-      <path>Models/Mosquito-FB6.xml</path>
+      <path>Aircraft/mosquito/Models/Mosquito-FB6.xml</path>
       <crew>
         <pilot>
           <visible type="double">1</visible>

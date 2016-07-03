@@ -8,14 +8,14 @@ YASim aerodynamic model for a de Havilland Mosquito
 -->
 
 <!-- Weight of everything but fuel   -->
-<airplane mass="15634">
+<airplane mass="15634" version="YASIM_VERSION_CURRENT">
 
   <!-- Approach configuration -->
-  <approach speed="105" aoa="10">
-    <control-setting axis="/controls/engines/engine[0]/throttle" value="0.3"/>
+  <approach speed="100" aoa="11">
+    <control-setting axis="/controls/engines/engine[0]/throttle-c" value="0.5"/>
     <control-setting axis="/controls/engines/engine[0]/mixture" value="0.65"/>
     <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="0.5"/>
-    <control-setting axis="/controls/engines/engine[1]/throttle" value="0.3"/>
+    <control-setting axis="/controls/engines/engine[1]/throttle-c" value="0.5"/>
     <control-setting axis="/controls/engines/engine[1]/mixture" value="0.65"/>
     <control-setting axis="/controls/engines/engine[1]/propeller-pitch" value="0.5"/>
     <control-setting axis="/controls/flight/flaps" value="1.0"/>
@@ -23,12 +23,12 @@ YASim aerodynamic model for a de Havilland Mosquito
   </approach>
 
   <!-- Cruise configuration -->
-  <cruise speed="354" alt="26000">
-    <control-setting axis="/controls/engines/engine[0]/throttle" value="1.0"/>
+  <cruise speed="279" alt="12000">
+    <control-setting axis="/controls/engines/engine[0]/throttle-c" value="1.0"/>
     <control-setting axis="/controls/engines/engine[0]/mixture" value="1.00"/>
     <control-setting axis="/controls/engines/engine[0]/propeller-pitch" value="1.0"/>
     <control-setting axis="/controls/engines/engine[0]/boost" value="1.0"/>
-    <control-setting axis="/controls/engines/engine[1]/throttle" value="1.0"/>
+    <control-setting axis="/controls/engines/engine[1]/throttle-c" value="1.0"/>
     <control-setting axis="/controls/engines/engine[1]/mixture" value="1.00"/>
     <control-setting axis="/controls/engines/engine[1]/propeller-pitch" value="1.0"/>
     <control-setting axis="/controls/engines/engine[1]/boost" value="1.0"/>
@@ -39,21 +39,28 @@ YASim aerodynamic model for a de Havilland Mosquito
   <!-- pilot's eyepoint -->
   <cockpit x="-4.495" y="0" z="0.689"/>
 
-  <fuselage ax="-0.0" ay="0.0" az="0.24" bx="-11.3" by="0.0" bz="0.5"
-            width="1.7" taper="0.4" midpoint="0.32"/>
+  <fuselage ax="-0.2" ay="0.0" az="-0.2" bx="-4.0" by="0.0" bz="0.1"
+            width="1.7" taper="0.2" midpoint="1.0"/>
+
+  <fuselage ax="-1.2" ay="0.0" az="0.5" bx="-4.0" by="0.0" bz="0.9"
+            width="1.0" taper="0.2" midpoint="0.3"/>
+  
+
+  <fuselage ax="-4.0" ay="0.0" az="0.1" bx="-11.3" by="0.0" bz="0.5"
+            width="1.7" taper="0.4" midpoint="0.0"/>
 
 
-  <fuselage ax="-0.1" ay="-2.87" az="-0.124" bx="-4.938" by="-2.938" bz="-0.039"
-            width="0.7" taper="0.6" midpoint="0.2"/>
+  <fuselage ax="-0.4" ay="-2.4" az="-0.124" bx="-4.938" by="-2.4" bz="-0.039"
+            width="1.0" taper="0.6" midpoint="0.2"/>
 
-  <fuselage ax="-0.1" ay="2.87" az="-0.124" bx="-4.938" by="2.938" bz="-0.039"
-            width="0.7" taper="0.6" midpoint="0.2"/>
+  <fuselage ax="-0.4" ay="2.4" az="-0.124" bx="-4.938" by="2.4" bz="-0.039"
+            width="1.0" taper="0.6" midpoint="0.2"/>
 
 
   <!--inner wing-->
 
   <vstab x="-3.969" y="0.677" z="-0.022" taper="0.89" incidence="0.0"
-         length="1.268" chord="4.096" sweep="-3" dihedral="4" camber="0.1">
+         length="1.4" chord="4.096" sweep="-3" dihedral="4" camber="0.03">
     <stall aoa="14" width="16" peak="1.5"/>
     <flap0 start="0.0" end="1.0" lift="1.7" drag="1.5"/>
     <spoiler start="0.05" end="0.95" lift="2.1" drag="1.6"/>
@@ -61,27 +68,26 @@ YASim aerodynamic model for a de Havilland Mosquito
     <control-input axis="/controls/engines/engine[0]/cowl-flaps-norm" control="SPOILER"/>
     <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
     <control-output control="SPOILER" prop="/surface-positions/cooler-l-pos-norm"/>
-    <control-speed control="FLAP0" transition-time="5"/>
-    <control-speed control="SPOILER" transition-time="2"/>
+    <control-speed control="FLAP0" transition-time="10"/>
+    <control-speed control="SPOILER" transition-time="5"/>
   </vstab>
 
-  <vstab x="-3.969" y="-0.677" z="-0.022" taper="0.89" incidence="0.0"
-         length="1.268" chord="4.096" sweep="-3" dihedral="4" camber="0.1">
+  <vstab x="-3.969" y="-0.677" z="0.12" taper="0.89" incidence="0.0"
+         length="-1.4" chord="4.096" sweep="-3" dihedral="-4" camber="0.03">
     <stall aoa="14" width="16" peak="1.5"/>
     <flap0 start="0.0" end="1.0" lift="2.1" drag="1.5"/>
     <spoiler start="0.05" end="0.95" lift="1.8" drag="1.6"/>
     <control-input axis="/controls/flight/flaps" control="FLAP0"/>
-    <control-input axis="/controls/engines/engine[0]/cowl-flaps-norm" control="SPOILER"/>
+    <control-input axis="/controls/engines/engine[1]/cowl-flaps-norm" control="SPOILER"/>
     <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
     <control-output control="SPOILER" prop="/surface-positions/cooler-r-pos-norm"/>
     <control-speed control="FLAP0" transition-time="5"/>
     <control-speed control="SPOILER" transition-time="2"/>
   </vstab>
 
-
   <!--wingtip-->
-  <mstab x="3.23" y="7.57" z="0.382" taper="0.2" incidence="0"
-         length="0.56" chord="1.222" sweep="0" dihedral="3" camber="0.1">
+  <mstab x="-3.23" y="7.57" z="0.4" taper="0.2" incidence="0"
+         length="0.56" chord="1.222" sweep="0" dihedral="3" camber="0.02">
     <stall aoa="15" width="22" peak="1.5"/>
   </mstab>
   <!--
@@ -92,30 +98,31 @@ YASim aerodynamic model for a de Havilland Mosquito
   -->
 
   <!--outer wing-->
-  <wing x="-3.838" y="3.067" z="0.234" taper="0.428" incidence="1.0"
-        length="4.464" chord="2.855" sweep="-4.0" dihedral="3" camber="0.1">
-    <stall aoa="13" width="20" peak="1.5"/>
+  <wing x="-3.838" y="3.067" z="0.234" taper="0.428" incidence="1.5"
+        length="4.55" chord="2.855" sweep="-7.5" dihedral="3" camber="0.03">
+    <stall aoa="14" width="16" peak="1.5"/>
     <flap0 start="0.0" end="0.33" lift="1.4" drag="1.6"/>
     <flap1 start="0.33" end="1.0" lift="1.3" drag="1.2"/>
     <control-input axis="/controls/flight/flaps" control="FLAP0"/>
     <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
-    <control-speed control="FLAP0" transition-time="5"/>
+    <control-speed control="FLAP0" transition-time="10"/>
     <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
     <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
   </wing>
 
   <hstab x="-11.122" y="0.277" z="0.468" taper="0.6" dihedral="0"
          length="2.9" chord="1.753" sweep="2" incidence="0">
-    <stall aoa="15" width="28" peak="1.5"/>
-    <flap0 start="0.0" end="1.0" lift="1.7" drag="1.4"/>
+    <stall aoa="15" width="18" peak="1.5"/>
+    <flap0 start="0.0" end="1.0" lift="1.85" drag="1.6"/>
     <control-input axis="/controls/flight/elevator" control="FLAP0"/>
     <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
     <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
+    <control-speed control="FLAP0" transition-time="1"/>
   </hstab>
 
   <!-- rudder has to be able to counteract aileron drag -->
-  <vstab x="-10.484" y="0" z="-0.774" taper="0.6" effectiveness="3.5"
-         length="2.106" chord="1.71" sweep="2"  incidence="-1.0">
+  <vstab x="-10.484" y="0" z="0.8" taper="0.4" effectiveness="2.0"
+         length="2.106" chord="1.71" sweep="5"  incidence="-1.0">
     <stall aoa="15" width="14" peak="1.5"/>
     <flap0 start="0" end="1" lift="1.6" drag="1.4"/>
     <control-input axis="/controls/flight/rudder" square="true" control="FLAP0" invert="true"/>
@@ -127,60 +134,62 @@ YASim aerodynamic model for a de Havilland Mosquito
   <propeller   x="-1.414" y="2.51" z="-0.02"
                radius="1.9" 
                mass="1640" moment="94.0"
-               cruise-alt="3000" cruise-power="1385"
-               cruise-speed="305" cruise-rpm="1056"
+               cruise-alt="6000" cruise-power="1085"
+               cruise-speed="235" cruise-rpm="1050"
                gear-ratio="0.42"
-               min-rpm="766" max-rpm="1276" >
-    <actionpt x="-0.239" y="2.51" z="-0.02"/>
+               min-rpm="766" max-rpm="1260" >
+    <actionpt x="-0.4" y="2.51" z="-0.02"/>
     <control-input axis="/controls/engines/engine[0]/propeller-pitch" control="ADVANCE" />
     <piston-engine
         eng-power="1565" eng-rpm="3000"
-        turbo-mul="5.5" wastegate-mp="61"
+        turbo-mul="2.5" wastegate-mp="61"
         >
-      <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
+      <control-input axis="/controls/engines/engine[0]/throttle-c" control="THROTTLE"/>
       <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
       <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
       <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
       <control-input axis="/controls/engines/engine[0]/boost" control="BOOST"/>
+      <control-input axis="/controls/engines/engine[0]/propeller-feather" control="PROPFEATHER"/>
     </piston-engine>
   </propeller>
 
   <propeller   x="-1.414" y="-2.51" z="-0.02"
                radius="1.9" 
                mass="1640" moment="94.0"
-               cruise-alt="3000" cruise-power="1385"
-               cruise-speed="305" cruise-rpm="1056"
+               cruise-alt="6000" cruise-power="1085"
+               cruise-speed="235" cruise-rpm="1050"
                gear-ratio="0.42"
-               min-rpm="766" max-rpm="1276" >
-    <actionpt x="-0.239" y="-2.51" z="-0.02"/>
+               min-rpm="766" max-rpm="1260" >
+    <actionpt x="-0.4" y="-2.51" z="-0.02"/>
     <control-input axis="/controls/engines/engine[1]/propeller-pitch" control="ADVANCE" />
     <piston-engine
         eng-power="1565" eng-rpm="3000"
-        turbo-mul="5.5" wastegate-mp="61"
+        turbo-mul="2.5" wastegate-mp="61"
         >
-      <control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE"/>
+      <control-input axis="/controls/engines/engine[1]/throttle-c" control="THROTTLE"/>
       <control-input axis="/controls/engines/engine[1]/starter" control="STARTER"/>
       <control-input axis="/controls/engines/engine[1]/magnetos" control="MAGNETOS"/>
       <control-input axis="/controls/engines/engine[1]/mixture" control="MIXTURE"/>
       <control-input axis="/controls/engines/engine[1]/boost" control="BOOST"/>
+      <control-input axis="/controls/engines/engine[1]/propeller-feather" control="PROPFEATHER"/>
     </piston-engine>
   </propeller>
 
 
   <!-- left main -->
-  <gear x="-2.357" y="2.9" z="-2.45" compression="0.3" spring="0.7" damp="3.0" dfric="0.6" sfric ="0.40">
+  <gear x="-2.357" y="2.9" z="-2.45" compression="0.5" spring="0.7" damp="3.0" dfric="0.7" sfric ="0.40">
     <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
     <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
-    <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+    <control-input axis="/controls/gear/gear[0]/gear-down" control="EXTEND"/>
     <control-speed control="EXTEND" transition-time="6"/>
     <control-output control="EXTEND" prop="/gear/gear[0]/position-norm"/>
   </gear>
 
   <!-- right main -->
-  <gear x="-2.357" y="-2.9" z="-2.45" compression="0.3" spring="0.7" damp="3.0" dfric="0.6" sfric ="0.40">
+  <gear x="-2.357" y="-2.9" z="-2.45" compression="0.5" spring="0.7" damp="3.0" dfric="0.7" sfric ="0.40">
     <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
     <control-input axis="/controls/gear/brake-parking" control="BRAKE" split="true"/>
-    <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
+    <control-input axis="/controls/gear/gear[0]/gear-down" control="EXTEND"/>
     <control-speed control="EXTEND" transition-time="6"/>
     <control-output control="EXTEND" prop="/gear/gear[1]/position-norm"/>
   </gear>
@@ -196,23 +205,20 @@ YASim aerodynamic model for a de Havilland Mosquito
     <control-output control="EXTEND" prop="/gear/gear[2]/position-norm"/>
   </gear>
 
-  <tank x="-4.033" y="0.34" z="-0.19" capacity="545"/> 
-  <tank x="-3.97" y="1.35" z="-0.08" capacity="273"/> 
-  <tank x="-3.411" y="3.45" z="0.22" capacity="192"/>
+  <tank x="-4.033" y="0.34" z="-0.19" capacity="300"/> 
+  <tank x="-4.033" y="-0.34" z="-0.19" capacity="300"/> 
 
-  <tank x="-4.033" y="-0.34" z="-0.19" capacity="545"/> 
-  <tank x="-3.97" y="-1.35" z="-0.08" capacity="273"/> 
-  <tank x="-3.411" y="-3.45" z="0.22" capacity="192"/>
+  <tank x="-3.97" y="-1.35" z="0.12" capacity="1714"/> 
+  <tank x="-3.97" y="1.35" z="0.12" capacity="1714"/> 
 
-  <!-- pilot -->
-  <ballast x="-2.4" y="0.3" z="0.4" mass="180"/>
+  <tank x="-3.411" y="3.45" z="0.22" capacity="696"/>
+  <tank x="-3.411" y="-3.45" z="0.22" capacity="696"/>
 
-  <ballast x="-2.6" y="-0.3" z="0.4" mass="180"/>
 
-  <ballast x="-7.5" y="0" z="0.9" mass="-1600"/>
-
+  <ballast x="-1.5" y="0" z="-0.9" mass="5000"/>
+  <!--
   <weight x="2.499" y="0" z="-1.084" mass-prop="sim/weight[0]/weight-lb" size="0.46" />
   <weight x="2.6" y="-5.8" z="-0.21" mass-prop="sim/weight[1]/weight-lb" size="0.25" />
   <weight x="2.6" y="5.8" z="-0.21" mass-prop="sim/weight[2]/weight-lb" size="0.25" />
-
+  -->
 </airplane>

@@ -1,7 +1,5 @@
 <?xml version="1.0"?>
-
 <!-- de Havilland Mosquito by Detlef Faber -->
-
 <PropertyList>
 
   <path>mosquito.ac</path>
@@ -17,17 +15,16 @@
     </unload>
   </nasal>
 
-  <animation>
-    <type>shader</type>
-    <shader>chrome</shader>
-    <texture>Models/glass_shader.png</texture>
+  <effect>
+    <inherits-from>Aircraft/mosquito/Models/Effects/glass</inherits-from>
     <object-name>canopyglass</object-name>
     <object-name>topdoorglass</object-name>
     <object-name>noseglass</object-name>
-  </animation>
+  </effect>
+
   <model>
     <name>cockpit</name>
-    <path>Models/cockpit.xml</path>
+    <path>Aircraft/mosquito/Models/cockpit.xml</path>
     <offsets>
       <x-m>0.083</x-m>
     </offsets>
@@ -36,7 +33,7 @@
     <object-name>cockpit</object-name>
     <type>range</type>
     <min-m>0</min-m>
-    <max-m>10</max-m>
+    <max-m>100</max-m>
   </animation>
 
   <animation>
@@ -123,7 +120,6 @@
         <ind>0.2</ind>
         <dep>40</dep>
       </entry>
-
       <entry>
         <ind>1.0</ind>
         <dep>0.0</dep>
@@ -154,7 +150,6 @@
         <ind>0.2</ind>
         <dep>70</dep>
       </entry>
-      
       <entry>
         <ind>1.0</ind>
         <dep>0.0</dep>
@@ -171,6 +166,7 @@
       <z>0.0</z>
     </axis>
   </animation>
+
   <animation>
     <type>rotate</type>
     <object-name>leftgeardoor.L</object-name>
@@ -203,6 +199,7 @@
       <z2-m>-0.637</z2-m>
     </axis>
   </animation>
+
   <animation>
     <type>rotate</type>
     <object-name>rightgeardoor.L</object-name>
@@ -235,6 +232,7 @@
       <z2-m>-0.636</z2-m>
     </axis>
   </animation>
+
   <!--rightgear -->
   <animation>
     <type>rotate</type>
@@ -252,12 +250,10 @@
         <ind>0.2</ind>
         <dep>113.2</dep>
       </entry>
-
       <entry>
         <ind>1.0</ind>
         <dep>0.0</dep>
       </entry>
-
     </interpolation>
     <center>
       <x-m>2.628</x-m>
@@ -284,7 +280,6 @@
         <ind>0.2</ind>
         <dep>40</dep>
       </entry>
-
       <entry>
         <ind>1.0</ind>
         <dep>0.0</dep>
@@ -315,7 +310,6 @@
         <ind>0.2</ind>
         <dep>70</dep>
       </entry>
-      
       <entry>
         <ind>1.0</ind>
         <dep>0.0</dep>
@@ -424,19 +418,71 @@
       <z>0.0</z>
     </axis>
   </animation>
+
+  <!-- bombbaydoors -->
+
+  <animation>
+    <type>rotate</type>
+    <object-name>bombbaydoor.L</object-name>
+    <property>controls/armament/bombbaydoor/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>00</dep>
+      </entry>
+      <entry>
+        <ind>0.2</ind>
+        <dep>-15.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>-90.0</dep>
+      </entry>
+    </interpolation>
+    <axis>
+      <x1-m>3.825</x1-m>
+      <y1-m>-0.52218</y1-m>
+      <z1-m>-0.66975</z1-m>
+      <x2-m>5.761</x2-m>
+      <y2-m>-0.52218</y2-m>
+      <z2-m>-0.58576</z2-m>
+    </axis>
+  </animation>
+
+  <animation>
+    <type>rotate</type>
+    <object-name>bombbaydoor.R</object-name>
+    <property>controls/armament/bombbaydoor/position-norm</property>
+    <interpolation>
+      <entry>
+        <ind>0.0</ind>
+        <dep>00</dep>
+      </entry>
+      <entry>
+        <ind>0.2</ind>
+        <dep>15.0</dep>
+      </entry>
+      <entry>
+        <ind>1.0</ind>
+        <dep>90.0</dep>
+      </entry>
+    </interpolation>
+    <axis>
+      <x1-m>3.825</x1-m>
+      <y1-m>0.52218</y1-m>
+      <z1-m>-0.66975</z1-m>
+      <x2-m>5.761</x2-m>
+      <y2-m>0.52218</y2-m>
+      <z2-m>-0.58576</z2-m>
+    </axis>
+  </animation>
+
   <!-- flaps -->
   <animation>
     <type>rotate</type>
     <object-name>flap.L</object-name>
     <property>surface-positions/flap-pos-norm</property>
     <factor>-47.0</factor>
-
-    <center>
-      <x-m>4.804</x-m>
-      <y-m>-2.470</y-m>
-      <z-m>0.09</z-m>
-    </center>
-
     <axis>
       <x1-m>5.061</x1-m>
       <y1-m>-0.711</y1-m>
@@ -446,18 +492,12 @@
       <z2-m>0.201</z2-m>
     </axis>
   </animation>
+
   <animation>
     <type>rotate</type>
     <object-name>flap.R</object-name>
     <property>surface-positions/flap-pos-norm</property>
     <factor>-47.0</factor>
-
-    <center>
-      <x-m>4.804</x-m>
-      <y-m>2.470</y-m>
-      <z-m>0.09</z-m>
-    </center>
-
     <axis>
       <x2-m>5.061</x2-m>
       <y2-m>0.711</y2-m>
@@ -467,6 +507,7 @@
       <z1-m>0.201</z1-m>
     </axis>
   </animation>
+
   <animation>
     <type>rotate</type>
     <object-name>coolflap.L</object-name>
@@ -486,6 +527,7 @@
       <z2-m>-0.145</z2-m>
     </axis>
   </animation>
+
   <animation>
     <type>rotate</type>
     <object-name>coolflap.R</object-name>
@@ -634,26 +676,6 @@
     </axis>
   </animation>
 
-  <!-- Hotspots 
-       <panel>
-       <path>Aircraft/beaufighter/Models/panel-hotspots.xml</path>
-       <bottom-left>
-       <x-m>1.83</x-m>
-       <y-m>-0.571009</y-m>
-       <z-m>0.129482</z-m>
-       </bottom-left>
-       <bottom-right>
-       <x-m>1.83</x-m>
-       <y-m>0.571009</y-m>
-       <z-m>0.129482</z-m>
-       </bottom-right>
-       <top-left>
-       <x-m>1.83</x-m>
-       <y-m>-0.571009</y-m>
-       <z-m>0.713365</z-m>
-       </top-left>
-       </panel>
-  -->
   <!-- crew -->
   <model> 
     <path>Models/pilot.xml</path>
@@ -696,18 +718,7 @@
       </less-than>
     </condition>
   </animation>
-  <!--
-      <model> 
-      <path>Models/yoke.ac</path>
-      <name>yoke</name>
-      <offsets> 
-      <x-m>1.935</x-m>
-      <y-m>-0.23</y-m>
-      <z-m>-0.146</z-m>
-      <pitch-deg>14</pitch-deg>
-      </offsets>
-      </model>
-  -->
+
   <animation>
     <type>select</type>
     <object-name>pilot</object-name>

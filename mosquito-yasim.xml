@@ -140,16 +140,17 @@ YASim aerodynamic model for a de Havilland Mosquito
                min-rpm="766" max-rpm="1260" >
     <actionpt x="-0.4" y="2.51" z="-0.02"/>
     <control-input axis="/controls/engines/engine[0]/propeller-pitch" control="ADVANCE" />
+    <control-input axis="/controls/engines/engine[0]/propeller-feather" control="PROPFEATHER"/>
     <piston-engine
         eng-power="1565" eng-rpm="3000"
         turbo-mul="2.5" wastegate-mp="61"
+        supercharging="1"
         >
       <control-input axis="/controls/engines/engine[0]/throttle-c" control="THROTTLE"/>
       <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
       <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
       <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
       <control-input axis="/controls/engines/engine[0]/boost" control="BOOST"/>
-      <control-input axis="/controls/engines/engine[0]/propeller-feather" control="PROPFEATHER"/>
     </piston-engine>
   </propeller>
 
@@ -162,16 +163,17 @@ YASim aerodynamic model for a de Havilland Mosquito
                min-rpm="766" max-rpm="1260" >
     <actionpt x="-0.4" y="-2.51" z="-0.02"/>
     <control-input axis="/controls/engines/engine[1]/propeller-pitch" control="ADVANCE" />
+    <control-input axis="/controls/engines/engine[1]/propeller-feather" control="PROPFEATHER"/>
     <piston-engine
         eng-power="1565" eng-rpm="3000"
         turbo-mul="2.5" wastegate-mp="61"
+        supercharging="1"
         >
       <control-input axis="/controls/engines/engine[1]/throttle-c" control="THROTTLE"/>
       <control-input axis="/controls/engines/engine[1]/starter" control="STARTER"/>
       <control-input axis="/controls/engines/engine[1]/magnetos" control="MAGNETOS"/>
       <control-input axis="/controls/engines/engine[1]/mixture" control="MIXTURE"/>
       <control-input axis="/controls/engines/engine[1]/boost" control="BOOST"/>
-      <control-input axis="/controls/engines/engine[1]/propeller-feather" control="PROPFEATHER"/>
     </piston-engine>
   </propeller>
 

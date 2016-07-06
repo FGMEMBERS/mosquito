@@ -15,20 +15,6 @@ don@sol2500.net
 
 <PropertyList include="mosquito-common.xml">
 
-  <consumables>
-    <!-- This section is here because the 3D model of the bomber variant
-         lacks the fuel cocks.  Someone, please make the fuel cocks common
-         to both variants and then remove this section. -->
-    <fuel>
-      <tank n="0"><selected type="bool">true</selected></tank>
-      <tank n="1"><selected type="bool">true</selected></tank>
-      <tank n="2"><selected type="bool">true</selected></tank>
-      <tank n="3"><selected type="bool">true</selected></tank>
-      <tank n="4"><selected type="bool">true</selected></tank>
-      <tank n="5"><selected type="bool">true</selected></tank>
-    </fuel>
-  </consumables>
-
   <sim>
     <description>de Havilland Mosquito B Mk XVI</description>
 

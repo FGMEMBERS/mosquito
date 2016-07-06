@@ -38,17 +38,18 @@ var main_loop = func {
 
 
 var check_airframe = func {
-	var gl = gload.getValue();
-	var gw = weight.getValue();
-	var as = airspeed.getValue();
-	var slip = turn.getValue();
-	var fail = fail_r.getValue();
-	var ow = gw - emptyw;
+  var gl = gload.getValue();
+  var gw = weight.getValue();
+  var as = airspeed.getValue();
+  var slip = turn.getValue();
+  var fail = fail_r.getValue();
+  var ow = gw - emptyw;
 
 # check flap deployment and failure due to overspeed
   if ( flappos.getValue() > 0 ) {
     if (as > flapoverspeed) {
       print ("flaps overspeed! as=", as, " flapoverspeed=", flapoverspeed);
+      setprop ("sim/messages/copilot", "Flaps overspeed!");
       var load = as - flapoverspeed;
    #   print (load*flappos.getValue());
       if (load * flappos.getValue() > 20 ) {
@@ -57,8 +58,9 @@ var check_airframe = func {
           flappos.setAttribute("writable",0);
           setprop ("/sim/failure-manager/flaps", "1");
           print ("Flaps failed");
+          setprop ("sim/messages/copilot", "Flaps failed!");
         }
-	flappos.setValue(0);
+  flappos.setValue(0);
       }
     }
   }
@@ -67,111 +69,118 @@ var check_airframe = func {
   # print(gl, breakload - 0.0004 * ow );
   if (gl > (breakload - 0.0003 * ow)) {
     print ("gl=", gl, " > (breakload - 0.0003 * ow)=", breakload - 0.0003 * ow);
+    setprop ("sim/messages/copilot", "Airframe overloaded!");
   }
   if (as > breakspeed) {
     print ("as=", as, " > breakspeed=", breakspeed);
+    setprop ("sim/messages/copilot", "Overspeed!");
   }
   if (gl > (breakload - 0.0003 * ow) or (as > breakspeed)) {
     print ("break");
     if (slip < 0) {
       setprop ("sim/failure-manager/left-wing-torn", "1");
       fail_r.setValue(1);
+      setprop ("sim/messages/copilot", "Port wing torn!");
     } else {
       setprop ("sim/failure-manager/right-wing-torn", "1");
       fail_r.setValue(-1);
+      setprop ("sim/messages/copilot", "Starboard wing torn!");
     }
   }
   if (gl > (bendload - 0.0004 * ow)) {
     print ("bend");
     if (slip < 0) {
       gear0.setAttribute("writable",0);
+      setprop ("sim/messages/copilot", "Port undercarriage stuck!");
     } else {
       gear1.setAttribute("writable",0);
+      setprop ("sim/messages/copilot", "Starboard undercarriage stuck!");
     }
-  }		
+  }    
 }
 
 
 var kill_engine = func {
-	nofuel.setValue(1);
-	nofuel.setAttribute("writable", 0);
-#	interpolate ("/engines/engine[0]/fuel-press", 0, 1);
-#	interpolate ("/engines/engine[0]/mp-osi", 0, 1.5);
-	
+  setprop ("sim/messages/copilot", "Engine failed!");
+  nofuel.setValue(1);
+  nofuel.setAttribute("writable", 0);
+#  interpolate ("/engines/engine[0]/fuel-press", 0, 1);
+#  interpolate ("/engines/engine[0]/mp-osi", 0, 1.5);
 }
 
 
 var process_hit = func {
 
-		if (getprop("/hitcount" ) > 5 ) {
-				var fail_prob = getprop ("/hitcount") + rand()*25;
-				print ("Faliure Probability: ", fail_prob);
-				if (fail_prob >= 40 ) {
-						
-						var fail_type = rand()*10;
-						print ("Failure Type: ",fail_type);
-						var state = getprop ("sim/failure-manager/fail-type");
-						if (fail_type >= 6 ) {
-								print ("Engine failure");
-								kill_engine();
-								setprop ("sim/failure-manager/smoking",1);
-						} else if (fail_type >= 3 ) {
-								print ("Fire");
-								setprop ("sim/failure-manager/burning",2);
-						} else {
-								print ("Structural failure");
-								tear_wing();
-								# setprop ("sim/failure-manager/fail-type",3);
-						}
-				}
-		}
-	
+    if (getprop("/hitcount" ) > 5 ) {
+        var fail_prob = getprop ("/hitcount") + rand()*25;
+        print ("Failure Probability: ", fail_prob);
+        if (fail_prob >= 40 ) {
+            var fail_type = rand()*10;
+            print ("Failure Type: ",fail_type);
+            var state = getprop ("sim/failure-manager/fail-type");
+            if (fail_type >= 6 ) {
+                print ("Engine failure");
+                kill_engine();
+                setprop ("sim/failure-manager/smoking",1);
+            } else if (fail_type >= 3 ) {
+                print ("Fire");
+                setprop ("sim/messages/copilot", "Fire on board!");
+                setprop ("sim/failure-manager/burning",2);
+            } else {
+                print ("Structural failure");
+                tear_wing();
+                # setprop ("sim/failure-manager/fail-type",3);
+            }
+        }
+    }
 }
 
 var tear_wing = func {
-									var slip = turn.getValue();
-										if (slip < 0) {
-												aileron.setValue(1);
-												aileron.setAttribute("writable", 0);
-										} else {
-												aileron.setValue(-1);
-												aileron.setAttribute("writable", 0);
-										}
+  var slip = turn.getValue();
+  setprop ("sim/messages/copilot", "Ailerons frozen!");
+  if (slip < 0) {
+    aileron.setValue(1);
+    aileron.setAttribute("writable", 0);
+  } else {
+    aileron.setValue(-1);
+    aileron.setAttribute("writable", 0);
+  }
 }
 
 
 # lower gear
 setlistener("/controls/gear/gear-down", func(n) {
-#		print (n.getValue());
-		if (n.getValue() == "1") {
-				gear0.setValue("true");
-				gear1.setValue("true"); 
-				if (getprop ("controls/gear/tailwheel-steerable")) {
-						gear3.setValue("true");
-				} else {
-						gear2.setValue("true");
-				}
-		} else {
-				gear0.setValue("false");
-				gear1.setValue("false"); 
-				gear2.setValue("false");
-	#			gear3.setValue("false");
-		}
+#    print (n.getValue());
+    if (n.getValue() == "1") {
+        gear0.setValue("true");
+        gear1.setValue("true"); 
+        if (getprop ("controls/gear/tailwheel-steerable")) {
+            gear3.setValue("true");
+        } else {
+            gear2.setValue("true");
+        }
+    } else {
+        gear0.setValue("false");
+        gear1.setValue("false"); 
+        gear2.setValue("false");
+  #      gear3.setValue("false");
+    }
 });
 
 # check for propstrike
 setlistener("/gear/gear[4]/compression-norm", func(n) {
-		if (n.getValue() >=0.1 ) {
-			if (getprop ("sim/failure-manager/engines/engine[0]/propstrike") != 1) {
-				kill_engine();
-				if (engon.getValue() == 1 ){
-						setprop ("sim/failure-manager/engines/engine[0]/propstrike-force", 1);
-				}
-				setprop ("sim/failure-manager/engines/engine[0]/propstrike", 1);
-				print("propsrtrike");
-				interpolate ("sim/failure-manager/engines/engine[0]/propstrike-force",0 ,0.1);
-			}
-		}
+  if (n.getValue() >=0.1 ) {
+    if (getprop ("sim/failure-manager/engines/engine[0]/propstrike") != 1) {
+      kill_engine();
+      if (engon.getValue() == 1 ){
+          setprop ("sim/failure-manager/engines/engine[0]/propstrike-force", 1);
+      }
+      setprop ("sim/failure-manager/engines/engine[0]/propstrike", 1);
+      print("propstrike");
+      setprop ("sim/messages/copilot", "Prop strike!");
+      interpolate ("sim/failure-manager/engines/engine[0]/propstrike-force",0 ,0.1);
+    }
+  }
 });
 
 setlistener("/sim/signals/fdm-initialized",init);

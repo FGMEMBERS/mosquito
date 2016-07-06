@@ -306,37 +306,76 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
     <help>
       <key>
-        <name>d</name>
+        <name>D</name>
         <desc>Toggle bomb bay doors</desc>
       </key>
       <key>
-        <name>F</name>
+        <name>Shift+F</name>
         <desc>Open Radiator Shutter</desc>
       </key>
       <key>
-        <name>f</name>
+        <name>F</name>
         <desc>Close Radiator Shutter</desc>
       </key>
       <key>
-        <name>q/Q</name>
-        <desc>Master Arm on/off</desc>
+        <name>Q</name>
+        <desc>Master Arm ON</desc>
       </key>
       <key>
-        <name>e</name>
+        <name>Shift+Q</name>
+        <desc>Master Arm OFF</desc>
+      </key>
+      <key>
+        <name>E</name>
         <desc>Fire machine guns</desc>
       </key>
-
       <key>
-        <name>l</name>
-        <desc>toggle Tailwheel lock</desc>
+        <name>L</name>
+        <desc>Unlock/Lock tail wheel</desc>
       </key>
       <text>
-        ---Take off---
-        Open Radiator shutters and use Flaps 1 step down on short fields. Lift Tailwheel early and take off at 120 knots. 
-        Close Radiator shutters in level flight.
+--- Engine startup ---
+Switch to Interior view, look down and left behind the pilot's seat for the fuel cocks.
+Open both fuel cocks on Main Tanks.
+Switch back to Cockpit view.
+Switch magnetos on.
+Push the ENGINE STARTING button for each engine until the engine reaches 200 rpm.
+Wait until both engines stabilise at 600 rpm.
 
-        ---Landing---
-      Approach at 145 knots with Flaps down. Treshold speed is about 110 knots. </text>
+--- Taxi ---
+Open throttle a little bit, stabilise engines at 900-1100 rpm.
+Unlock tail wheel.
+Release the brakes.
+Use differential braking only: , to turn left, . to turn right.
+Lock the tail wheel when aligned on runway.
+
+---Take off---
+Open radiator shutters using the two leftmost switches on top of the right-hand side
+panel that also has the fuel gauges.
+On short fields, use flaps 1 step down.
+Set propeller pitch to full fine, apply full throttle (+20 boost).
+Lift tail wheel early and take off at 140 mph.
+
+--- Climb ---
+Reduce manifold pressure to +9 boost and set 2850 rpm.
+
+--- Cruise ---
+Reduce manifold pressure to +4 boost and set 2650 rpm.
+Close Radiator shutters.
+
+---Landing---
+Approach at 170 mph with flaps down.
+Threshold speed is about 130 mph.
+Close throttle on, or just before, touchdown.
+Apply brakes very gently or you will topple forward.
+Unlock the tail wheel then use differential braking to vacate the runway.
+
+--- Limits ---
+Never exceed speed, flaps down: 224 mph indicated
+Never exceed speed, flaps up:   477 mph indicated
+Load factor, undercarriage down: 7g
+Load factor, undercarriage up:   9g
+      </text>
     </help>
 
     <hud>

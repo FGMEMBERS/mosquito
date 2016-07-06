@@ -34,9 +34,6 @@
     <object-name>canopyglass</object-name>
     <object-name>fbcanopyglass</object-name>
     <object-name>topdoorglass</object-name>
-<!--
-    <object-name>noseglass</object-name>
--->
   </effect>
 
   <effect>

@@ -184,3 +184,24 @@ setlistener("/gear/gear[4]/compression-norm", func(n) {
 });
 
 setlistener("/sim/signals/fdm-initialized",init);
+
+var repair_aircraft = func () {
+  setprop ("/sim/failure-manager/flaps", "0");
+  flappos.setAttribute ("writable", 1);
+  gear0  .setAttribute ("writable", 1);
+  gear1  .setAttribute ("writable", 1);
+  nofuel .setAttribute ("writable", 1);
+  aileron.setAttribute ("writable", 1);
+  aileron.setValue (0);
+  setprop ("sim/failure-manager/engines/engine[0]/propstrike", 0);
+  setprop ("sim/failure-manager/engines/engine[0]/propstrike-force", 0);
+  setprop ("sim/failure-manager/engines/engine[1]/propstrike", 0);
+  setprop ("sim/failure-manager/engines/engine[1]/propstrike-force", 0);
+  setprop ("sim/failure-manager/left-wing-torn", "0");
+  setprop ("sim/failure-manager/right-wing-torn", "0");
+  fail_r.setValue (0);
+  setprop ("sim/failure-manager/smoking", 0);
+  setprop ("sim/failure-manager/burning", 0);
+  setprop ("sim/failure-manager/fail-type", 0);
+  setprop ("sim/messages/copilot", "Aircraft repaired, you cheater!");
+};

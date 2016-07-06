@@ -394,6 +394,13 @@ Load factor, undercarriage up:   9g
 	      <script>mosquito.config.open()</script>
 	    </binding>
 	  </item>
+          <item>
+            <label>Repair aircraft</label>
+            <binding>
+              <command>nasal</command>
+              <script>failure.repair_aircraft();</script>
+            </binding>
+          </item>
 	</menu>
       </default>
     </menubar>

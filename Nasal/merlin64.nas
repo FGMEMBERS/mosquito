@@ -168,6 +168,7 @@ var check_engine = func {
 	}
 	if ( gload.getValue() < -0.3 ) {
   	print ("cutout!");
+        setprop ("sim/messages/copilot", "Port engine starved of fuel by negative G-force!");
   	if (mixture0.getValue() == 0 ){
     	mixture0.setValue( mixture.getValue() );
     	mixture.setValue(0);

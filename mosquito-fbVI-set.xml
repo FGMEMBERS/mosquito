@@ -17,7 +17,6 @@ don@sol2500.net
   <sim>
     <description>de Havilland Mosquito FB Mk VI</description>
     <flight-model>yasim</flight-model>
-    <aero>mosquitofb6-yasim</aero>
 
     <model>
       <path>Aircraft/mosquito/Models/Mosquito-FB6.xml</path>

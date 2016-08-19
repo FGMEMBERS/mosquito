@@ -34,72 +34,59 @@
     <object-name>canopyglass</object-name>
     <object-name>fbcanopyglass</object-name>
     <object-name>topdoorglass</object-name>
-<!--
-    <object-name>noseglass</object-name>
--->
   </effect>
 
-      <effect>
-        <inherits-from>Aircraft/mosquito/Models/Effects/bumpspec</inherits-from>
-        <object-name>fuselage</object-name>
-        <object-name>front-fb</object-name>
-        <object-name>wing.L</object-name>
-        <object-name>wing.R</object-name>
-        <object-name>aileron.L</object-name>
-        <object-name>aileron.R</object-name>
-        <object-name>flap.L</object-name>
-        <object-name>flap.R</object-name>
-        <object-name>fbengine.L</object-name>
-        <object-name>fbengine.R</object-name>
-        <object-name>fbprophub.L</object-name>
-        <object-name>fbprophub.R</object-name>
-        <object-name>fbbaydoor.L</object-name>
-        <object-name>fbbaydoor.R</object-name>
-        <object-name>door.outside</object-name>
-        <object-name>horstab</object-name>
-        <object-name>stab.L</object-name>
-        <object-name>stab.R</object-name>
-        <object-name>elevator.L</object-name>
-        <object-name>elevator.R</object-name>
-        <object-name>rudder</object-name>
-        <object-name>wheel.R</object-name>
-        <object-name>wheel.L</object-name>
-        <object-name>leftgeardoor.L</object-name>
-        <object-name>rightgeardoor.L</object-name>
-        <object-name>leftgeardoor.R</object-name>
-        <object-name>rightgeardoor.R</object-name>
-        <object-name>bombbaydoor.L</object-name>
-        <object-name>bombbaydoor.R</object-name>
-        <object-name>fbcanopyframe</object-name>
-        <object-name>cooler.L</object-name>
-        <object-name>cooler.R</object-name>
-       <object-name>dinghi</object-name>
-       <object-name>radioeq</object-name>
-
-        <object-name>coolflap.L</object-name>
-        <object-name>coolflap.R</object-name>
-<!--
-
-        <object-name>gear.L</object-name>
-        <object-name>gear.R</object-name>
-
-
-
-
-
-        <object-name>crewdoor</object-name>
-
-        <object-name>topdoor</object-name>
-
--->
-      </effect>
+  <effect>
+    <inherits-from>Aircraft/mosquito/Models/Effects/bumpspec</inherits-from>
+    <object-name>fuselage</object-name>
+    <object-name>front-fb</object-name>
+    <object-name>wing.L</object-name>
+    <object-name>wing.R</object-name>
+    <object-name>aileron.L</object-name>
+    <object-name>aileron.R</object-name>
+    <object-name>flap.L</object-name>
+    <object-name>flap.R</object-name>
+    <object-name>fbengine.L</object-name>
+    <object-name>fbengine.R</object-name>
+    <object-name>fbprophub.L</object-name>
+    <object-name>fbprophub.R</object-name>
+    <object-name>fbbaydoor.L</object-name>
+    <object-name>fbbaydoor.R</object-name>
+    <object-name>door.outside</object-name>
+    <object-name>horstab</object-name>
+    <object-name>stab.L</object-name>
+    <object-name>stab.R</object-name>
+    <object-name>elevator.L</object-name>
+    <object-name>elevator.R</object-name>
+    <object-name>rudder</object-name>
+    <object-name>wheel.R</object-name>
+    <object-name>wheel.L</object-name>
+    <object-name>leftgeardoor.L</object-name>
+    <object-name>rightgeardoor.L</object-name>
+    <object-name>leftgeardoor.R</object-name>
+    <object-name>rightgeardoor.R</object-name>
+    <object-name>bombbaydoor.L</object-name>
+    <object-name>bombbaydoor.R</object-name>
+    <object-name>fbcanopyframe</object-name>
+    <object-name>cooler.L</object-name>
+    <object-name>cooler.R</object-name>
+    <object-name>dinghi</object-name>
+    <object-name>radioeq</object-name>
+    <object-name>coolflap.L</object-name>
+    <object-name>coolflap.R</object-name>
+  </effect>
 
   <model>
     <name>cockpit</name>
     <path>Aircraft/mosquito/Models/FBcockpit.xml</path>
   </model>
+
+  <model>
+    <name>instruments</name>
+    <path>Aircraft/mosquito/Models/cockpit.xml</path>
+  </model>
   <animation>
-    <object-name>cockpit</object-name>
+    <object-name>instruments</object-name>
     <type>range</type>
     <min-m>0</min-m>
     <max-m>100</max-m>
@@ -492,7 +479,7 @@
     </axis>
   </animation>
 
-<!-- bombbaydoors -->
+  <!-- bombbaydoors -->
 
   <animation>
     <type>rotate</type>
@@ -507,7 +494,6 @@
         <ind>0.2</ind>
         <dep>-15.0</dep>
       </entry>
-      
       <entry>
         <ind>1.0</ind>
         <dep>-90.0</dep>
@@ -536,7 +522,6 @@
         <ind>0.2</ind>
         <dep>15.0</dep>
       </entry>
-      
       <entry>
         <ind>1.0</ind>
         <dep>90.0</dep>
@@ -821,7 +806,6 @@
   <model> 
     <path>Models/crew.xml</path>
     <name>crew</name>
-    <nopreview/>
     <offsets> 
       <x-m>2.64</x-m>
       <y-m>0.3</y-m>
@@ -839,109 +823,96 @@
       </less-than>
     </condition>
   </animation>
-  <!--
-      <model> 
-        <path>Models/yoke.ac</path>
-	<name>yoke</name>
-        <offsets> 
-          <x-m>1.935</x-m>
-          <y-m>-0.23</y-m>
-          <z-m>-0.146</z-m>
-          <pitch-deg>14</pitch-deg>
-        </offsets>
-      </model>
-      -->
-      <animation>
-        <type>select</type>
-        <object-name>pilot</object-name>
-        <condition>
-          <greater-than>
-            <property>sim/current-view/view-number</property>
-            <value>0.0</value>
-          </greater-than>
-        </condition>
-      </animation>
 
-      <!--prop -->
+  <animation>
+    <type>select</type>
+    <object-name>pilot</object-name>
+    <condition>
+      <greater-than>
+        <property>sim/current-view/view-number</property>
+        <value>0.0</value>
+      </greater-than>
+    </condition>
+  </animation>
 
-      <model>
-        <name>pdiskL</name>
-	<nopreview/>
-        <path>Models/pdiskL.xml</path>
-        <offsets>
-          <x-m>0.5</x-m>
-          <y-m>-2.525</y-m>
-          <z-m>0.030</z-m>
-        </offsets>
-      </model>	
+  <!--prop -->
 
+  <model>
+    <name>pdiskL</name>
+    <nopreview/>
+    <path>Models/pdiskL.xml</path>
+    <offsets>
+      <x-m>0.5</x-m>
+      <y-m>-2.525</y-m>
+      <z-m>0.030</z-m>
+    </offsets>
+  </model>	
 
-      <model>
-        <name>pdiskL</name>
-	<nopreview/>
-        <path>Models/pdiskR.xml</path>
-        <offsets>
-          <x-m>0.5</x-m>
-          <y-m>2.525</y-m>
-          <z-m>0.030</z-m>
-        </offsets>
-      </model>	
+  <model>
+    <name>pdiskL</name>
+    <path>Models/pdiskR.xml</path>
+    <offsets>
+      <x-m>0.5</x-m>
+      <y-m>2.525</y-m>
+      <z-m>0.030</z-m>
+    </offsets>
+  </model>	
 
-      <animation>
-	<type>material</type>
-        <object-name>canopyglass</object-name>
-        <object-name>fbcanopyglass</object-name>
-	<transparency>
-	  <alpha>0.25</alpha>
-	</transparency>
-      </animation>
+  <animation>
+    <type>material</type>
+    <object-name>canopyglass</object-name>
+    <object-name>fbcanopyglass</object-name>
+    <transparency>
+      <alpha>0.25</alpha>
+    </transparency>
+  </animation>
 
-      <animation>
-        <type>material</type>
-        <object-name>fuselage</object-name>
-        <object-name>front-fb</object-name>
-        <object-name>fbbaydoor.L</object-name>
-        <object-name>fbbaydoor.R</object-name>
-        <object-name>door.outside</object-name>
-        <object-name>wing.L</object-name>
-        <object-name>wing.R</object-name>
-        <object-name>aileron.L</object-name>
-        <object-name>aileron.R</object-name>
-        <object-name>flap.L</object-name>
-        <object-name>flap.R</object-name>
-        <object-name>gear.L</object-name>
-        <object-name>gear.R</object-name>
-        <object-name>fbengine.L</object-name>
-        <object-name>fbengine.R</object-name>
-        <object-name>fbprophub.L</object-name>
-        <object-name>fbprophub.R</object-name>
-        <object-name>horstab</object-name>
-        <object-name>stab.L</object-name>
-        <object-name>stab.R</object-name>
-        <object-name>elevator.L</object-name>
-        <object-name>elevator.R</object-name>
-        <object-name>coolflap.L</object-name>
-        <object-name>coolflap.R</object-name>
-        <object-name>cooler.L</object-name>
-        <object-name>cooler.R</object-name>
-        <object-name>leftgeardoor.L</object-name>
-        <object-name>rightgeardoor.L</object-name>
-        <object-name>leftgeardoor.R</object-name>
-        <object-name>rightgeardoor.R</object-name>
-        <object-name>bombbaydoor.L</object-name>
-        <object-name>bombbaydoor.R</object-name>
-        <object-name>crewdoor</object-name>
-        <object-name>fbcanopyframe</object-name>
-        <object-name>topdoor</object-name>
-        <object-name>rudder</object-name>
-       <object-name>dinghi</object-name>
-       <object-name>radioeq</object-name>
-        <property-base>sim/model/livery</property-base>
-        <texture-prop>texture</texture-prop>
-        <texture>mosquito-1.png</texture>
-      </animation>
+  <animation>
+    <type>material</type>
+    <object-name>fuselage</object-name>
+    <object-name>front-fb</object-name>
+    <object-name>fbbaydoor.L</object-name>
+    <object-name>fbbaydoor.R</object-name>
+    <object-name>door.outside</object-name>
+    <object-name>wing.L</object-name>
+    <object-name>wing.R</object-name>
+    <object-name>aileron.L</object-name>
+    <object-name>aileron.R</object-name>
+    <object-name>flap.L</object-name>
+    <object-name>flap.R</object-name>
+    <object-name>gear.L</object-name>
+    <object-name>gear.R</object-name>
+    <object-name>fbengine.L</object-name>
+    <object-name>fbengine.R</object-name>
+    <object-name>fbprophub.L</object-name>
+    <object-name>fbprophub.R</object-name>
+    <object-name>horstab</object-name>
+    <object-name>stab.L</object-name>
+    <object-name>stab.R</object-name>
+    <object-name>elevator.L</object-name>
+    <object-name>elevator.R</object-name>
+    <object-name>coolflap.L</object-name>
+    <object-name>coolflap.R</object-name>
+    <object-name>cooler.L</object-name>
+    <object-name>cooler.R</object-name>
+    <object-name>leftgeardoor.L</object-name>
+    <object-name>rightgeardoor.L</object-name>
+    <object-name>leftgeardoor.R</object-name>
+    <object-name>rightgeardoor.R</object-name>
+    <object-name>bombbaydoor.L</object-name>
+    <object-name>bombbaydoor.R</object-name>
+    <object-name>crewdoor</object-name>
+    <object-name>fbcanopyframe</object-name>
+    <object-name>topdoor</object-name>
+    <object-name>rudder</object-name>
+    <object-name>dinghi</object-name>
+    <object-name>radioeq</object-name>
+    <property-base>sim/model/livery</property-base>
+    <texture-prop>texture</texture-prop>
+    <texture>mosquito-1.png</texture>
+  </animation>
 
-<!-- door -->
+  <!-- door -->
 
   <animation>
     <type>rotate</type>
@@ -978,82 +949,82 @@
     <name>contrail</name>
     <path>Aircraft/mosquito/Models/Effects/contrail.xml</path>
     <offsets>
-   <x-m>6.2</x-m>
-   <y-m>0.0</y-m>
-   <z-m>0.181</z-m>
+      <x-m>6.2</x-m>
+      <y-m>0.0</y-m>
+      <z-m>0.181</z-m>
     </offsets>
   </model>
 
-<!-- startup smoke left engine -->
- <model>
+  <!-- startup smoke left engine -->
+  <model>
     <name>startup0-0</name>
     <path>Aircraft/mosquito/Models/Effects/startupsmoke.xml</path>
     <offsets>
-   <x-m>1.96</x-m>
-   <y-m>-3.12</y-m>
-   <z-m>-0.11</z-m>
-	 <heading-deg>-20</heading-deg>
-	 <pitch-deg>-30</pitch-deg>
+      <x-m>1.96</x-m>
+      <y-m>-3.12</y-m>
+      <z-m>-0.11</z-m>
+      <heading-deg>-20</heading-deg>
+      <pitch-deg>-30</pitch-deg>
     </offsets>
   </model>
- <model>
+  <model>
     <name>startup0-1</name>
     <path>Aircraft/mosquito/Models/Effects/startupsmoke.xml</path>
     <offsets>
-   <x-m>1.96</x-m>
-   <y-m>-1.9</y-m>
-   <z-m>-0.11</z-m>
-	 <heading-deg>20</heading-deg>
-	 <pitch-deg>-30</pitch-deg>
+      <x-m>1.96</x-m>
+      <y-m>-1.9</y-m>
+      <z-m>-0.11</z-m>
+      <heading-deg>20</heading-deg>
+      <pitch-deg>-30</pitch-deg>
     </offsets>
   </model>
 
- <animation>
-  <type>select</type>
-  <object-name>startup0-1</object-name>
-  <object-name>startup0-0</object-name>
-  <condition>
-   <equals>
-    <property>engines/engine[0]/startup_smoke</property>
-    <value>1</value>
-   </equals>
-  </condition>
- </animation>
+  <animation>
+    <type>select</type>
+    <object-name>startup0-1</object-name>
+    <object-name>startup0-0</object-name>
+    <condition>
+      <equals>
+        <property>engines/engine[0]/startup_smoke</property>
+        <value>1</value>
+      </equals>
+    </condition>
+  </animation>
 
-<!-- startup smoke right engine -->
- <model>
+  <!-- startup smoke right engine -->
+  <model>
     <name>startup1-0</name>
     <path>Aircraft/mosquito/Models/Effects/startupsmoke.xml</path>
     <offsets>
-   <x-m>1.96</x-m>
-   <y-m>3.12</y-m>
-   <z-m>-0.11</z-m>
-	 <heading-deg>20</heading-deg>
-	 <pitch-deg>-30</pitch-deg>
+      <x-m>1.96</x-m>
+      <y-m>3.12</y-m>
+      <z-m>-0.11</z-m>
+      <heading-deg>20</heading-deg>
+      <pitch-deg>-30</pitch-deg>
     </offsets>
   </model>
- <model>
+  <model>
     <name>startup1-1</name>
     <path>Aircraft/mosquito/Models/Effects/startupsmoke1.xml</path>
     <offsets>
-   <x-m>1.96</x-m>
-   <y-m>1.9</y-m>
-   <z-m>-0.11</z-m>
-	 <heading-deg>-20</heading-deg>
-	 <pitch-deg>-30</pitch-deg>
+      <x-m>1.96</x-m>
+      <y-m>1.9</y-m>
+      <z-m>-0.11</z-m>
+      <heading-deg>-20</heading-deg>
+      <pitch-deg>-30</pitch-deg>
     </offsets>
   </model>
 
- <animation>
-  <type>select</type>
-  <object-name>startup1-1</object-name>
-  <object-name>startup1-0</object-name>
-  <condition>
-   <equals>
-    <property>engines/engine[1]/startup_smoke</property>
-    <value>1</value>
-   </equals>
-  </condition>
- </animation>
+  <animation>
+    <type>select</type>
+    <object-name>startup1-1</object-name>
+    <object-name>startup1-0</object-name>
+    <condition>
+      <equals>
+        <property>engines/engine[1]/startup_smoke</property>
+        <value>1</value>
+      </equals>
+    </condition>
+  </animation>
 
-    </PropertyList>
+</PropertyList>

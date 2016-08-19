@@ -17,7 +17,6 @@ don@sol2500.net
 
   <sim>
     <description>de Havilland Mosquito B Mk XVI</description>
-    <aero>mosquito-yasim</aero>
 
     <model>
       <path>Aircraft/mosquito/Models/Mosquito-B16.xml</path>
@@ -102,7 +101,3 @@ don@sol2500.net
   </sim>
 
 </PropertyList>
-
-
-
-

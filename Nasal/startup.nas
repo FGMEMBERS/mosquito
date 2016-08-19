@@ -16,7 +16,7 @@ var init =func () {
 
   } else {
     if (getprop ("controls/startup/idling") ) {
-      print("Startup runnign!");
+      print("Startup running!");
       merlin0.magicstart();
       merlin1.magicstart();
     }

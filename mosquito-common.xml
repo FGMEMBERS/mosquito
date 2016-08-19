@@ -27,37 +27,37 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     </magnetic-compass>
   </instrumentation>
 
- <consumables>
-  <fuel>
-    <on-reserve type="int">0</on-reserve>
-    <tank n="0">
-      <name>Center left</name>
-      <selected type="bool">false</selected>
-    </tank>
-    <tank n="1">
-      <name>Center right</name>
-      <selected type="bool">false</selected>
-    </tank>
-    <tank n="2">
-      <name>Inner Wing left</name>
-      <selected type="bool">false</selected>
-    </tank>
-    <tank n="3">
-      <name>Inner wing right</name>
-      <selected type="bool">false</selected>
-    </tank>
-    <tank n="4">
-      <name>Outer wing left</name>
-      <selected type="bool">false</selected>
-    </tank>
-    <tank n="5">
-      <name>Outer wing right</name>
-      <selected type="bool">false</selected>
-    </tank>
-    <stbdcock type="int">0</stbdcock>
-    <prtcock type="int">0</prtcock>
-  </fuel>
- </consumables>
+  <consumables>
+    <fuel>
+      <on-reserve type="int">0</on-reserve>
+      <tank n="0">
+        <name>Center left</name>
+        <selected type="bool">false</selected>
+      </tank>
+      <tank n="1">
+        <name>Center right</name>
+        <selected type="bool">false</selected>
+      </tank>
+      <tank n="2">
+        <name>Inner Wing left</name>
+        <selected type="bool">false</selected>
+      </tank>
+      <tank n="3">
+        <name>Inner wing right</name>
+        <selected type="bool">false</selected>
+      </tank>
+      <tank n="4">
+        <name>Outer wing left</name>
+        <selected type="bool">false</selected>
+      </tank>
+      <tank n="5">
+        <name>Outer wing right</name>
+        <selected type="bool">false</selected>
+      </tank>
+      <stbdcock type="int">0</stbdcock>
+      <prtcock type="int">0</prtcock>
+    </fuel>
+  </consumables>
 
   <controls>
     <armament>
@@ -89,7 +89,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       <rdoor-pos-norm type="float">0.0</rdoor-pos-norm>
       <cdoor-pos-norm type="float">0.0</cdoor-pos-norm>
       <fdoor-pos-norm type="float">0.0</fdoor-pos-norm>
-     <gear n="0">
+      <gear n="0">
         <gear-down type="bool">true</gear-down>
       </gear>
       <gear n="1">
@@ -108,47 +108,54 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     </startup>
   </controls>
 
- <engines>
-   <engine n="0">
-     <rpm type="double">0</rpm>
-     <cylinder-temp-degc type="float">15</cylinder-temp-degc>
-     <coolant-temp-degc type="float">15.0</coolant-temp-degc>
-     <crankloop type="float">0</crankloop>
-     <oiltempc type = "float">15.0</oiltempc>
-     <oil-visc type = "float">0.1</oil-visc>
-     <oil-press type = "float">0.0</oil-press>
-     <fuel-press type ="float">0.0</fuel-press>
-     <rev-strain type="int">0</rev-strain>
-     <overrev type="int">0</overrev>
-     <overheat type="int">0</overheat>
-     <primed type="float">1</primed>
-     <startup_smoke type="bool">false</startup_smoke>
-     <boost-strain type="float">0</boost-strain>
-     <carburator-entry-temp-degc type="float">15</carburator-entry-temp-degc>
-   </engine>
-   <engine n="1">
-     <rpm type="double">0</rpm>
-     <cylinder-temp-degc type="float">15</cylinder-temp-degc>
-     <coolant-temp-degc type="float">15.0</coolant-temp-degc>
-     <crankloop type="float">0</crankloop>
-     <oiltempc type = "float">15.0</oiltempc>
-     <oil-visc type = "float">0.1</oil-visc>
-     <oil-press type = "float">0.0</oil-press>
-     <fuel-press type ="float">0.0</fuel-press>
-     <rev-strain type="int">0</rev-strain>
-     <overrev type="int">0</overrev>
-     <overheat type="int">0</overheat>
-     <primed type="float">1</primed>
-     <startup_smoke type="bool">false</startup_smoke>
-     <boost-strain type="float">0</boost-strain>
-     <carburator-entry-temp-degc type="float">15</carburator-entry-temp-degc>
-   </engine>
- </engines>
-
-
+  <engines>
+    <engine n="0">
+      <rpm type="double">0</rpm>
+      <cylinder-temp-degc type="float">15</cylinder-temp-degc>
+      <coolant-temp-degc type="float">15.0</coolant-temp-degc>
+      <crankloop type="float">0</crankloop>
+      <oiltempc type = "float">15.0</oiltempc>
+      <oil-visc type = "float">0.1</oil-visc>
+      <oil-press type = "float">0.0</oil-press>
+      <fuel-press type ="float">0.0</fuel-press>
+      <rev-strain type="int">0</rev-strain>
+      <overrev type="int">0</overrev>
+      <overheat type="int">0</overheat>
+      <primed type="float">1</primed>
+      <startup_smoke type="bool">false</startup_smoke>
+      <boost-strain type="float">0</boost-strain>
+      <carburator-entry-temp-degc type="float">15</carburator-entry-temp-degc>
+    </engine>
+    <engine n="1">
+      <rpm type="double">0</rpm>
+      <cylinder-temp-degc type="float">15</cylinder-temp-degc>
+      <coolant-temp-degc type="float">15.0</coolant-temp-degc>
+      <crankloop type="float">0</crankloop>
+      <oiltempc type = "float">15.0</oiltempc>
+      <oil-visc type = "float">0.1</oil-visc>
+      <oil-press type = "float">0.0</oil-press>
+      <fuel-press type ="float">0.0</fuel-press>
+      <rev-strain type="int">0</rev-strain>
+      <overrev type="int">0</overrev>
+      <overheat type="int">0</overheat>
+      <primed type="float">1</primed>
+      <startup_smoke type="bool">false</startup_smoke>
+      <boost-strain type="float">0</boost-strain>
+      <carburator-entry-temp-degc type="float">15</carburator-entry-temp-degc>
+    </engine>
+  </engines>
 
   <input>
     <keyboard>
+      <key n="100">
+        <name>d</name>
+        <desc>Toggle bomb bay doors</desc>
+        <binding>
+          <command>nasal</command>
+          <script>mosquito.bombbaydoor.toggle();</script>
+        </binding>
+      </key>
+      
       <key n="108"> 
         <name>l</name>
         <desc>Toggle Tailwheel Lock.</desc>
@@ -203,6 +210,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
           <max type="double">1</max>
         </binding>
       </key>  
+
       <key n="101">
         <name>e</name>
         <desc>Fire machine guns</desc>
@@ -245,6 +253,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
   </nasal>
 
   <sim>
+    <aero>mosquito-yasim</aero>
     <aircraft-version>0.2</aircraft-version>
     <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
     <armament include="Dialogs/armament.xml"/>
@@ -263,67 +272,110 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       </config>
     </autopilot>
 
-  <failure-manager>
-    <controls-failure-drag type="double">1.0</controls-failure-drag>
-    <controls-failure-roll type="double">0.7</controls-failure-roll>
-    <engines>
-      <engine n="0">
-        <propstrike type="bool">false</propstrike>
-        <propstrike-force type="float">0</propstrike-force>
-      </engine>
-      <engine n="1">
-        <propstrike type="bool">false</propstrike>
-        <propstrike-force type="float">0</propstrike-force>
-      </engine>
-    </engines>
-    <flaps type="bool">false</flaps>
-    <left-wing-torn type="bool">false</left-wing-torn>
-    <right-wing-torn type="bool">false</right-wing-torn>
-    <gear>
-      <gear n="0">
-        <jammed type="bool">false</jammed>
+    <failure-manager>
+      <controls-failure-drag type="double">1.0</controls-failure-drag>
+      <controls-failure-roll type="double">0.7</controls-failure-roll>
+      <engines>
+        <engine n="0">
+          <propstrike type="bool">false</propstrike>
+          <propstrike-force type="float">0</propstrike-force>
+        </engine>
+        <engine n="1">
+          <propstrike type="bool">false</propstrike>
+          <propstrike-force type="float">0</propstrike-force>
+        </engine>
+      </engines>
+      <flaps type="bool">false</flaps>
+      <left-wing-torn type="bool">false</left-wing-torn>
+      <right-wing-torn type="bool">false</right-wing-torn>
+      <gear>
+        <gear n="0">
+          <jammed type="bool">false</jammed>
+        </gear>
+        <gear n="1">
+          <jammed type="bool">false</jammed>
+        </gear>
+        <gear n="2">
+          <jammed type="bool">false</jammed>
+        </gear>
       </gear>
-      <gear n="1">
-        <jammed type="bool">false</jammed>
-      </gear>
-      <gear n="2">
-        <jammed type="bool">false</jammed>
-      </gear>
-    </gear>
       <fail-type type= "int">0</fail-type>
-  </failure-manager>
+    </failure-manager>
 
     <flight-model>yasim</flight-model>
 
     <help>
       <key>
-        <name>F</name>
+        <name>D</name>
+        <desc>Toggle bomb bay doors</desc>
+      </key>
+      <key>
+        <name>Shift+F</name>
         <desc>Open Radiator Shutter</desc>
       </key>
       <key>
-        <name>f</name>
+        <name>F</name>
         <desc>Close Radiator Shutter</desc>
       </key>
       <key>
-        <name>q/Q</name>
-        <desc>Master Arm on/off</desc>
+        <name>Q</name>
+        <desc>Master Arm ON</desc>
       </key>
       <key>
-        <name>e</name>
+        <name>Shift+Q</name>
+        <desc>Master Arm OFF</desc>
+      </key>
+      <key>
+        <name>E</name>
         <desc>Fire machine guns</desc>
       </key>
-
       <key>
-        <name>l</name>
-        <desc>toggle Tailwheel lock</desc>
+        <name>L</name>
+        <desc>Unlock/Lock tail wheel</desc>
       </key>
       <text>
-      ---Take off---
-      Open Radiator shutters and use Flaps 1 step down on short fields. Lift Tailwheel early and take off at 120 knots. 
-      Close Radiator shutters in level flight.
+--- Engine startup ---
+Switch to Interior view, look down and left behind the pilot's seat for the fuel cocks.
+Open both fuel cocks on Main Tanks.
+Switch back to Cockpit view.
+Switch magnetos on.
+Push the ENGINE STARTING button for each engine until the engine reaches 200 rpm.
+Wait until both engines stabilise at 600 rpm.
 
-      ---Landing---
-      Approach at 145 knots with Flaps down. Treshold speed is about 110 knots. </text>
+--- Taxi ---
+Open throttle a little bit, stabilise engines at 900-1100 rpm.
+Unlock tail wheel.
+Release the brakes.
+Use differential braking only: , to turn left, . to turn right.
+Lock the tail wheel when aligned on runway.
+
+---Take off---
+Open radiator shutters using the two leftmost switches on top of the right-hand side
+panel that also has the fuel gauges.
+On short fields, use flaps 1 step down.
+Set propeller pitch to full fine, apply full throttle (+20 boost).
+Lift tail wheel early and take off at 140 mph.
+
+--- Climb ---
+Reduce manifold pressure to +9 boost and set 2850 rpm.
+
+--- Cruise ---
+Reduce manifold pressure to +4 boost and set 2650 rpm.
+Close Radiator shutters.
+
+---Landing---
+Approach at 170 mph with flaps down.
+Threshold speed is about 130 mph.
+Close throttle on, or just before, touchdown.
+Apply brakes very gently or you will topple forward.
+Unlock the tail wheel then use differential braking to vacate the runway.
+
+--- Limits ---
+Never exceed speed, flaps down: 224 mph indicated
+Never exceed speed, flaps up:   477 mph indicated
+Load factor, undercarriage down: 7g
+Load factor, undercarriage up:   9g
+      </text>
     </help>
 
     <hud>
@@ -342,6 +394,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 	      <script>mosquito.config.open()</script>
 	    </binding>
 	  </item>
+          <item>
+            <label>Repair aircraft</label>
+            <binding>
+              <command>nasal</command>
+              <script>failure.repair_aircraft();</script>
+            </binding>
+          </item>
 	</menu>
       </default>
     </menubar>

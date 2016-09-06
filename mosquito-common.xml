@@ -405,6 +405,12 @@ Load factor, undercarriage up:   9g
       </default>
     </menubar>
 
+    <multiplay>
+      <generic>
+        <float n="0" type="float" alias="/controls/doors/door/position-norm"/>
+        <float n="1" type="float" alias="/controls/armament/bombbaydoor/position-norm"/>
+      </generic>
+    </multiplay>
 
     <rating>
       <FDM type="int">3</FDM>

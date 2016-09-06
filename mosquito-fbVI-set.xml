@@ -39,13 +39,8 @@ don@sol2500.net
 
     <multiplay>
       <generic>
-        <int n="0" type="int" alias="/sim/armament/gun[0]/fire"/>
-        <int n="1" type="int" alias="/sim/armament/gun[1]/fire"/>
-        <int n="2" type="int" alias="/sim/armament/tankL/type"/>
-        <int n="3" type="int" alias="/sim/armament/tankR/type"/>
-        <int n="4" type="int" alias="/sim/armament/bombL/type"/>
-        <int n="5" type="int" alias="/sim/armament/bombR/type"/>
-        <int n="6" type="int" alias="/sim/armament/bombB1/type"/>
+        <int n="5" alias="/sim/armament/gun[0]/fire"/>
+        <int n="6" alias="/sim/armament/gun[1]/fire"/>
       </generic>
     </multiplay>
 

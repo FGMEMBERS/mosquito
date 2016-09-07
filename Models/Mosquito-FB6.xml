@@ -935,7 +935,7 @@
   <animation>
     <type>rotate</type>
     <object-name>door.outside</object-name>
-    <property>/controls/doors/door/position-norm</property>
+    <property>controls/doors/door/position-norm</property>
     <interpolation>
       <entry>
         <ind>0.0</ind>

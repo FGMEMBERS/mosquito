@@ -5,14 +5,32 @@
   <path>mosquito.ac</path>
 
   <nasal>
-    <load>
+    <load><![CDATA[
       var update = aircraft.overlay_update.new();
       update.add("Models/AI-Liveries", "sim/model/livery/file");
       update.add("Aircraft/Generic/Logos", "sim/multiplay/generic/string");
-    </load>
-    <unload>
+
+      var self = cmdarg();
+      # Link the generic multiplayer protocol properties to the remote aircraft's
+      # properties for animations.
+      self.getNode ("controls/doors/door/position-norm", 1).
+        alias(self.getNode ("sim/multiplay/generic/float[0]"));
+      self.getNode ("controls/armament/bombbaydoor/position-norm", 1).
+        alias(self.getNode ("sim/multiplay/generic/float[1]"));
+      self.getNode ("sim/armament/tankL/type", 1).
+        alias(self.getNode ("sim/multiplay/generic/int[0]"));
+      self.getNode ("sim/armament/tankR/type", 1).
+        alias(self.getNode ("sim/multiplay/generic/int[1]"));
+      self.getNode ("sim/armament/bombL/type", 1).
+        alias(self.getNode ("sim/multiplay/generic/int[2]"));
+      self.getNode ("sim/armament/bombR/type", 1).
+        alias(self.getNode ("sim/multiplay/generic/int[3]"));
+      self.getNode ("sim/armament/bombB1/type", 1).
+        alias(self.getNode ("sim/multiplay/generic/int[4]"));
+    ]]></load>
+    <unload><![CDATA[
       update.stop();
-    </unload>
+    ]]></unload>
   </nasal>
 
   <effect>

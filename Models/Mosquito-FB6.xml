@@ -5,22 +5,40 @@
   <path>mosquitofb6.ac</path>
 
   <nasal>
-    <load>
+    <load><![CDATA[
       var update = aircraft.overlay_update.new();
       update.add("Models/AI-Liveries", "sim/model/livery/file");
 
-  var self = cmdarg();
-  var refl_c = self.getNode("sim/model/livery/refl_correction");
-  refl_c.setValue(-0.8);
-  var amb_c = self.getNode("sim/model/livery/amb_correction");
-  amb_c.setValue(0.2);
-  var MPmodel = self.getNode("sim/model/MPmodel",1);
+      var self = cmdarg();
+      var refl_c = self.getNode("sim/model/livery/refl_correction", 1);
+      refl_c.setValue(-0.8);
+      var amb_c = self.getNode("sim/model/livery/amb_correction", 1);
+      amb_c.setValue(0.2);
 
-
-    </load>
-    <unload>
+      # Link the generic multiplayer protocol properties to the remote aircraft's
+      # properties for animations.
+      self.getNode ("controls/doors/door/position-norm", 1).
+        alias(self.getNode ("sim/multiplay/generic/float[0]"));
+      self.getNode ("controls/armament/bombbaydoor/position-norm", 1).
+        alias(self.getNode ("sim/multiplay/generic/float[1]"));
+      self.getNode ("sim/armament/tankL/type", 1).
+        alias(self.getNode ("sim/multiplay/generic/int[0]"));
+      self.getNode ("sim/armament/tankR/type", 1).
+        alias(self.getNode ("sim/multiplay/generic/int[1]"));
+      self.getNode ("sim/armament/bombL/type", 1).
+        alias(self.getNode ("sim/multiplay/generic/int[2]"));
+      self.getNode ("sim/armament/bombR/type", 1).
+        alias(self.getNode ("sim/multiplay/generic/int[3]"));
+      self.getNode ("sim/armament/bombB1/type", 1).
+        alias(self.getNode ("sim/multiplay/generic/int[4]"));
+      self.getNode ("sim/armament/gun[0]/fire", 1).
+        alias(self.getNode ("sim/multiplay/generic/int[5]"));
+      self.getNode ("sim/armament/gun[1]/fire", 1).
+        alias(self.getNode ("sim/multiplay/generic/int[6]"));
+    ]]></load>
+    <unload><![CDATA[
       update.stop();
-    </unload>
+    ]]></unload>
   </nasal>
 
   <model> 
@@ -917,7 +935,7 @@
   <animation>
     <type>rotate</type>
     <object-name>door.outside</object-name>
-    <property>/controls/doors/door/position-norm</property>
+    <property>controls/doors/door/position-norm</property>
     <interpolation>
       <entry>
         <ind>0.0</ind>

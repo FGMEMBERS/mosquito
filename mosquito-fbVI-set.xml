@@ -37,6 +37,13 @@ don@sol2500.net
       </logo>
     </model>
 
+    <multiplay>
+      <generic>
+        <int n="5" alias="/sim/armament/gun[0]/fire"/>
+        <int n="6" alias="/sim/armament/gun[1]/fire"/>
+      </generic>
+    </multiplay>
+
     <view n="0">
       <internal archive="y">true</internal>
       <config>

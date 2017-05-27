@@ -2,10 +2,10 @@
 <!--
 ************************************************************************
 Mosquito simulation config. This files ties together all the components
-used by FGFS to represent the Beaufighter. Components include the flight data 
+used by FGFS to represent the Beaufighter. Components include the flight data
 model, instrument panel, and external 3D model.
 
-March 2007 Detlef Faber 
+March 2007 Detlef Faber
 
 http://www.sol2500.net/flightgear
 
@@ -16,6 +16,24 @@ don@sol2500.net
 <PropertyList include="mosquito-common.xml">
   <sim>
     <description>de Havilland Mosquito FB Mk VI</description>
+    <long-description>The de Havilland DH.98 Mosquito is a British multi-role
+      combat aircraft with a two-man crew which served during and after the
+      Second World War.  The FB Mk VI was a fighter-bomber variant which first
+      flew in June 1942.
+    </long-description>
+    <tags>
+        <tag>bomber</tag>
+        <tag>fighter</tag>
+        <tag>1940s</tag>
+        <tag>ww2</tag>
+        <tag>retractable-gear</tag>
+        <tag>tail-dragger</tag>
+        <tag>piston</tag>
+        <tag>twin-engine</tag>
+        <tag>variable-pitch</tag>
+    </tags>
+    <author>Ludovic Brenta, Detlef Faber.</author>
+
     <flight-model>yasim</flight-model>
 
     <model>
@@ -56,7 +74,3 @@ don@sol2500.net
 
   </sim>
 </PropertyList>
-
-
-
-

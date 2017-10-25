@@ -57,8 +57,14 @@ don@sol2500.net
 
     <multiplay>
       <generic>
-        <int n="5" alias="/sim/armament/gun[0]/fire"/>
-        <int n="6" alias="/sim/armament/gun[1]/fire"/>
+        <bool n="0" alias="/sim/armament/gun[0]/fire"/>
+        <bool n="1" alias="/sim/armament/gun[1]/fire"/>
+        <bool n="2" alias="/sim/armament/gun[2]/fire"/>
+        <bool n="3" alias="/sim/armament/gun[3]/fire"/>
+        <bool n="4" alias="/sim/armament/cannon[0]/fire"/>
+        <bool n="5" alias="/sim/armament/cannon[1]/fire"/>
+        <bool n="6" alias="/sim/armament/cannon[2]/fire"/>
+        <bool n="7" alias="/sim/armament/cannon[3]/fire"/>
       </generic>
     </multiplay>
 

@@ -211,6 +211,20 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         </binding>
       </key>  
 
+      <key n="69">
+        <name>E</name>
+        <desc>Fire cannon</desc>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/armament/trigger1</property>
+        </binding>
+        <mod-up>
+          <binding>
+            <command>property-toggle</command>
+            <property>controls/armament/trigger1</property>
+          </binding>
+        </mod-up>
+      </key>
       <key n="101">
         <name>e</name>
         <desc>Fire machine guns</desc>
@@ -230,19 +244,19 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
   <nasal>
     <startup>
-      <file>Nasal/startup.nas</file>
+      <file>Aircraft/mosquito/Nasal/startup.nas</file>
     </startup>
     <weapons>
-      <file>Nasal/weapons.nas</file>
+      <file>Aircraft/mosquito/Nasal/weapons.nas</file>
     </weapons>
     <mosquito>
-      <file>Nasal/mosquito.nas</file>
+      <file>Aircraft/mosquito/Nasal/mosquito.nas</file>
     </mosquito>
     <hitcheck>
-      <file>Nasal/hitcheck.nas</file>
+      <file>Aircraft/mosquito/Nasal/hitcheck.nas</file>
     </hitcheck>
     <failure>
-      <file>Nasal/failure.nas</file>
+      <file>Aircraft/mosquito/Nasal/failure.nas</file>
     </failure>
     <merlin0>
       <file>Aircraft/mosquito/Nasal/merlin64.nas</file>
@@ -250,6 +264,9 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <merlin1>
       <file>Aircraft/mosquito/Nasal/merlin64b.nas</file>
     </merlin1>
+    <mosquito_bombable>
+      <file>Aircraft/mosquito/Nasal/bombable.nas</file>
+    </mosquito_bombable>
   </nasal>
 
   <sim>
@@ -328,6 +345,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       <key>
         <name>E</name>
         <desc>Fire machine guns</desc>
+      </key>
+      <key>
+        <name>Shift+E</name>
+        <desc>Fire cannon</desc>
       </key>
       <key>
         <name>L</name>

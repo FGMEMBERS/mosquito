@@ -32,9 +32,24 @@
       self.getNode ("sim/armament/bombB1/type", 1).
         alias(self.getNode ("sim/multiplay/generic/int[4]"));
       self.getNode ("sim/armament/gun[0]/fire", 1).
-        alias(self.getNode ("sim/multiplay/generic/int[5]"));
+        alias(self.getNode ("sim/multiplay/generic/bool[0]"));
       self.getNode ("sim/armament/gun[1]/fire", 1).
-        alias(self.getNode ("sim/multiplay/generic/int[6]"));
+        alias(self.getNode ("sim/multiplay/generic/bool[1]"));
+      self.getNode ("sim/armament/gun[2]/fire", 1).
+        alias(self.getNode ("sim/multiplay/generic/bool[2]"));
+      self.getNode ("sim/armament/gun[3]/fire", 1).
+        alias(self.getNode ("sim/multiplay/generic/bool[3]"));
+      self.getNode ("sim/armament/cannon[0]/fire", 1).
+        alias(self.getNode ("sim/multiplay/generic/bool[4]"));
+      self.getNode ("sim/armament/cannon[1]/fire", 1).
+        alias(self.getNode ("sim/multiplay/generic/bool[5]"));
+      self.getNode ("sim/armament/cannon[2]/fire", 1).
+        alias(self.getNode ("sim/multiplay/generic/bool[6]"));
+      self.getNode ("sim/armament/cannon[3]/fire", 1).
+        alias(self.getNode ("sim/multiplay/generic/bool[7]"));
+
+      io.load_nasal (getprop ("/sim/fg-aircraft") ~ "/mosquito/Nasal/bombable.nas", "mosquito_bombable");
+      mosquito_bombable.load(rplayer);
     ]]></load>
     <unload><![CDATA[
       update.stop();

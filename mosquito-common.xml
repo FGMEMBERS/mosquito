@@ -112,9 +112,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <engine n="0">
       <rpm type="double">0</rpm>
       <cylinder-temp-degc type="float">15</cylinder-temp-degc>
-      <coolant-temp-degc type="float">15.0</coolant-temp-degc>
       <crankloop type="float">0</crankloop>
-      <oiltempc type = "float">15.0</oiltempc>
       <oil-visc type = "float">0.1</oil-visc>
       <oil-press type = "float">0.0</oil-press>
       <fuel-press type ="float">0.0</fuel-press>
@@ -122,16 +120,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       <overrev type="int">0</overrev>
       <overheat type="int">0</overheat>
       <primed type="float">1</primed>
-      <startup_smoke type="bool">false</startup_smoke>
+      <startup-smoke type="bool">false</startup-smoke>
       <boost-strain type="float">0</boost-strain>
-      <carburator-entry-temp-degc type="float">15</carburator-entry-temp-degc>
     </engine>
     <engine n="1">
       <rpm type="double">0</rpm>
       <cylinder-temp-degc type="float">15</cylinder-temp-degc>
-      <coolant-temp-degc type="float">15.0</coolant-temp-degc>
       <crankloop type="float">0</crankloop>
-      <oiltempc type = "float">15.0</oiltempc>
       <oil-visc type = "float">0.1</oil-visc>
       <oil-press type = "float">0.0</oil-press>
       <fuel-press type ="float">0.0</fuel-press>
@@ -139,9 +134,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       <overrev type="int">0</overrev>
       <overheat type="int">0</overheat>
       <primed type="float">1</primed>
-      <startup_smoke type="bool">false</startup_smoke>
+      <startup-smoke type="bool">false</startup-smoke>
       <boost-strain type="float">0</boost-strain>
-      <carburator-entry-temp-degc type="float">15</carburator-entry-temp-degc>
     </engine>
   </engines>
 
@@ -175,7 +169,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
           <time>2</time>
         </binding>
         <binding>
-          <command>property-assign</command>
+          <command>property-interpolate</command>
           <property>controls/engines/engine[1]/cowl-flaps-norm</property>
           <value>1</value>
           <time>2</time>
@@ -192,7 +186,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
           <time>2</time>
         </binding>
         <binding>
-          <command>property-assign</command>
+          <command>property-interpolate</command>
           <property>controls/engines/engine[1]/cowl-flaps-norm</property>
           <value>0</value>
           <time>2</time>

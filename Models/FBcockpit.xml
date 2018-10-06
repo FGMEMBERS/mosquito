@@ -46,7 +46,7 @@
     <object-name>door.1</object-name>
     <object-name>doorhandle</object-name>
     <object-name>emergrel</object-name>
-    <property>/controls/doors/door/position-norm</property>
+    <property>controls/doors/door/position-norm</property>
     <interpolation>
       <entry>
         <ind>0.0</ind>

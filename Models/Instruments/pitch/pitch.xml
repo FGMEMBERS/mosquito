@@ -7,7 +7,7 @@
     <object-name>portknob</object-name>
     <object-name>portknob_fwd</object-name>
     <object-name>portlever</object-name>
-    <property>/controls/engines/engine[0]/propeller-pitch</property>
+    <property>controls/engines/engine[0]/propeller-pitch</property>
     <interpolation>
       <entry>
         <ind>0.0</ind>
@@ -34,7 +34,7 @@
     <object-name>stbdknob</object-name>
     <object-name>stbdknob_fwd</object-name>
     <object-name>stblever</object-name>
-    <property>/controls/engines/engine[1]/propeller-pitch</property>
+    <property>controls/engines/engine[1]/propeller-pitch</property>
     <interpolation>
       <entry>
         <ind>0.0</ind>
@@ -65,7 +65,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[0]/propeller-pitch</property>
+        <property>controls/engines/engine[0]/propeller-pitch</property>
         <step>0.2</step>
         <min>0</min>
         <max>1</max>
@@ -82,7 +82,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[0]/propeller-pitch</property>
+        <property>controls/engines/engine[0]/propeller-pitch</property>
         <step>-0.2</step>
         <min>0</min>
         <max>1</max>
@@ -98,7 +98,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[1]/propeller-pitch</property>
+        <property>controls/engines/engine[1]/propeller-pitch</property>
         <step>0.2</step>
         <min>0</min>
         <max>1</max>
@@ -115,7 +115,7 @@
       <repeatable>false</repeatable>
       <binding>
         <command>property-adjust</command>
-        <property>/controls/engines/engine[1]/propeller-pitch</property>
+        <property>controls/engines/engine[1]/propeller-pitch</property>
         <step>-0.2</step>
         <min>0</min>
         <max>1</max>

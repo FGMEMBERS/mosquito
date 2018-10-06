@@ -50,7 +50,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>/controls/engines/engine/magnetos</property>
+      <property>controls/engines/engine/magnetos</property>
     <step>1.0</step>
     <min>0</min>
     <max>3</max>
@@ -67,7 +67,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>/controls/engines/engine/magnetos</property>
+      <property>controls/engines/engine/magnetos</property>
     <step>-1.0</step>
     <min>0</min>
     <max>3</max>
@@ -83,7 +83,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>/controls/engines/engine/magnetos</property>
+      <property>controls/engines/engine/magnetos</property>
     <step>2.0</step>
     <min>0</min>
     <max>3</max>
@@ -100,7 +100,7 @@
     <repeatable>false</repeatable>
     <binding>
       <command>property-adjust</command>
-      <property>/controls/engines/engine/magnetos</property>
+      <property>controls/engines/engine/magnetos</property>
     <step>-2.0</step>
     <min>0</min>
     <max>3</max>

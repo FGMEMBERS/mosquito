@@ -240,23 +240,6 @@ var close_cowlflaps = func {
 	}
 }
 
-var shift_blower_up = func {
-	if (blower.getValue() <= 0.3){
-  interpolate("controls/engines/engine["~ en ~"]/boost", 0.75, 45);
-	}
-	else {
-  interpolate("controls/engines/engine["~ en ~"]/boost", 1.0, 45);
-	}
-}
-var shift_blower_dn = func {
-	if (blower.getValue() >= 1.0){
-  interpolate("controls/engines/engine["~ en ~"]/boost", 0.75, 45);
-	}
-	else {
-  interpolate("controls/engines/engine["~ en ~"]/boost", 0.3, 45);
-	}
-}
-
 var starter = func {
 	starter_power = getprop("/systems/electrical/volts");
 	if(starter_power == nil)

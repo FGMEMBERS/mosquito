@@ -70,7 +70,7 @@
       <object-name>arm1.R</object-name>
       <object-name>arm2.R</object-name>
       <object-name>hand.R</object-name>
-      <property>/controls/flight/elevator</property>
+      <property>controls/flight/elevator</property>
       <factor>20</factor>
       <center>
       <x-m>-0.015</x-m>
@@ -88,7 +88,7 @@
       <object-name>arm1.R</object-name>
       <object-name>arm2.R</object-name>
       <object-name>hand.R</object-name>
-      <property>/controls/flight/aileron</property>
+      <property>controls/flight/aileron</property>
       <factor>-15</factor>
       <center>
       <x-m>-0.015</x-m>
@@ -123,7 +123,7 @@
       <type>rotate</type>
       <object-name>arm2.R</object-name>
       <object-name>hand.R</object-name>
-      <property>/controls/flight/elevator</property>
+      <property>controls/flight/elevator</property>
       <factor>-15</factor>
       <center>
       <x-m>0.007</x-m>
@@ -141,7 +141,7 @@
 <type>rotate</type>
 <object-name>arm2.R</object-name>
 <object-name>hand.R</object-name>
-<property>/controls/flight/aileron</property>
+<property>controls/flight/aileron</property>
 <factor>60</factor>
 <center>
 <x-m>0.0</x-m>
@@ -283,7 +283,7 @@
         <type>rotate</type>
         <object-name>arm2.R</object-name>
         <object-name>hand.R</object-name>
-        <property>/controls/flight/elevator</property>
+        <property>controls/flight/elevator</property>
         <factor>15</factor>
 
         <center>

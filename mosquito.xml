@@ -127,16 +127,13 @@ YASim aerodynamic model for a P-51D mustang
     <control-input axis="/controls/engines/engine[0]/propeller-pitch" control="ADVANCE" />
     <piston-engine
         eng-power="1725" eng-rpm="2900"
-        turbo-mul="5.5" wastegate-mp="61"
-        >
+        supercharged="1" turbo-mul="5.5" wastegate-mp="61">
       <control-input axis="/controls/engines/engine[0]/throttle" control="THROTTLE"/>
       <control-input axis="/controls/engines/engine[0]/starter" control="STARTER"/>
       <control-input axis="/controls/engines/engine[0]/magnetos" control="MAGNETOS"/>
       <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
       <control-input axis="/controls/engines/engine[0]/boost" control="BOOST"/>
     </piston-engine>
-
-
   </propeller>
 
   <propeller   x="-1.47" y="-2.87" z="-0.08"
@@ -150,16 +147,13 @@ YASim aerodynamic model for a P-51D mustang
     <control-input axis="/controls/engines/engine[1]/propeller-pitch" control="ADVANCE" />
     <piston-engine
         eng-power="1725" eng-rpm="2900"
-        turbo-mul="5.5" wastegate-mp="61"
-        >
+        supercharged="1" turbo-mul="5.5" wastegate-mp="61">
       <control-input axis="/controls/engines/engine[1]/throttle" control="THROTTLE"/>
       <control-input axis="/controls/engines/engine[1]/starter" control="STARTER"/>
       <control-input axis="/controls/engines/engine[1]/magnetos" control="MAGNETOS"/>
       <control-input axis="/controls/engines/engine[1]/mixture" control="MIXTURE"/>
       <control-input axis="/controls/engines/engine[1]/boost" control="BOOST"/>
     </piston-engine>
-
-
   </propeller>
 
   <!-- Tail wheel -->

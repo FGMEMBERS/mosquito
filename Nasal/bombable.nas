@@ -338,7 +338,7 @@ bombableObject.weapons.hs_II_4 = bombableObject.weapons.hs_II_1;
 
 load = func (thisNode) {
   var thisNodeName = thisNode.getPath();
-  print("MiG-15: loading bombable support ", thisNodeName);
+  print("Mosquito: loading bombable support ", thisNodeName);
 
   if (getprop ("/bombable/menusettings/bombable-enabled") != 1) {
     print ("Bombable not installed or not loaded");

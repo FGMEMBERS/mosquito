@@ -68,7 +68,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <engines>
       <engine n="0">
         <magnetos>0</magnetos>
-        <boost type="double">0.45</boost> <!--high: 0.6 -->
+        <boost type="double">0.667</boost>
 	<blower type="int">0</blower>
         <primer-pressed type="bool">0.0</primer-pressed>
 	<throttle-c type="float">0</throttle-c>
@@ -76,7 +76,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       </engine>
       <engine n="1">
         <magnetos>0</magnetos>
-        <boost type="double">0.45</boost>
+        <boost type="double">0.667</boost>
 	<blower type="int">0</blower>
         <primer-pressed type="bool">0.0</primer-pressed>
 	<throttle-c type="float">0</throttle-c>
@@ -168,23 +168,34 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       <key n="70">
         <name>F</name>
         <desc>Open Radiator Shutter</desc>
-        <binding n="0">
-          <command>nasal</command>
-          <script> 
-            merlin0.open_cowlflaps();
-            merlin1.open_cowlflaps();
-          </script>
+        <binding>
+          <command>property-interpolate</command>
+          <property>controls/engines/engine[0]/cowl-flaps-norm</property>
+          <value>1</value>
+          <time>2</time>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>controls/engines/engine[1]/cowl-flaps-norm</property>
+          <value>1</value>
+          <time>2</time>
         </binding>
       </key>
+
       <key n="102">
         <name>f</name>
         <desc>Close Radiator Shutter</desc>
-        <binding n="0">
-          <command>nasal</command>
-          <script> 
-            merlin0.close_cowlflaps();
-            merlin1.close_cowlflaps();
-          </script>
+        <binding>
+          <command>property-interpolate</command>
+          <property>controls/engines/engine[0]/cowl-flaps-norm</property>
+          <value>0</value>
+          <time>2</time>
+        </binding>
+        <binding>
+          <command>property-assign</command>
+          <property>controls/engines/engine[1]/cowl-flaps-norm</property>
+          <value>0</value>
+          <time>2</time>
         </binding>
       </key>
 
@@ -251,6 +262,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     </weapons>
     <mosquito>
       <file>Aircraft/mosquito/Nasal/mosquito.nas</file>
+      <file>Aircraft/mosquito/Nasal/merlin.nas</file>
     </mosquito>
     <hitcheck>
       <file>Aircraft/mosquito/Nasal/hitcheck.nas</file>
@@ -258,12 +270,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <failure>
       <file>Aircraft/mosquito/Nasal/failure.nas</file>
     </failure>
-    <merlin0>
-      <file>Aircraft/mosquito/Nasal/merlin64.nas</file>
-    </merlin0>
-    <merlin1>
-      <file>Aircraft/mosquito/Nasal/merlin64b.nas</file>
-    </merlin1>
     <mosquito_bombable>
       <file>Aircraft/mosquito/Nasal/bombable.nas</file>
     </mosquito_bombable>
@@ -374,7 +380,7 @@ Lock the tail wheel when aligned on runway.
 Open radiator shutters using the two leftmost switches on top of the right-hand side
 panel that also has the fuel gauges.
 On short fields, use flaps 1 step down.
-Set propeller pitch to full fine, apply full throttle (+20 boost).
+Set propeller pitch to full fine, open throttle to +12 boost.
 Lift tail wheel early and take off at 140 mph.
 
 --- Climb ---
@@ -383,6 +389,9 @@ Reduce manifold pressure to +9 boost and set 2850 rpm.
 --- Cruise ---
 Reduce manifold pressure to +4 boost and set 2650 rpm.
 Close Radiator shutters.
+
+--- Combat ---
+Your engines are rated to a maximum of +16 boost.
 
 ---Landing---
 Approach at 170 mph with flaps down.
@@ -435,6 +444,8 @@ Load factor, undercarriage up:   9g
         <int n="2" alias="/sim/armament/bombL/type"/>
         <int n="3" alias="/sim/armament/bombR/type"/>
         <int n="4" alias="/sim/armament/bombB1/type"/>
+        <bool n="8" alias="/engines/engine[0]/startup-smoke"/>
+        <bool n="9" alias="/engines/engine[1]/startup-smoke"/>
       </generic>
     </multiplay>
 

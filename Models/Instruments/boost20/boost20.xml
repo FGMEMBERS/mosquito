@@ -7,66 +7,19 @@
     <animation> 
       <type>rotate</type>
       <object-name>boost-Needle1</object-name>
-      <property alias ="../../boost-gauge-inhg"/>
-      <!--    <factor>0.4911</factor>
-      <offset>-29.92</offset> -->
+      <property alias ="../../mp-inhg"/>
+      <!-- 4 psi = 8.144 inHg therefore: -->
+      <!-- I measured the angles on the texture using gimp. The scale is nonlinear. -->
       <interpolation> 
-        <entry>
-          <ind>-4</ind>
-          <dep>-43</dep>
-        </entry>
-        <entry>
-          <ind>-2</ind>
-          <dep>-22</dep>
-        </entry>
-        <entry>
-          <ind>0</ind>
-          <dep>0</dep>
-        </entry>
-        <entry>
-          <ind>2</ind>
-          <dep>21</dep>
-        </entry>
-        <entry>
-          <ind>4</ind>
-          <dep>42</dep>
-        </entry>
-        <entry>
-          <ind>6</ind>
-          <dep>63</dep>
-        </entry>
-        <entry>
-          <ind>8</ind>
-          <dep>85</dep>
-        </entry>
-        <entry>
-          <ind>10</ind>
-          <dep>106</dep>
-        </entry>
-        <entry>
-          <ind>12</ind>
-          <dep>126</dep>
-        </entry>
-        <entry>
-          <ind>14</ind>
-          <dep>147</dep>
-        </entry>
-        <entry>
-          <ind>16</ind>
-          <dep>167</dep>
-        </entry>
-        <entry>
-          <ind>18</ind>
-          <dep>189</dep>
-        </entry>
-        <entry>
-          <ind>20</ind>
-          <dep>209</dep>
-        </entry>
-        <entry>
-          <ind>26</ind>
-          <dep>272</dep>
-        </entry>
+        <entry><ind>21.776</ind><dep>-44</dep></entry> <!-- -4psi -->
+        <entry><ind>29.920</ind><dep>  0</dep></entry> <!-- +0psi -->
+        <entry><ind>38.064</ind><dep> 41</dep></entry> <!-- +4psi -->
+        <entry><ind>46.208</ind><dep> 84</dep></entry> <!-- +8psi -->
+        <entry><ind>54.352</ind><dep>125</dep></entry> <!-- +12psi -->
+        <entry><ind>62.496</ind><dep>167</dep></entry> <!-- +16psi -->
+        <entry><ind>70.640</ind><dep>212</dep></entry> <!-- +20psi -->
+        <entry><ind>78.784</ind><dep>254</dep></entry> <!-- +24psi -->
+        <entry><ind>82.856</ind><dep>274</dep></entry> <!-- +26psi -->
       </interpolation>
       <axis>
         <x>-1</x>

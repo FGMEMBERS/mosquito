@@ -7,7 +7,7 @@
   <nasal>
     <load><![CDATA[
       var update = aircraft.overlay_update.new();
-      update.add("Models/AI-Liveries", "sim/model/livery/file");
+      update.add("Aircraft/mosquito/Models/AI-Liveries", "sim/model/livery/file");
 
       var self = cmdarg();
       var refl_c = self.getNode("sim/model/livery/refl_correction", 1);
@@ -47,9 +47,13 @@
         alias(self.getNode ("sim/multiplay/generic/bool[6]"));
       self.getNode ("sim/armament/cannon[3]/fire", 1).
         alias(self.getNode ("sim/multiplay/generic/bool[7]"));
+      self.getNode ("engines/engine[0]/startup-smoke", 1).
+        alias(self.getNode ("sim/multiplay/generic/bool[8]"));
+      self.getNode ("engines/engine[1]/startup-smoke", 1).
+        alias(self.getNode ("sim/multiplay/generic/bool[9]"));
 
       io.load_nasal (getprop ("/sim/fg-aircraft") ~ "/mosquito/Nasal/bombable.nas", "mosquito_bombable");
-      mosquito_bombable.load(rplayer);
+      mosquito_bombable.load(self);
     ]]></load>
     <unload><![CDATA[
       update.stop();
@@ -57,7 +61,7 @@
   </nasal>
 
   <model> 
-    <path>Models/stores/loads.xml</path>
+    <path>Aircraft/mosquito/Models/stores/loads.xml</path>
     <name>external loads</name>
   </model>
   
@@ -689,7 +693,7 @@
   <animation>
     <type>rotate</type>
     <object-name>aileron.L</object-name>
-    <property>controls/flight/aileron</property>
+    <property>surface-positions/left-aileron-pos-norm</property>
     <factor>-30.0</factor>
 
     <center>
@@ -710,8 +714,8 @@
   <animation>
     <type>rotate</type>
     <object-name>aileron.R</object-name>
-    <property>controls/flight/aileron</property>
-    <factor>-30.0</factor>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <factor>30.0</factor>
 
     <center>
       <x-m>3.974</x-m>
@@ -816,7 +820,7 @@
 
   <!-- crew -->
   <model> 
-    <path>Models/pilot.xml</path>
+    <path>Aircraft/mosquito/Models/pilot.xml</path>
     <name>pilot</name>
     <offsets> 
       <x-m>2.16</x-m>
@@ -837,7 +841,7 @@
   </animation>
 
   <model> 
-    <path>Models/crew.xml</path>
+    <path>Aircraft/mosquito/Models/crew.xml</path>
     <name>crew</name>
     <offsets> 
       <x-m>2.64</x-m>
@@ -873,7 +877,7 @@
   <model>
     <name>pdiskL</name>
     <nopreview/>
-    <path>Models/pdiskL.xml</path>
+    <path>Aircraft/mosquito/Models/pdiskL.xml</path>
     <offsets>
       <x-m>0.5</x-m>
       <y-m>-2.525</y-m>
@@ -883,7 +887,7 @@
 
   <model>
     <name>pdiskL</name>
-    <path>Models/pdiskR.xml</path>
+    <path>Aircraft/mosquito/Models/pdiskR.xml</path>
     <offsets>
       <x-m>0.5</x-m>
       <y-m>2.525</y-m>
@@ -1017,10 +1021,7 @@
     <object-name>startup0-1</object-name>
     <object-name>startup0-0</object-name>
     <condition>
-      <equals>
-        <property>engines/engine[0]/startup_smoke</property>
-        <value>1</value>
-      </equals>
+      <property>engines/engine[0]/startup-smoke</property>
     </condition>
   </animation>
 
@@ -1053,10 +1054,7 @@
     <object-name>startup1-1</object-name>
     <object-name>startup1-0</object-name>
     <condition>
-      <equals>
-        <property>engines/engine[1]/startup_smoke</property>
-        <value>1</value>
-      </equals>
+      <property>engines/engine[1]/startup-smoke</property>
     </condition>
   </animation>
 

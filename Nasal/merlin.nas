@@ -3,6 +3,7 @@ var airspeed = props.globals.getNode("velocities/airspeed-kt");
 var envtemp = props.globals.getNode("environment/temperature-degc");
 var gload = props.globals.getNode("accelerations/pilot-g",1);
 var alt = props.globals.getNode("instrumentation/altimeter/pressure-alt-ft");
+var ambient_pressure = props.globals.getNode ("/environment/pressure-inhg");
 
 var mp_max = 62.50;
 var mp_idle = 3;
@@ -83,6 +84,11 @@ var merlin66 = {
       var temp = 3 * cat + 0.3 * rpm0 + 0.5 * egt - 0.005 * as * as - 0.07* thr * (cf+0.1) -20 * mix;
       #print ("Temp: ",temp,"Mix: ",mix);
       me.cyltemp.setDoubleValue (temp * 0.4);
+
+      # Automatic mixture control.  Mixture is 1 up to 3600 ft (ambient pressure for a standard
+      # atmosphere=26.3296 inHg) then decreases in proportion to ambient pressure.
+      var amb = ambient_pressure.getValue();
+      me.mixture.setValue (math.min (1.0, amb / 26.3296));
 
       # adjust throttle
       var throttle_s = me.throttle.getValue() * mp_max;

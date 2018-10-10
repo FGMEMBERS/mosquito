@@ -61,30 +61,30 @@ YASim aerodynamic model for a de Havilland Mosquito
 
   <!--inner wing-->
 
-  <vstab x="-3.969" y="0.677" z="-0.022" taper="0.89" incidence="0.0"
+  <vstab x="-3.969" y="0.677" z="0" taper="0.89" incidence="0.0"
          length="1.4" chord="4.096" sweep="-3" dihedral="4" camber="0.03">
     <stall aoa="14" width="16" peak="1.5"/>
-    <flap0 start="0.0" end="1.0" lift="1.7" drag="1.5"/>
-    <spoiler start="0.05" end="0.95" lift="2.1" drag="1.6"/>
+    <flap0 start="0.0" end="1.0" lift="1.3" drag="1.7"/>
+    <spoiler start="0.05" end="0.95" lift="1.0" drag="1.1"/>
     <control-input axis="/controls/flight/flaps" control="FLAP0"/>
     <control-input axis="/controls/engines/engine[0]/cowl-flaps-norm" control="SPOILER"/>
     <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
     <control-output control="SPOILER" prop="/surface-positions/cooler-l-pos-norm"/>
-    <control-speed control="FLAP0" transition-time="10"/>
-    <control-speed control="SPOILER" transition-time="5"/>
+    <control-speed control="FLAP0" transition-time="5"/>
+    <control-speed control="SPOILER" transition-time="10"/>
   </vstab>
 
-  <vstab x="-3.969" y="-0.677" z="0.12" taper="0.89" incidence="0.0"
-         length="-1.4" chord="4.096" sweep="-3" dihedral="-4" camber="0.03">
+  <vstab x="-3.969" y="-0.677" z="0" taper="0.89" incidence="0.0"
+         length="1.4" chord="4.096" sweep="-3" dihedral="176" camber="-0.03">
     <stall aoa="14" width="16" peak="1.5"/>
-    <flap0 start="0.0" end="1.0" lift="2.1" drag="1.5"/>
-    <spoiler start="0.05" end="0.95" lift="1.8" drag="1.6"/>
-    <control-input axis="/controls/flight/flaps" control="FLAP0"/>
-    <control-input axis="/controls/engines/engine[1]/cowl-flaps-norm" control="SPOILER"/>
+    <flap0 start="0.0" end="1.0" lift="1.3" drag="1.7"/>
+    <spoiler start="0.05" end="0.95" lift="1.0" drag="1.1"/>
+    <control-input axis="/controls/flight/flaps" control="FLAP0" invert="true"/>
+    <control-input axis="/controls/engines/engine[1]/cowl-flaps-norm" control="SPOILER" invert="true"/>
     <control-output control="FLAP0" prop="/surface-positions/flap-pos-norm"/>
     <control-output control="SPOILER" prop="/surface-positions/cooler-r-pos-norm"/>
     <control-speed control="FLAP0" transition-time="5"/>
-    <control-speed control="SPOILER" transition-time="2"/>
+    <control-speed control="SPOILER" transition-time="10"/>
   </vstab>
 
   <!--wingtip-->

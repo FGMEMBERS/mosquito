@@ -197,13 +197,13 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
           <command>property-interpolate</command>
           <property>controls/engines/engine[0]/cowl-flaps-norm</property>
           <value>1</value>
-          <time>2</time>
+          <time>10</time>
         </binding>
         <binding>
           <command>property-interpolate</command>
           <property>controls/engines/engine[1]/cowl-flaps-norm</property>
           <value>1</value>
-          <time>2</time>
+          <time>10</time>
         </binding>
       </key>
 

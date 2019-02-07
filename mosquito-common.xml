@@ -114,7 +114,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       <cylinder-temp-degc type="float">15</cylinder-temp-degc>
       <crankloop type="float">0</crankloop>
       <oil-visc type = "float">0.1</oil-visc>
-      <oil-press type = "float">0.0</oil-press>
+      <oil-pressure-psi type = "double">0.0</oil-pressure-psi>
+      <oil-temperature-degf type="double">59.0</oil-temperature-degf> <!-- 15°C -->
       <fuel-press type ="float">0.0</fuel-press>
       <rev-strain type="int">0</rev-strain>
       <overrev type="int">0</overrev>
@@ -128,7 +129,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       <cylinder-temp-degc type="float">15</cylinder-temp-degc>
       <crankloop type="float">0</crankloop>
       <oil-visc type = "float">0.1</oil-visc>
-      <oil-press type = "float">0.0</oil-press>
+      <oil-pressure-psi type = "double">0.0</oil-pressure-psi>
+      <oil-temperature-degf type="double">59.0</oil-temperature-degf> <!-- 15°C -->
       <fuel-press type ="float">0.0</fuel-press>
       <rev-strain type="int">0</rev-strain>
       <overrev type="int">0</overrev>
@@ -302,7 +304,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
   <sim>
     <aero>mosquito-yasim</aero>
-    <aircraft-version>0.2</aircraft-version>
+    <aircraft-version>3.1.4</aircraft-version>
     <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
     <armament include="Dialogs/armament.xml"/>
     <author>Detlef Faber, Ludovic Brenta</author>

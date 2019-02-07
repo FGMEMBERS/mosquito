@@ -23,9 +23,8 @@ var merlin66 = {
       m.exhtempf = m.engine.getNode ("egt-degf");
       m.manpress = m.engine.getNode ("mp-osi");
       m.nofuel = m.engine.getNode ("out-of-fuel",1 );
-      m.oilpress = m.engine.getNode ("oil-press", 1);
-      m.oiltemp = m.engine.getNode ("oil-temperature-degf");
-      m.oiltempcalc = m.engine.getNode ("oil-temperature-calc", 1);
+      m.oilpress = m.engine.getNode ("oil-pressure-psi");
+      m.oiltemp = m.engine.initNode ("oil-temperature-degf", getprop ("/environment/temperature-degf"), "DOUBLE");
       m.overrev = m.engine.getNode ("overrev", 1);
       m.primed = m.engine.getNode ("primed");
       m.rpm = m.engine.getNode ("rpm");
@@ -34,7 +33,7 @@ var merlin66 = {
       m.startup = m.engine.getNode ("startup", 1);
       m.startup_smoke = m.engine.getNode ("startup-smoke", 1);
       m.thrust = m.engine.getNode ("thrust-lbs",1);
-      m.viscosity = m.engine.getNode ("oil-visc");
+      m.viscosity = m.engine.initNode ("oil-visc", 1.0, "DOUBLE");
 
       m.controls = props.globals.getNode("controls/engines/engine[" ~ engine_number ~ "]");
       m.boost = m.controls.getNode ("boost");
@@ -106,8 +105,7 @@ var merlin66 = {
       var otemp = me.oiltemp.getValue();
       var visc = me.viscosity.getValue();
       # print (otemp," ",visc);
-      me.oilpress.setValue (8.2 - 2*visc);
-      me.oiltempcalc.setValue (otemp * visc - 70);
+      me.oilpress.setValue ((8.2 - 2*visc) * 14.69); # compute in atm then convert to PSI
       if (visc < 1.0 ) {
          me.viscosity.setValue (visc + 0.002);
       }

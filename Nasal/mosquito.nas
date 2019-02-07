@@ -24,7 +24,7 @@ var main_loop = func {
 		interpolate (boost1, lowblower,30);
 		blower1.setValue(0);
 		}
-  settimer(main_loop, 0.2)
+  settimer(main_loop, 0.05)
 }
 
 var switch_fuelS = func {

@@ -228,7 +228,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
       <key n="113"> 
         <name>q</name>
-        <desc>Toggle Master Arm on</desc>
+        <desc>Master Arm on</desc>
         <binding> 
           <command>property-adjust</command>
           <property>/controls/armament/master-arm</property>
@@ -239,7 +239,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       </key>
       <key n="81"> 
         <name>Q</name>
-        <desc>Toggle Master Arm off</desc>
+        <desc>Master Arm off</desc>
         <binding> 
           <command>property-adjust</command>
           <property>/controls/armament/master-arm</property>

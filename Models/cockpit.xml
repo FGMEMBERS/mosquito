@@ -398,7 +398,7 @@
     <path>Models/Instruments/fuelcontrol/fuelcontrol.xml</path>
     <offsets> 
       <x-m>2.79</x-m>
-      <y-m>-0.02</y-m>
+      <y-m>-0.16</y-m>
       <z-m>0.29</z-m>
       <heading-deg>180</heading-deg>
       <pitch-deg>-18</pitch-deg>

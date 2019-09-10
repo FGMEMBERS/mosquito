@@ -75,6 +75,21 @@ don@sol2500.net
         <y-offset-m archive="y" type="double">0.93</y-offset-m>
         <z-offset-m archive="y" type="double">2.35</z-offset-m>
         <pitch-offset-deg>-17.5</pitch-offset-deg>
+        <!-- Override fgdata's pilot viewing limits so that we can see fuel
+        cocks behind the pilot seat. -->
+        <limits>
+          <enabled type="bool">true</enabled>
+          <left>
+            <heading-max-deg type="double">140</heading-max-deg>
+            <x-offset-max-m type="double">0.15</x-offset-max-m>
+            <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+          </left>
+          <right>
+            <heading-max-deg type="double">160</heading-max-deg>
+            <x-offset-max-m type="double">0.15</x-offset-max-m>
+            <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+          </right>
+        </limits>
       </config>
     </view>
 

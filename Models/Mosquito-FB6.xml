@@ -845,7 +845,7 @@
     <name>crew</name>
     <offsets> 
       <x-m>2.64</x-m>
-      <y-m>0.3</y-m>
+      <y-m>0.2</y-m>
       <z-m>0.14</z-m>
       <pitch-deg>14</pitch-deg>
     </offsets>

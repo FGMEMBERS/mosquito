@@ -133,7 +133,7 @@ var merlin66 = {
       }
       if (gload.getValue() < -0.3 ) {
          print ("cutout!");
-         setprop ("sim/messages/copilot", me.name ~ " starved of fuel by negative G-force!");
+         failure.copilot_message(me.name ~ " starved of fuel by negative G-force!");
          if (me.mixture0.getValue() == 0) {
             me.mixture0.setValue (me.mixture.getValue());
             me.mixture.setValue(0);

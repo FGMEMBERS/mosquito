@@ -32,7 +32,7 @@
        <binding>
          <command>property-adjust</command>
          <property>controls/engines/engine[0]/throttle</property>
-         <factor>-0.1</factor>
+         <factor>0.1</factor>
          <min>0</min>
          <max>1.0</max>                
          <wrap>false</wrap>
@@ -42,7 +42,7 @@
        <binding>
          <command>property-adjust</command>
          <property>controls/engines/engine[0]/throttle</property>
-         <factor>-0.1</factor>
+         <factor>0.1</factor>
          <min>0</min>
          <max>1.0</max>                
          <wrap>false</wrap>
@@ -50,12 +50,20 @@
        <binding>
          <command>property-adjust</command>
          <property>controls/engines/engine[1]/throttle</property>
-         <factor>-0.1</factor>
+         <factor>0.1</factor>
          <min>0</min>
          <max>1.0</max>                
          <wrap>false</wrap>
        </binding>
         </shift-action>
+      <hovered>
+        <binding>
+          <command>set-tooltip</command>
+          <tooltip-id>Left throttle</tooltip-id>
+          <label>Left throttle = %s</label>
+          <property>controls/engines/engine[0]/throttle</property>
+        </binding>
+      </hovered>
    </animation>
 
  <animation>
@@ -85,7 +93,7 @@
        <binding>
          <command>property-adjust</command>
          <property>controls/engines/engine[1]/throttle</property>
-         <factor>-0.1</factor>
+         <factor>0.1</factor>
          <min>0</min>
          <max>1.0</max>                
          <wrap>false</wrap>
@@ -95,7 +103,7 @@
        <binding>
          <command>property-adjust</command>
          <property>controls/engines/engine[0]/throttle</property>
-         <factor>-0.1</factor>
+         <factor>0.1</factor>
          <min>0</min>
          <max>1.0</max>                
          <wrap>false</wrap>
@@ -103,12 +111,20 @@
        <binding>
          <command>property-adjust</command>
          <property>controls/engines/engine[1]/throttle</property>
-         <factor>-0.1</factor>
+         <factor>0.1</factor>
          <min>0</min>
          <max>1.0</max>                
          <wrap>false</wrap>
        </binding>
         </shift-action>
+      <hovered>
+        <binding>
+          <command>set-tooltip</command>
+          <tooltip-id>Right throttle</tooltip-id>
+          <label>Right throttle = %s</label>
+          <property>controls/engines/engine[1]/throttle</property>
+        </binding>
+      </hovered>
    </animation>
 
 <!-- RPM levers -->
@@ -140,7 +156,7 @@
        <binding>
          <command>property-adjust</command>
          <property>controls/engines/engine[0]/propeller-pitch</property>
-         <factor>-0.1</factor>
+         <factor>0.1</factor>
          <min>0</min>
          <max>1.0</max>                
          <wrap>false</wrap>
@@ -150,7 +166,7 @@
        <binding>
          <command>property-adjust</command>
          <property>controls/engines/engine[0]/propeller-pitch</property>
-         <factor>-0.1</factor>
+         <factor>0.1</factor>
          <min>0</min>
          <max>1.0</max>                
          <wrap>false</wrap>
@@ -158,12 +174,20 @@
        <binding>
          <command>property-adjust</command>
          <property>controls/engines/engine[1]/propeller-pitch</property>
-         <factor>-0.1</factor>
+         <factor>0.1</factor>
          <min>0</min>
          <max>1.0</max>                
          <wrap>false</wrap>
        </binding>
         </shift-action>
+      <hovered>
+        <binding>
+          <command>set-tooltip</command>
+          <tooltip-id>Left propeller pitch</tooltip-id>
+          <label>Left propeller pitch = %s</label>
+          <property>controls/engines/engine[0]/propeller-pitch</property>
+        </binding>
+      </hovered>
    </animation>
 
  <animation>
@@ -193,7 +217,7 @@
        <binding>
          <command>property-adjust</command>
          <property>controls/engines/engine[1]/propeller-pitch</property>
-         <factor>-0.1</factor>
+         <factor>0.1</factor>
          <min>0</min>
          <max>1.0</max>                
          <wrap>false</wrap>
@@ -203,7 +227,7 @@
        <binding>
          <command>property-adjust</command>
          <property>controls/engines/engine[0]/propeller-pitch</property>
-         <factor>-0.1</factor>
+         <factor>0.1</factor>
          <min>0</min>
          <max>1.0</max>                
          <wrap>false</wrap>
@@ -211,12 +235,20 @@
        <binding>
          <command>property-adjust</command>
          <property>controls/engines/engine[1]/propeller-pitch</property>
-         <factor>-0.1</factor>
+         <factor>0.1</factor>
          <min>0</min>
          <max>1.0</max>                
          <wrap>false</wrap>
        </binding>
         </shift-action>
+      <hovered>
+        <binding>
+          <command>set-tooltip</command>
+          <tooltip-id>Right propeller pitch</tooltip-id>
+          <label>Right propeller pitch = %s</label>
+          <property>controls/engines/engine[1]/propeller-pitch</property>
+        </binding>
+      </hovered>
    </animation>
 
 <!--

@@ -85,6 +85,14 @@
         <wrap>1</wrap>
       </binding>
     </action>
+      <hovered>
+        <binding>
+          <command>set-tooltip</command>
+          <tooltip-id>Left cowl flaps</tooltip-id>
+          <label>Left cowl flaps = %s</label>
+          <property>controls/engines/engine/cowl-flaps-norm</property>
+        </binding>
+      </hovered>
   </animation>
 
   <animation>
@@ -129,6 +137,14 @@
         <wrap>1</wrap>
       </binding>
     </action>
+      <hovered>
+        <binding>
+          <command>set-tooltip</command>
+          <tooltip-id>Right cowl flaps</tooltip-id>
+          <label>Right cowl flaps = %s</label>
+          <property>controls/engines/engine[1]/cowl-flaps-norm</property>
+        </binding>
+      </hovered>
   </animation>
 
   <animation>
@@ -173,6 +189,14 @@
         <wrap>1</wrap>
       </binding>
     </action>
+      <hovered>
+        <binding>
+          <command>set-tooltip</command>
+          <tooltip-id>Navigation lights</tooltip-id>
+          <label>Navigation lights = %s</label>
+          <property>controls/lighting/navlights</property>
+        </binding>
+      </hovered>
   </animation>
 
   <animation>

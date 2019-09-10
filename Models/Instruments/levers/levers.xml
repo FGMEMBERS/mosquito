@@ -28,6 +28,14 @@
         <property>controls/gear/gear-down</property>
       </binding>
     </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>Undercarriage</tooltip-id>
+        <label>Undercarriage = %.1f</label>
+        <property>controls/gear/gear-down</property>
+      </binding>
+    </hovered>
  </animation>
 
  <animation>
@@ -55,6 +63,14 @@
 <script>mosquito.bombbaydoor.toggle();</script>                                                                                                                                                            
       </binding>
     </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>Bombbay doors</tooltip-id>
+        <label>Bombbay doors = %.1f</label>
+        <property>controls/armament/bombbaydoor/position-norm</property>
+      </binding>
+    </hovered>
  </animation>
 
 
@@ -77,12 +93,20 @@
        <binding>
          <command>property-adjust</command>
          <property>controls/flight/flaps</property>
-         <factor>0.1</factor>
+         <factor>-0.1</factor>
          <min>0</min>
          <max>1.0</max>                
          <wrap>false</wrap>
        </binding>
      </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>Flaps</tooltip-id>
+        <label>Flaps = %.1f</label>
+        <property>controls/flight/flaps</property>
+      </binding>
+    </hovered>
    </animation>
 
 

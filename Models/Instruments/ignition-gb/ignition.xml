@@ -56,6 +56,13 @@
         <wrap>0</wrap>
       </binding>
     </action>
+      <hovered>
+        <binding>
+          <command>set-tooltip</command>
+          <tooltip-id>Magneto 1 off</tooltip-id>
+          <label>Magneto 1 off</label>
+        </binding>
+      </hovered>
   </animation>
 
   <animation>
@@ -73,6 +80,13 @@
         <wrap>0</wrap>
       </binding>
     </action>
+      <hovered>
+        <binding>
+          <command>set-tooltip</command>
+          <tooltip-id>Magneto 1 on</tooltip-id>
+          <label>Magneto 1 on</label>
+        </binding>
+      </hovered>
   </animation>
   <animation>
     <type>pick</type>
@@ -89,6 +103,13 @@
         <wrap>0</wrap>
       </binding>
     </action>
+      <hovered>
+        <binding>
+          <command>set-tooltip</command>
+          <tooltip-id>Magneto 2 off</tooltip-id>
+          <label>Magneto 2 off</label>
+        </binding>
+      </hovered>
   </animation>
 
   <animation>
@@ -106,6 +127,13 @@
         <wrap>0</wrap>
       </binding>
     </action>
+      <hovered>
+        <binding>
+          <command>set-tooltip</command>
+          <tooltip-id>Magneto 2 on</tooltip-id>
+          <label>Magneto 2 on</label>
+        </binding>
+      </hovered>
   </animation>
 
 </PropertyList>

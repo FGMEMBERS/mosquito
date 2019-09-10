@@ -26,6 +26,21 @@
         <z>0</z>
       </axis>
     </animation>
+    
+    <animation>
+      <type>pick</type>
+      <object-name>face</object-name>
+      <hovered>
+        <binding>
+          <command>set-tooltip</command>
+          <tooltip-id>Slip/skid/turn</tooltip-id>
+          <label>Slip/skid=%.1f Turn=%.1f</label>
+          <property>instrumentation/slip-skid-ball/indicated-slip-skid</property>
+          <property>instrumentation/turn-indicator/indicated-turn-rate</property>
+        </binding>
+      </hovered>
+    </animation>
+    
     <animation> 
       <type>rotate</type>
       <object-name>Needle2</object-name>

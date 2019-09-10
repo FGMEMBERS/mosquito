@@ -103,6 +103,14 @@
         <wrap>0</wrap>
       </binding>
     </action>
+      <hovered>
+        <binding>
+          <command>set-tooltip</command>
+          <tooltip-id>Altimeter adjust up</tooltip-id>
+          <label>Altimeter adjust: %.3f Inches of Hg</label>
+          <property>instrumentation/altimeter/setting-inhg</property>
+        </binding>
+      </hovered>
  </animation>
   <animation>
     <type>pick</type>
@@ -120,6 +128,27 @@
         <wrap>0</wrap>
       </binding>
     </action>
+      <hovered>
+        <binding>
+          <command>set-tooltip</command>
+          <tooltip-id>Altimeter adjust down</tooltip-id>
+          <label>Altimeter adjust: %.3f Inches of Hg</label>
+          <property>instrumentation/altimeter/setting-inhg</property>
+        </binding>
+      </hovered>
+ </animation>
+
+  <animation>
+    <type>pick</type>
+    <object-name>Face</object-name>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>Altitude</tooltip-id>
+        <label>Altitude = %i ft</label>
+        <property>instrumentation/altimeter/indicated-altitude-ft</property>
+      </binding>
+    </hovered>
  </animation>
 
 </PropertyList>

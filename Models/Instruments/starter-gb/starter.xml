@@ -20,6 +20,14 @@
         </binding>
       </mod-up>
     </action>
+      <hovered>
+        <binding>
+          <command>set-tooltip</command>
+          <tooltip-id>Starter</tooltip-id>
+          <label>Starter = %s</label>
+          <property alias="../../../../eng"/>
+        </binding>
+      </hovered>
   </animation>
 
   <animation>

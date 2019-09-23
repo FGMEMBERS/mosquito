@@ -2,56 +2,197 @@
 
 <PropertyList>
 
-  <!-- left-up -->
-
   <submodel>
-    <name>left-up-tracer</name>
-    <model>Models/Geometry/null.ac</model>
+    <name>browning_303_1</name>
+    <model>Models/Effects/tracer.xml</model>
     <trigger>sim/armament/gun[0]/fire</trigger>
-    <speed>2840.0</speed>
+    <speed>2660</speed>
     <repeat>true</repeat>
-    <delay>0.45</delay>
-    <count>-1</count>
-    <x-offset>0</x-offset>
+    <delay>0.051724137931</delay> <!-- 1150 rounds per minute -->
+    <count>1250</count>
+    <x-offset>-0.30</x-offset>
     <y-offset>0.0</y-offset>
-    <z-offset>-.2</z-offset>
+    <z-offset>0</z-offset>
     <yaw-offset>0.0</yaw-offset>
     <pitch-offset>-5</pitch-offset>
     <life>2.0</life>
     <wind>false</wind>
-    <weight>0.1069</weight>
+    <weight>0.0249</weight> <!-- 11.3 grams -->
     <cd>0.193</cd>
     <eda>0.00136354</eda> 
     <collision>true</collision>
     <collision-reports>ai/models/model-collision</collision-reports>
     <impact>true</impact>
     <impact-reports>ai/models/model-impact</impact-reports>
-    <submodel-path>Aircraft/spitfireIX/Models/subsubmodels.xml</submodel-path>
   </submodel>
 
-
-  <!--right up-->
   <submodel>
-    <name>tracer</name>
+    <name>browning_303_2</name>
     <model>Models/Effects/tracer.xml</model>
-    <trigger>sim/armament/gun[0]/fire</trigger>
-    <speed>2840.0</speed>
+    <trigger>sim/armament/gun[1]/fire</trigger>
+    <speed>2660</speed>
     <repeat>true</repeat>
-    <delay>0.42</delay>
-    <count>-1</count>
-    <x-offset>0</x-offset>
-    <y-offset>1.948</y-offset>
-    <z-offset>-.2</z-offset>
+    <delay>0.051724137931</delay> <!-- 1150 rounds per minute -->
+    <count>1250</count>
+    <x-offset>-0.10</x-offset>
+    <y-offset>0.0</y-offset>
+    <z-offset>0</z-offset>
     <yaw-offset>0.0</yaw-offset>
     <pitch-offset>-5</pitch-offset>
     <life>2.0</life>
     <wind>false</wind>
-    <weight>0.1069</weight>
+    <weight>0.0249</weight> <!-- 11.3 grams -->
     <cd>0.193</cd>
     <eda>0.00136354</eda> 
+    <collision>true</collision>
+    <collision-reports>ai/models/model-collision</collision-reports>
+    <impact>true</impact>
+    <impact-reports>ai/models/model-impact</impact-reports>
   </submodel>
 
+  <submodel>
+    <name>browning_303_3</name>
+    <model>Models/Effects/tracer.xml</model>
+    <trigger>sim/armament/gun[2]/fire</trigger>
+    <speed>2660</speed>
+    <repeat>true</repeat>
+    <delay>0.051724137931</delay> <!-- 1150 rounds per minute -->
+    <count>1250</count>
+    <x-offset>0.10</x-offset>
+    <y-offset>0.0</y-offset>
+    <z-offset>0</z-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>-5</pitch-offset>
+    <life>2.0</life>
+    <wind>false</wind>
+    <weight>0.0249</weight> <!-- 11.3 grams -->
+    <cd>0.193</cd>
+    <eda>0.00136354</eda> 
+    <collision>true</collision>
+    <collision-reports>ai/models/model-collision</collision-reports>
+    <impact>true</impact>
+    <impact-reports>ai/models/model-impact</impact-reports>
+  </submodel>
 
+  <submodel>
+    <name>browning_303_4</name>
+    <model>Models/Effects/tracer.xml</model>
+    <trigger>sim/armament/gun[3]/fire</trigger>
+    <speed>2660</speed>
+    <repeat>true</repeat>
+    <delay>0.051724137931</delay> <!-- 1150 rounds per minute -->
+    <count>1250</count>
+    <x-offset>0.30</x-offset>
+    <y-offset>0.0</y-offset>
+    <z-offset>0</z-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>-5</pitch-offset>
+    <life>2.0</life>
+    <wind>false</wind>
+    <weight>0.0249</weight> <!-- 11.3 grams -->
+    <cd>0.193</cd>
+    <eda>0.00136354</eda> 
+    <collision>true</collision>
+    <collision-reports>ai/models/model-collision</collision-reports>
+    <impact>true</impact>
+    <impact-reports>ai/models/model-impact</impact-reports>
+  </submodel>
+
+  <submodel>
+    <name>hispano_II_1</name>
+    <model>Models/Effects/tracer.xml</model>
+    <trigger>sim/armament/cannon[0]/fire</trigger>
+    <speed>2756</speed> <!-- 840 m/s -->
+    <repeat>true</repeat>
+    <delay>0.1</delay> <!-- 600 rounds per minute -->
+    <count>600</count>
+    <x-offset>-0.30</x-offset>
+    <y-offset>0.0</y-offset>
+    <z-offset>0</z-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>-5</pitch-offset>
+    <life>2.0</life>
+    <wind>false</wind>
+    <weight>0.287</weight> <!-- 130 grams -->
+    <cd>0.193</cd>
+    <eda>0.00136354</eda> 
+    <collision>true</collision>
+    <collision-reports>ai/models/model-collision</collision-reports>
+    <impact>true</impact>
+    <impact-reports>ai/models/model-impact</impact-reports>
+  </submodel>
+
+  <submodel>
+    <name>hispano_II_2</name>
+    <model>Models/Effects/tracer.xml</model>
+    <trigger>sim/armament/cannon[1]/fire</trigger>
+    <speed>2756</speed> <!-- 840 m/s -->
+    <repeat>true</repeat>
+    <delay>0.1</delay> <!-- 600 rounds per minute -->
+    <count>600</count>
+    <x-offset>-0.10</x-offset>
+    <y-offset>0.0</y-offset>
+    <z-offset>0</z-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>-5</pitch-offset>
+    <life>2.0</life>
+    <wind>false</wind>
+    <weight>0.287</weight> <!-- 130 grams -->
+    <cd>0.193</cd>
+    <eda>0.00136354</eda> 
+    <collision>true</collision>
+    <collision-reports>ai/models/model-collision</collision-reports>
+    <impact>true</impact>
+    <impact-reports>ai/models/model-impact</impact-reports>
+  </submodel>
+
+  <submodel>
+    <name>hispano_II_3</name>
+    <model>Models/Effects/tracer.xml</model>
+    <trigger>sim/armament/cannon[2]/fire</trigger>
+    <speed>2756</speed> <!-- 840 m/s -->
+    <repeat>true</repeat>
+    <delay>0.1</delay> <!-- 600 rounds per minute -->
+    <count>600</count>
+    <x-offset>0.10</x-offset>
+    <y-offset>0.0</y-offset>
+    <z-offset>0</z-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>-5</pitch-offset>
+    <life>2.0</life>
+    <wind>false</wind>
+    <weight>0.287</weight> <!-- 130 grams -->
+    <cd>0.193</cd>
+    <eda>0.00136354</eda> 
+    <collision>true</collision>
+    <collision-reports>ai/models/model-collision</collision-reports>
+    <impact>true</impact>
+    <impact-reports>ai/models/model-impact</impact-reports>
+  </submodel>
+
+  <submodel>
+    <name>hispano_II_4</name>
+    <model>Models/Effects/tracer.xml</model>
+    <trigger>sim/armament/cannon[3]/fire</trigger>
+    <speed>2756</speed> <!-- 840 m/s -->
+    <repeat>true</repeat>
+    <delay>0.1</delay> <!-- 600 rounds per minute -->
+    <count>600</count>
+    <x-offset>0.30</x-offset>
+    <y-offset>0.0</y-offset>
+    <z-offset>0</z-offset>
+    <yaw-offset>0.0</yaw-offset>
+    <pitch-offset>-5</pitch-offset>
+    <life>2.0</life>
+    <wind>false</wind>
+    <weight>0.287</weight> <!-- 130 grams -->
+    <cd>0.193</cd>
+    <eda>0.00136354</eda> 
+    <collision>true</collision>
+    <collision-reports>ai/models/model-collision</collision-reports>
+    <impact>true</impact>
+    <impact-reports>ai/models/model-impact</impact-reports>
+  </submodel>
 
   <submodel>
     <name>rp_l1</name>

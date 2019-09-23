@@ -13,15 +13,10 @@ var init =func () {
 
     #open dialog
     startup.open();
-
   } else {
-    if (getprop ("controls/startup/idling") ) {
-      print("Startup running!");
-      merlin0.magicstart();
-      merlin1.magicstart();
-    }
+    mosquito.port_engine.init();
+    mosquito.starboard_engine.init();
   }
-
 }
 
 

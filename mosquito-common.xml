@@ -68,7 +68,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <engines>
       <engine n="0">
         <magnetos>0</magnetos>
-        <boost type="double">0.45</boost> <!--high: 0.6 -->
+        <boost type="double">0.667</boost>
 	<blower type="int">0</blower>
         <primer-pressed type="bool">0.0</primer-pressed>
 	<throttle-c type="float">0</throttle-c>
@@ -76,7 +76,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       </engine>
       <engine n="1">
         <magnetos>0</magnetos>
-        <boost type="double">0.45</boost>
+        <boost type="double">0.667</boost>
 	<blower type="int">0</blower>
         <primer-pressed type="bool">0.0</primer-pressed>
 	<throttle-c type="float">0</throttle-c>
@@ -112,41 +112,68 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
     <engine n="0">
       <rpm type="double">0</rpm>
       <cylinder-temp-degc type="float">15</cylinder-temp-degc>
-      <coolant-temp-degc type="float">15.0</coolant-temp-degc>
       <crankloop type="float">0</crankloop>
-      <oiltempc type = "float">15.0</oiltempc>
       <oil-visc type = "float">0.1</oil-visc>
-      <oil-press type = "float">0.0</oil-press>
+      <oil-pressure-psi type = "double">0.0</oil-pressure-psi>
+      <oil-temperature-degf type="double">59.0</oil-temperature-degf> <!-- 15°C -->
       <fuel-press type ="float">0.0</fuel-press>
       <rev-strain type="int">0</rev-strain>
       <overrev type="int">0</overrev>
       <overheat type="int">0</overheat>
       <primed type="float">1</primed>
-      <startup_smoke type="bool">false</startup_smoke>
+      <startup-smoke type="bool">false</startup-smoke>
       <boost-strain type="float">0</boost-strain>
-      <carburator-entry-temp-degc type="float">15</carburator-entry-temp-degc>
     </engine>
     <engine n="1">
       <rpm type="double">0</rpm>
       <cylinder-temp-degc type="float">15</cylinder-temp-degc>
-      <coolant-temp-degc type="float">15.0</coolant-temp-degc>
       <crankloop type="float">0</crankloop>
-      <oiltempc type = "float">15.0</oiltempc>
       <oil-visc type = "float">0.1</oil-visc>
-      <oil-press type = "float">0.0</oil-press>
+      <oil-pressure-psi type = "double">0.0</oil-pressure-psi>
+      <oil-temperature-degf type="double">59.0</oil-temperature-degf> <!-- 15°C -->
       <fuel-press type ="float">0.0</fuel-press>
       <rev-strain type="int">0</rev-strain>
       <overrev type="int">0</overrev>
       <overheat type="int">0</overheat>
       <primed type="float">1</primed>
-      <startup_smoke type="bool">false</startup_smoke>
+      <startup-smoke type="bool">false</startup-smoke>
       <boost-strain type="float">0</boost-strain>
-      <carburator-entry-temp-degc type="float">15</carburator-entry-temp-degc>
     </engine>
   </engines>
 
   <input>
     <keyboard>
+      <key n="98">
+        <name>b</name>
+        <desc>override the brake keybinding for progressive braking</desc>
+        <binding>
+          <command>property-interpolate</command>
+          <property>controls/gear/brake-left</property>
+          <value>1</value>
+          <time>1.0</time>
+        </binding>
+        <binding>
+          <command>property-interpolate</command>
+          <property>controls/gear/brake-right</property>
+          <value>1</value>
+          <time>1.0</time>
+        </binding>
+        <mod-up>
+          <binding>
+            <command>property-interpolate</command>
+            <property>controls/gear/brake-left</property>
+            <value>0</value>
+            <time>1.0</time>
+          </binding>
+          <binding>
+            <command>property-interpolate</command>
+            <property>controls/gear/brake-right</property>
+            <value>0</value>
+            <time>1.0</time>
+          </binding>
+        </mod-up>
+      </key>
+
       <key n="100">
         <name>d</name>
         <desc>Toggle bomb bay doors</desc>
@@ -168,29 +195,40 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       <key n="70">
         <name>F</name>
         <desc>Open Radiator Shutter</desc>
-        <binding n="0">
-          <command>nasal</command>
-          <script> 
-            merlin0.open_cowlflaps();
-            merlin1.open_cowlflaps();
-          </script>
+        <binding>
+          <command>property-interpolate</command>
+          <property>controls/engines/engine[0]/cowl-flaps-norm</property>
+          <value>1</value>
+          <time>10</time>
+        </binding>
+        <binding>
+          <command>property-interpolate</command>
+          <property>controls/engines/engine[1]/cowl-flaps-norm</property>
+          <value>1</value>
+          <time>10</time>
         </binding>
       </key>
+
       <key n="102">
         <name>f</name>
         <desc>Close Radiator Shutter</desc>
-        <binding n="0">
-          <command>nasal</command>
-          <script> 
-            merlin0.close_cowlflaps();
-            merlin1.close_cowlflaps();
-          </script>
+        <binding>
+          <command>property-interpolate</command>
+          <property>controls/engines/engine[0]/cowl-flaps-norm</property>
+          <value>0</value>
+          <time>2</time>
+        </binding>
+        <binding>
+          <command>property-interpolate</command>
+          <property>controls/engines/engine[1]/cowl-flaps-norm</property>
+          <value>0</value>
+          <time>2</time>
         </binding>
       </key>
 
       <key n="113"> 
         <name>q</name>
-        <desc>Toggle Master Arm on</desc>
+        <desc>Master Arm on</desc>
         <binding> 
           <command>property-adjust</command>
           <property>/controls/armament/master-arm</property>
@@ -201,7 +239,7 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
       </key>
       <key n="81"> 
         <name>Q</name>
-        <desc>Toggle Master Arm off</desc>
+        <desc>Master Arm off</desc>
         <binding> 
           <command>property-adjust</command>
           <property>/controls/armament/master-arm</property>
@@ -211,6 +249,20 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         </binding>
       </key>  
 
+      <key n="69">
+        <name>E</name>
+        <desc>Fire cannon</desc>
+        <binding>
+          <command>property-toggle</command>
+          <property>controls/armament/trigger1</property>
+        </binding>
+        <mod-up>
+          <binding>
+            <command>property-toggle</command>
+            <property>controls/armament/trigger1</property>
+          </binding>
+        </mod-up>
+      </key>
       <key n="101">
         <name>e</name>
         <desc>Fire machine guns</desc>
@@ -230,31 +282,29 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
   <nasal>
     <startup>
-      <file>Nasal/startup.nas</file>
+      <file>Aircraft/mosquito/Nasal/startup.nas</file>
     </startup>
     <weapons>
-      <file>Nasal/weapons.nas</file>
+      <file>Aircraft/mosquito/Nasal/weapons.nas</file>
     </weapons>
     <mosquito>
-      <file>Nasal/mosquito.nas</file>
+      <file>Aircraft/mosquito/Nasal/mosquito.nas</file>
+      <file>Aircraft/mosquito/Nasal/merlin.nas</file>
     </mosquito>
     <hitcheck>
-      <file>Nasal/hitcheck.nas</file>
+      <file>Aircraft/mosquito/Nasal/hitcheck.nas</file>
     </hitcheck>
     <failure>
-      <file>Nasal/failure.nas</file>
+      <file>Aircraft/mosquito/Nasal/failure.nas</file>
     </failure>
-    <merlin0>
-      <file>Aircraft/mosquito/Nasal/merlin64.nas</file>
-    </merlin0>
-    <merlin1>
-      <file>Aircraft/mosquito/Nasal/merlin64b.nas</file>
-    </merlin1>
+    <mosquito_bombable>
+      <file>Aircraft/mosquito/Nasal/bombable.nas</file>
+    </mosquito_bombable>
   </nasal>
 
   <sim>
     <aero>mosquito-yasim</aero>
-    <aircraft-version>0.2</aircraft-version>
+    <aircraft-version>3.1.4</aircraft-version>
     <allow-toggle-cockpit archive="y">true</allow-toggle-cockpit>
     <armament include="Dialogs/armament.xml"/>
     <author>Detlef Faber, Ludovic Brenta</author>
@@ -330,6 +380,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
         <desc>Fire machine guns</desc>
       </key>
       <key>
+        <name>Shift+E</name>
+        <desc>Fire cannon</desc>
+      </key>
+      <key>
         <name>L</name>
         <desc>Unlock/Lock tail wheel</desc>
       </key>
@@ -353,7 +407,7 @@ Lock the tail wheel when aligned on runway.
 Open radiator shutters using the two leftmost switches on top of the right-hand side
 panel that also has the fuel gauges.
 On short fields, use flaps 1 step down.
-Set propeller pitch to full fine, apply full throttle (+20 boost).
+Set propeller pitch to full fine, open throttle to +12 boost.
 Lift tail wheel early and take off at 140 mph.
 
 --- Climb ---
@@ -362,6 +416,9 @@ Reduce manifold pressure to +9 boost and set 2850 rpm.
 --- Cruise ---
 Reduce manifold pressure to +4 boost and set 2650 rpm.
 Close Radiator shutters.
+
+--- Combat ---
+Your engines are rated to a maximum of +16 boost.
 
 ---Landing---
 Approach at 170 mph with flaps down.
@@ -414,6 +471,8 @@ Load factor, undercarriage up:   9g
         <int n="2" alias="/sim/armament/bombL/type"/>
         <int n="3" alias="/sim/armament/bombR/type"/>
         <int n="4" alias="/sim/armament/bombB1/type"/>
+        <bool n="8" alias="/engines/engine[0]/startup-smoke"/>
+        <bool n="9" alias="/engines/engine[1]/startup-smoke"/>
       </generic>
     </multiplay>
 

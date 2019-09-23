@@ -17,9 +17,9 @@
 
 		<condition>
 			<and>
-				<property>/environment/contrail</property>
+				<property>environment/contrail</property>
 				<greater-than>
-					<property>/velocities/airspeed-kt</property>
+					<property>velocities/airspeed-kt</property>
 					<value>100</value>
 				</greater-than>
 			</and>
@@ -53,7 +53,7 @@
 
 		<counter>
 			<particles-per-sec>
-				<property>/velocities/airspeed-kt</property>
+				<property>velocities/airspeed-kt</property>
 				<factor>0.20</factor>
 				<offset>10</offset>
 				<!--<value>600</value>-->

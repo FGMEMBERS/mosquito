@@ -57,6 +57,19 @@
   <type>noshadow</type>
  </animation>
  
+  <animation>
+    <type>pick</type>
+    <object-name>face</object-name>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>AirspeedTooltip</tooltip-id>
+        <label>Airspeed = %i kts</label>
+        <property>instrumentation/airspeed-indicator/indicated-speed-kt</property>
+      </binding>
+    </hovered>
+  </animation>   
+
  <!-- *** LoD *** -->
  <animation>
   <type>range</type>

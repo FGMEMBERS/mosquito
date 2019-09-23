@@ -57,8 +57,14 @@ don@sol2500.net
 
     <multiplay>
       <generic>
-        <int n="5" alias="/sim/armament/gun[0]/fire"/>
-        <int n="6" alias="/sim/armament/gun[1]/fire"/>
+        <bool n="0" alias="/sim/armament/gun[0]/fire"/>
+        <bool n="1" alias="/sim/armament/gun[1]/fire"/>
+        <bool n="2" alias="/sim/armament/gun[2]/fire"/>
+        <bool n="3" alias="/sim/armament/gun[3]/fire"/>
+        <bool n="4" alias="/sim/armament/cannon[0]/fire"/>
+        <bool n="5" alias="/sim/armament/cannon[1]/fire"/>
+        <bool n="6" alias="/sim/armament/cannon[2]/fire"/>
+        <bool n="7" alias="/sim/armament/cannon[3]/fire"/>
       </generic>
     </multiplay>
 
@@ -69,6 +75,21 @@ don@sol2500.net
         <y-offset-m archive="y" type="double">0.93</y-offset-m>
         <z-offset-m archive="y" type="double">2.35</z-offset-m>
         <pitch-offset-deg>-17.5</pitch-offset-deg>
+        <!-- Override fgdata's pilot viewing limits so that we can see fuel
+        cocks behind the pilot seat. -->
+        <limits>
+          <enabled type="bool">true</enabled>
+          <left>
+            <heading-max-deg type="double">140</heading-max-deg>
+            <x-offset-max-m type="double">0.15</x-offset-max-m>
+            <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+          </left>
+          <right>
+            <heading-max-deg type="double">160</heading-max-deg>
+            <x-offset-max-m type="double">0.15</x-offset-max-m>
+            <x-offset-threshold-deg type="double">65</x-offset-threshold-deg>
+          </right>
+        </limits>
       </config>
     </view>
 

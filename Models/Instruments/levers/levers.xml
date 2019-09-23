@@ -28,6 +28,14 @@
         <property>controls/gear/gear-down</property>
       </binding>
     </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>Undercarriage</tooltip-id>
+        <label>Undercarriage = %.1f</label>
+        <property>controls/gear/gear-down</property>
+      </binding>
+    </hovered>
  </animation>
 
  <animation>
@@ -55,6 +63,14 @@
 <script>mosquito.bombbaydoor.toggle();</script>                                                                                                                                                            
       </binding>
     </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>Bombbay doors</tooltip-id>
+        <label>Bombbay doors = %.1f</label>
+        <property>controls/armament/bombbaydoor/position-norm</property>
+      </binding>
+    </hovered>
  </animation>
 
 
@@ -77,12 +93,20 @@
        <binding>
          <command>property-adjust</command>
          <property>controls/flight/flaps</property>
-         <factor>0.1</factor>
+         <factor>-0.1</factor>
          <min>0</min>
          <max>1.0</max>                
          <wrap>false</wrap>
        </binding>
      </action>
+    <hovered>
+      <binding>
+        <command>set-tooltip</command>
+        <tooltip-id>Flaps</tooltip-id>
+        <label>Flaps = %.1f</label>
+        <property>controls/flight/flaps</property>
+      </binding>
+    </hovered>
    </animation>
 
 
@@ -96,7 +120,7 @@
   <object-name>Background</object-name>
   <object-name>PressureDial</object-name>
   <emission>
-    <factor-prop>/controls/lighting/instruments-norm</factor-prop>
+    <factor-prop>controls/lighting/instruments-norm</factor-prop>
     <red>0.5</red>
     <green>0.25</green>
     <blue>0.25</blue>
@@ -109,7 +133,7 @@
  <animation>
   <type>rotate</type>
   <object-name>needle2</object-name>
-  <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+  <property>instrumentation/altimeter/indicated-altitude-ft</property>
   <factor>0.036</factor>
   <axis>
    <x>-1</x>
@@ -121,7 +145,7 @@
  <animation>
   <type>rotate</type>
   <object-name>needle3</object-name>
-  <property>/instrumentation/altimeter/indicated-altitude-ft</property>
+  <property>instrumentation/altimeter/indicated-altitude-ft</property>
   <factor>0.0036</factor>
   <axis>
    <x>-1</x>
@@ -133,7 +157,7 @@
  <animation>
   <type>rotate</type>
   <object-name>PressureDial</object-name>
-  <property>/instrumentation/altimeter/setting-inhg</property>
+  <property>instrumentation/altimeter/setting-inhg</property>
   <interpolation>
    <entry>
     <ind>28</ind>

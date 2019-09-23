@@ -20,6 +20,14 @@
         </binding>
       </mod-up>
     </action>
+      <hovered>
+        <binding>
+          <command>set-tooltip</command>
+          <tooltip-id>Starter</tooltip-id>
+          <label>Starter = %s</label>
+          <property alias="../../../../eng"/>
+        </binding>
+      </hovered>
   </animation>
 
   <animation>
@@ -63,7 +71,7 @@
   <animation> 
     <type>material</type>
     <emission> 
-      <factor-prop>/controls/lighting/panel-norm</factor-prop>
+      <factor-prop>controls/lighting/panel-norm</factor-prop>
       <red>0.75</red>
       <green>0.25</green>
       <blue>0.25</blue>

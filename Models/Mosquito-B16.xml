@@ -7,7 +7,7 @@
   <nasal>
     <load><![CDATA[
       var update = aircraft.overlay_update.new();
-      update.add("Models/AI-Liveries", "sim/model/livery/file");
+      update.add("Aircraft/mosquito/Models/AI-Liveries", "sim/model/livery/file");
       update.add("Aircraft/Generic/Logos", "sim/multiplay/generic/string");
 
       var self = cmdarg();
@@ -27,6 +27,10 @@
         alias(self.getNode ("sim/multiplay/generic/int[3]"));
       self.getNode ("sim/armament/bombB1/type", 1).
         alias(self.getNode ("sim/multiplay/generic/int[4]"));
+      self.getNode ("engines/engine[0]/startup-smoke", 1).
+        alias(self.getNode ("sim/multiplay/generic/bool[8]"));
+      self.getNode ("engines/engine[1]/startup-smoke", 1).
+        alias(self.getNode ("sim/multiplay/generic/bool[9]"));
     ]]></load>
     <unload><![CDATA[
       update.stop();
@@ -569,7 +573,7 @@
   <animation>
     <type>rotate</type>
     <object-name>aileron.L</object-name>
-    <property>controls/flight/aileron</property>
+    <property>surface-positions/left-aileron-pos-norm</property>
     <factor>-30.0</factor>
 
     <center>
@@ -590,8 +594,8 @@
   <animation>
     <type>rotate</type>
     <object-name>aileron.R</object-name>
-    <property>controls/flight/aileron</property>
-    <factor>-30.0</factor>
+    <property>surface-positions/right-aileron-pos-norm</property>
+    <factor>30.0</factor>
 
     <center>
       <x-m>3.974</x-m>
@@ -696,7 +700,7 @@
 
   <!-- crew -->
   <model> 
-    <path>Models/pilot.xml</path>
+    <path>Aircraft/mosquito/Models/pilot.xml</path>
     <name>pilot</name>
     <offsets> 
       <x-m>2.36</x-m>
@@ -717,7 +721,7 @@
   </animation>
 
   <model> 
-    <path>Models/crew.xml</path>
+    <path>Aircraft/mosquito/Models/crew.xml</path>
     <name>crew</name>
     <offsets> 
       <x-m>2.64</x-m>
@@ -752,7 +756,7 @@
 
   <model>
     <name>pdiskL</name>
-    <path>Models/pdiskL.xml</path>
+    <path>Aircraft/mosquito/Models/pdiskL.xml</path>
     <offsets>
       <x-m>0.218</x-m>
       <y-m>-2.525</y-m>
@@ -762,7 +766,7 @@
 
   <model>
     <name>pdiskL</name>
-    <path>Models/pdiskR.xml</path>
+    <path>Aircraft/mosquito/Models/pdiskR.xml</path>
     <offsets>
       <x-m>0.218</x-m>
       <y-m>2.525</y-m>

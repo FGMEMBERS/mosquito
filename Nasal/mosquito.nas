@@ -24,7 +24,7 @@ var main_loop = func {
 		interpolate (boost1, lowblower,30);
 		blower1.setValue(0);
 		}
-  settimer(main_loop, 0.2)
+  settimer(main_loop, 0.05)
 }
 
 var switch_fuelS = func {
@@ -82,3 +82,7 @@ aircraft.data.add(save_list);
 var flash_trigger = props.globals.getNode("sim/armament/gun[0]/fire", 0);
 aircraft.light.new("sim/model/mosquito/lighting/flash-l", [0.03, 0.02], flash_trigger);
 aircraft.light.new("sim/model/mosquito/lighting/flash-r", [0.024, 0.03], flash_trigger);
+
+var cannon_trigger = props.globals.getNode("sim/armament/cannon[0]/fire", 0);
+aircraft.light.new("sim/model/mosquito/lighting/flash-l", [0.03, 0.02], cannon_trigger);
+aircraft.light.new("sim/model/mosquito/lighting/flash-r", [0.024, 0.03], cannon_trigger);

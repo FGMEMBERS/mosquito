@@ -11,7 +11,7 @@ var flappos = props.globals.getNode("controls/flight/flaps",1);
 var turn = props.globals.getNode("instrumentation/turn-indicator/indicated-turn-rate");
 var fail_r = props.globals.getNode("sim/failure-manager/controls-failure-roll");
 var fail_d = props.globals.getNode("sim/failure-manager/controls-failure-drag");
-var aileron = props.globals.getNode("controls/flight/aileron-filtered");
+var aileron = props.globals.getNode("controls/flight/aileron");
 var gear0 = props.globals.getNode("controls/gear/gear[0]/gear-down");
 var gear1 = props.globals.getNode("controls/gear/gear[1]/gear-down");
 var gear2 = props.globals.getNode("controls/gear/gear[2]/gear-down");
@@ -36,6 +36,31 @@ var main_loop = func {
   settimer(main_loop, looptime);
 }
 
+var copilot_messages_recent = [];
+
+# Sets sim/messages/copilot, but avoids frequent repeatd of the same value,
+# otherwise text-to-speech can take ages to get through queue of messages.
+#
+var copilot_message = func (text) {
+    var t = systime();
+    for (var i=0; i < size(copilot_messages_recent); ) {
+        if (copilot_messages_recent[i]['time'] < (t-10)) {
+            # Is there an easy way to delete copilot_messages_recent[i]?
+            copilot_messages_recent[i] = copilot_messages_recent[size(copilot_messages_recent) - 1];
+            pop(copilot_messages_recent);
+            continue;
+            }
+        else {
+            if (copilot_messages_recent[i]['text'] == text) {
+                return;
+            }
+            i += 1;
+        }
+    }
+    
+    setprop('sim/messages/copilot', text);
+    append(copilot_messages_recent, { 'time': t, 'text': text});
+}
 
 var check_airframe = func {
   var gl = gload.getValue();
@@ -49,7 +74,7 @@ var check_airframe = func {
   if ( flappos.getValue() > 0 ) {
     if (as > flapoverspeed) {
       print ("flaps overspeed! as=", as, " flapoverspeed=", flapoverspeed);
-      setprop ("sim/messages/copilot", "Flaps overspeed!");
+      copilot_message("Flaps overspeed!");
       var load = as - flapoverspeed;
    #   print (load*flappos.getValue());
       if (load * flappos.getValue() > 20 ) {
@@ -58,7 +83,7 @@ var check_airframe = func {
           flappos.setAttribute("writable",0);
           setprop ("/sim/failure-manager/flaps", "1");
           print ("Flaps failed");
-          setprop ("sim/messages/copilot", "Flaps failed!");
+          copilot_message("Flaps failed!");
         }
   flappos.setValue(0);
       }
@@ -69,39 +94,39 @@ var check_airframe = func {
   # print(gl, breakload - 0.0004 * ow );
   if (gl > (breakload - 0.0003 * ow)) {
     print ("gl=", gl, " > (breakload - 0.0003 * ow)=", breakload - 0.0003 * ow);
-    setprop ("sim/messages/copilot", "Airframe overloaded!");
+    copilot_message("Airframe overloaded!");
   }
   if (as > breakspeed) {
     print ("as=", as, " > breakspeed=", breakspeed);
-    setprop ("sim/messages/copilot", "Overspeed!");
+    copilot_message("Overspeed!");
   }
   if (gl > (breakload - 0.0003 * ow) or (as > breakspeed)) {
     print ("break");
     if (slip < 0) {
       setprop ("sim/failure-manager/left-wing-torn", "1");
       fail_r.setValue(1);
-      setprop ("sim/messages/copilot", "Port wing torn!");
+      copilot_message("Port wing torn!");
     } else {
       setprop ("sim/failure-manager/right-wing-torn", "1");
       fail_r.setValue(-1);
-      setprop ("sim/messages/copilot", "Starboard wing torn!");
+      copilot_message("Starboard wing torn!");
     }
   }
   if (gl > (bendload - 0.0004 * ow)) {
     print ("bend");
     if (slip < 0) {
       gear0.setAttribute("writable",0);
-      setprop ("sim/messages/copilot", "Port undercarriage stuck!");
+      copilot_message("Port undercarriage stuck!");
     } else {
       gear1.setAttribute("writable",0);
-      setprop ("sim/messages/copilot", "Starboard undercarriage stuck!");
+      copilot_message("Starboard undercarriage stuck!");
     }
   }    
 }
 
 
 var kill_engine = func {
-  setprop ("sim/messages/copilot", "Engine failed!");
+  copilot_message("Engine failed!");
   nofuel.setValue(1);
   nofuel.setAttribute("writable", 0);
 #  interpolate ("/engines/engine[0]/fuel-press", 0, 1);
@@ -124,7 +149,7 @@ var process_hit = func {
                 setprop ("sim/failure-manager/smoking",1);
             } else if (fail_type >= 3 ) {
                 print ("Fire");
-                setprop ("sim/messages/copilot", "Fire on board!");
+                copilot_message("Fire on board!");
                 setprop ("sim/failure-manager/burning",2);
             } else {
                 print ("Structural failure");
@@ -137,7 +162,7 @@ var process_hit = func {
 
 var tear_wing = func {
   var slip = turn.getValue();
-  setprop ("sim/messages/copilot", "Ailerons frozen!");
+  copilot_message("Ailerons frozen!");
   if (slip < 0) {
     aileron.setValue(1);
     aileron.setAttribute("writable", 0);
@@ -177,7 +202,7 @@ setlistener("/gear/gear[4]/compression-norm", func(n) {
       }
       setprop ("sim/failure-manager/engines/engine[0]/propstrike", 1);
       print("propstrike");
-      setprop ("sim/messages/copilot", "Prop strike!");
+      copilot_message("Prop strike!");
       interpolate ("sim/failure-manager/engines/engine[0]/propstrike-force",0 ,0.1);
     }
   }
@@ -190,7 +215,9 @@ var repair_aircraft = func () {
   flappos.setAttribute ("writable", 1);
   gear0  .setAttribute ("writable", 1);
   gear1  .setAttribute ("writable", 1);
+  printf("nofuel=%s", view.str(nofuel));
   nofuel .setAttribute ("writable", 1);
+  printf("aileron=%s", view.str(aileron));
   aileron.setAttribute ("writable", 1);
   aileron.setValue (0);
   setprop ("sim/failure-manager/engines/engine[0]/propstrike", 0);
@@ -203,5 +230,5 @@ var repair_aircraft = func () {
   setprop ("sim/failure-manager/smoking", 0);
   setprop ("sim/failure-manager/burning", 0);
   setprop ("sim/failure-manager/fail-type", 0);
-  setprop ("sim/messages/copilot", "Aircraft repaired, you cheater!");
+  copilot_message("Aircraft repaired, you cheater!");
 };
